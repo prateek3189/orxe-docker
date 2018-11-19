@@ -3,7 +3,7 @@
 }
 
 .sidenav {
-  margin-top: 4em;
+  position: absolute;
   width: 180px;
 }
 
@@ -18,4 +18,10 @@
 }
 button{
 width: 150px;
+}
+.button{
+  width: 150px;
+  }
+.toolbar{
+  float: left;
 }
