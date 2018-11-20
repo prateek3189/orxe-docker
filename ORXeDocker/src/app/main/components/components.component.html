@@ -8,8 +8,6 @@
       </mat-toolbar>
     <mat-nav-list *ngFor="let data of data">
         <a mat-list-item><button mat-raised-button color="warn" (click)="MoreInfo(data.ComponentName)" routerLink="/{{data.ComponentName}}">{{data.ComponentName}}</button></a>
-      <!-- <a mat-list-item><button mat-raised-button color="warn" routerLink="/button">Button</button></a>
-      <a mat-list-item ><button mat-raised-button color="warn" routerLink="/input">Autocomplete</button></a> -->
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

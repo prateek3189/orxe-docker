@@ -14,7 +14,9 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
 import { FooterComponent } from './footer/footer.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ComponentService } from './component.service';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { CodepenComponent } from './main/description/codepen/codepen.component';
+import { ApiComponent } from './main/description/api/api.component'
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { FormsModule } from '@angular/forms'
     MainComponent,
     DescriptionComponent,
     ComponentsComponent,
-    FooterComponent
+    FooterComponent,
+    CodepenComponent,
+    ApiComponent
   ],
   imports: [
     BrowserModule,
