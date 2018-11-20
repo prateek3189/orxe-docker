@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ComponentService } from 'src/app/component.service';
 
 @Component({
   selector: 'app-main',
@@ -6,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-Component:any;
-  constructor() { }
+Component:any=null;
+  constructor(public componentdata: ComponentService) { }
 
   ngOnInit() {
   }
