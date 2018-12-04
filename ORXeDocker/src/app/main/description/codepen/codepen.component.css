@@ -1,7 +1,7 @@
-.example-card {
+/* .example-card {
     margin: 0 auto;
     max-width: 500px;
-  }
+  } */
 
 .example-headers-align .mat-expansion-panel-header-title,
 .example-headers-align .mat-expansion-panel-header-description {
@@ -12,10 +12,10 @@
   justify-content: space-between;
   align-items: center;
 }
-.expansion{
+/* .expansion{
     margin: 0 auto !important;
     max-width: 532px;
-}
+} */
 .mat-raised-button{
     margin-top: 2em;
     width: 150px;

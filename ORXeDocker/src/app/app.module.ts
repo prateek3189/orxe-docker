@@ -10,7 +10,6 @@ import { MainComponent } from './main/main.component';
 import { DescriptionComponent } from './main/description/description.component';
 import { ComponentsComponent } from './main/components/components.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { FooterComponent } from './footer/footer.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ComponentService } from './component.service';
@@ -37,12 +36,7 @@ import { ApiComponent } from './main/description/api/api.component'
     MaterialModule,
     LayoutModule,
     HttpClientModule,
-    FormsModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule
+    FormsModule
   ],
   providers: [ComponentService],
   bootstrap: [AppComponent]

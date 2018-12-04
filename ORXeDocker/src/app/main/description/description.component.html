@@ -1,8 +1,39 @@
 <div *ngFor="let data of componentdata.response">
   <div *ngIf="Component==data.ComponentName">
-    <mat-card>
-      <b>Description: </b>{{data.Description}}
-    </mat-card>
-    <app-codepen></app-codepen>
+    <div class="row">
+      <div class="codepen">
+        <app-codepen></app-codepen>
+      </div>
+      <div class="operation">
+        <mat-card>
+          <b>Description: </b>{{data.Description}}
+        </mat-card>
+        <mat-card>
+          <h3>Operations</h3>
+          <mat-list role="list">
+            <mat-list-item role="listitem">
+              <mat-checkbox>Item 1</mat-checkbox>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+              <mat-checkbox>Item 2</mat-checkbox>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+              <mat-checkbox>Item 3</mat-checkbox>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+                <mat-checkbox>Item 4</mat-checkbox>
+              </mat-list-item>
+          </mat-list>
+        </mat-card>
+        <mat-card>
+          <mat-form-field class="form-full-width">
+            <input matInput placeholder="Label" value="Label Value 1">
+          </mat-form-field>
+          <mat-form-field class="form-full-width">
+            <input matInput placeholder="Label" value="Label Value 2">
+          </mat-form-field>
+        </mat-card>
+      </div>
+    </div>
   </div>
 </div>
