@@ -1,18 +1,32 @@
 [
     {
-        "ComponentName":"Input",
-        "Description":"Description About Input Tag"
+        "ComponentName": "Input",
+        "Description": "Description About Input Tag"
     },
     {
-        "ComponentName":"Button",
-        "Description":"Description About Buttons"
+        "ComponentName": "Button",
+        "Module":"Mat-checkbox",
+        "Description": "Angular Material buttons are native <button> or <a> elements enhanced with Material Design styling and ink ripples.",
+        "Properties": [
+            {
+                "label": "mat-raised-button",
+                "value": "Boolean",
+                "description":"Angular Button Property"
+            },
+            {
+                "label": "Click Me",
+                "value": "String",
+                "description":"Name of Button"
+            }
+        ],
+        "CodeUrl": "https://github.com/prateek3189/orxe-docker"
     },
     {
-        "ComponentName":"AutoComplete",
-        "Description":"Description About AutoComplete"
+        "ComponentName": "AutoComplete",
+        "Description": "Description About AutoComplete"
     },
     {
-        "ComponentName":"DatePicker",
-        "Description":"Description About DatePicker"
+        "ComponentName": "DatePicker",
+        "Description": "Description About DatePicker"
     }
 ]

@@ -2,37 +2,49 @@
   <div *ngIf="Component==data.ComponentName">
     <div class="row">
       <div class="codepen">
-        <app-codepen></app-codepen>
+         <app-codepen></app-codepen>
       </div>
       <div class="operation">
         <mat-card>
           <b>Description: </b>{{data.Description}}
         </mat-card>
         <mat-card>
-          <h3>Operations</h3>
-          <mat-list role="list">
-            <mat-list-item role="listitem">
-              <mat-checkbox>Item 1</mat-checkbox>
-            </mat-list-item>
-            <mat-list-item role="listitem">
-              <mat-checkbox>Item 2</mat-checkbox>
-            </mat-list-item>
-            <mat-list-item role="listitem">
-              <mat-checkbox>Item 3</mat-checkbox>
-            </mat-list-item>
-            <mat-list-item role="listitem">
-                <mat-checkbox>Item 4</mat-checkbox>
+          <h3>Operations:</h3>
+          <mat-list role="list" *ngFor="let operation of data.Properties">
+              <mat-list-item role="listitem"  *ngIf="operation.value=='String'">
+              <mat-form-field class="form-full-width">
+                  <input matInput placeholder="Label" value={{operation.label}}>
+                </mat-form-field>
               </mat-list-item>
+            <mat-list-item role="listitem" *ngIf="operation.value=='Boolean'">
+              <mat-checkbox>{{operation.label}}</mat-checkbox>
+            </mat-list-item>
+          </mat-list>
+          <mat-list role="list" *ngIf="!data.Properties">
+            <mat-list-item role="listitem" *ngIf="!data.Properties">
+              Operations Not Found Please Add in Json File.
+            </mat-list-item>
           </mat-list>
         </mat-card>
-        <mat-card>
-          <mat-form-field class="form-full-width">
-            <input matInput placeholder="Label" value="Label Value 1">
+        <mat-card *ngIf="data.CodeUrl">
+            <mat-chip-list>
+                <b>Code: </b>
+                <a mat-list-item class="github" href="{{data.CodeUrl}}" target="_blank"><mat-chip color="accent" selected><mat-icon aria-label="Github Icon">code</mat-icon> Github</mat-chip>
+             </a></mat-chip-list>
+          </mat-card>
+        <!-- <mat-card>
+            <h3>Input Operations</h3>
+            <div  *ngFor="let operation of data.Properties">
+          <mat-form-field class="form-full-width"  *ngIf="operation.value=='String'">
+            <input matInput placeholder="Label" value={{operation.label}}>
           </mat-form-field>
-          <mat-form-field class="form-full-width">
-            <input matInput placeholder="Label" value="Label Value 2">
-          </mat-form-field>
-        </mat-card>
+        </div>
+          <mat-list role="list" *ngIf="operation.value!='String'">
+            <mat-list-item role="listitem" *ngIf="!data.Properties">
+              Input Not Found Please Add in Json File.
+            </mat-list-item>
+          </mat-list>
+        </mat-card> -->
       </div>
     </div>
   </div>

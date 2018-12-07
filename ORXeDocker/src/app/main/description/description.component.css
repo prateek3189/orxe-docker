@@ -28,6 +28,12 @@ mat-card{
     display: table;
     clear: both;
 }
+.github{
+    display: inline-block;
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
 @media only screen and (max-width: 600px) {
     .row {
         width: 100%;
@@ -37,10 +43,16 @@ mat-card{
     }
     .codepen{
         width: 100%;
-        height: 300px;
+        height: 100%;
+        border-right:none;
         }
         .operation{
         width: 100%;
-           height: 300px;
+        height: 100%;
         }
+    }
+@media only screen and  (min-width:1281px){
+    .codepen{
+        height:48em;
+    }
     }
