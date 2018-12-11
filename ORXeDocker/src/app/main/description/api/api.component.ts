@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ComponentService } from 'src/app/component.service';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-api',
@@ -6,26 +8,34 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./api.component.css']
 })
 export class ApiComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  //trustedUrl:any;
+  Url: any;
+  /**
+  * Get Component Name
+  */
+  @Input() Component: string = null;
+  constructor(public componentdata: ComponentService, private sanitizer: DomSanitizer) {
+    this.sanitizer = sanitizer;
   }
 
-  displayedColumns = ['Name', 'Description'];
-  dataSource = ELEMENT_DATA;
-}
+  ngOnInit() {
+    this.Url = "http://127.0.0.1:8080/components/" + this.Component + ".html";
+    //$('#iframeID').contents().find('#toppanel').hide();
 
-export interface PeriodicElement {
-  Name: string;
-  Description: number;
-}
+    // this.printContents = document.getElementById('iframe').content;
+    // var innerDoc = printContents.contentDocument || printContents.contentWindow.document; 
+    // let printBody = innerDoc.body.innerText 
+  }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {Name: 'Hydrogen', Description: 1.0079},
-  {Name: 'Helium', Description: 4.0026},
-  { Name: 'Lithium', Description: 6.941},
-  { Name: 'Beryllium', Description: 9.0122},
-  {Name: 'Boron', Description: 10.811},
-  {Name: 'Carbon', Description: 12.0107},
-];
+  /**
+  * @example
+  * This is a good Way to use Url
+  * this.sanitizer.bypassSecurityTrustResourceUrl(this.Url);
+  */
+  DocumentURL() {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(this.Url);
+  }
+  ngOnChanges() {
+    this.Url = "http://127.0.0.1:8080/components/" + this.Component + ".html";
+  }
+}

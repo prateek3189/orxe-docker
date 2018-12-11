@@ -1,23 +1,29 @@
-<div class="api">
-    <mat-card>
-        <b>Properties: </b>
-      </mat-card>
-  <table mat-table [dataSource]="dataSource" class="example-container mat-elevation-z8">
-
-    <!-- Position Column -->
-    <ng-container matColumnDef="Name">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let element"> {{element.Name}} </td>
-    </ng-container>
-
-    <!-- Name Column -->
-    <ng-container matColumnDef="Description">
-      <th mat-header-cell *matHeaderCellDef> Description </th>
-      <td mat-cell *matCellDef="let element"> {{element.Description}} </td>
-    </ng-container>
-
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
+<div class="row">
+  <div class="document">
+    <iframe id="iframe" class="DocumentService" [src]="DocumentURL()"  frameborder="0"></iframe>
+    </div>
+  <div class="steps">
+  <mat-card class="example-card">
+          <b>Steps to use this Component</b>
+      <mat-card-content>
+          <mat-list role="list">
+              <mat-list-item role="listitem"><b>Step 1 :</b>
+                Install Dependencies<br>
+                  Node (>6.0.0)
+                  Npm (>3.8.6)
+              </mat-list-item>
+              <mat-list-item role="listitem"><b>Step 2 :</b>
+                  Installation<br>
+                  # Install compodoc with npm<br>
+                  $ npm install -g @compodoc/compodoc
+              </mat-list-item>
+              <mat-list-item role="listitem"><b>Step 3 :</b>
+                  # Run compodoc in your project (generated with Angular CLI for example) and serve it<br>
+                  $ compodoc -p src/tsconfig.app.json -s
+                  
+              </mat-list-item>
+            </mat-list>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>

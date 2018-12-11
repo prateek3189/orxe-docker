@@ -4,7 +4,7 @@
         "Description": "Description About Input Tag"
     },
     {
-        "ComponentName": "Button",
+        "ComponentName": "ApiComponent",
         "Module":"Mat-checkbox",
         "Description": "Angular Material buttons are native <button> or <a> elements enhanced with Material Design styling and ink ripples.",
         "Properties": [
@@ -18,11 +18,10 @@
                 "value": "String",
                 "description":"Name of Button"
             }
-        ],
-        "CodeUrl": "https://github.com/prateek3189/orxe-docker"
+        ]
     },
     {
-        "ComponentName": "AutoComplete",
+        "ComponentName": "HeaderComponent",
         "Description": "Description About AutoComplete"
     },
     {
