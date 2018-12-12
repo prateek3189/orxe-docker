@@ -1,8 +1,8 @@
 .DocumentService{
   margin-top: -7em !important;
   margin: 0 auto;
-  width:767px;
-   height:53.7em;
+  width:102%;
+   height:88vh;
    display: flex;
 }
 mat-card{
@@ -42,30 +42,38 @@ mat-card{
   color: white;
   text-decoration: none;
 }
-@media only screen and (max-width: 600px),(max-width: 768px),(max-width:1024px){
+@media only screen and (max-width: 600px),(max-width:768px){
   .row {
       width: 100%;
-      height: 100%;
       display: flex;
       flex-direction:column;
       overflow: hidden;
   }
   .document{
-      width: 96%;
-      height: 100%;
+      width: 100%;
+      height: 30em;
       border-right:none;
       }
       .steps{
       width: 100%;
-      height: 100%;
       }
       .DocumentService{
         margin-top: -9em !important;
-        width:411px;
+        width:102%;
       }
   }
-@media only screen and  (min-width:1281px){
+  @media only screen and (max-width:1169px),(max-width:1024px){
+    .DocumentService{
+      margin-top: -9em !important;
+    }
+  } 
+  /* @media only screen and (max-width:768px){
+    .DocumentService{
+      height: 92vh;
+    }
+  } */
+/* @media only screen and  (min-width:1281px){
   .document{
       height:48em;
   }
-  }
+  } */

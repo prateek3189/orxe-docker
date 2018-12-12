@@ -17,5 +17,12 @@
   z-index: 1;
 }
 .mat-raised-button{
-  width: 150px;
+  width: 100%
+}
+.component{
+  padding: .5em;
+}
+a.link-active, a.link-active a:hover, a.link-active a:focus {
+  background-color: #4189C7;
+  color: white;
 }

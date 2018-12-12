@@ -541,16 +541,21 @@ export class ApiComponent implements OnInit {
           &lt;b&gt;Steps to use this Component&lt;/b&gt;
       &lt;mat-card-content&gt;
           &lt;mat-list role&#x3D;&quot;list&quot;&gt;
-              &lt;mat-list-item role&#x3D;&quot;listitem&quot;&gt;Step 1 :
+              &lt;mat-list-item role&#x3D;&quot;listitem&quot;&gt;&lt;b&gt;Step 1 :&lt;/b&gt;
                 Install Dependencies&lt;br&gt;
                   Node (&gt;6.0.0)
                   Npm (&gt;3.8.6)
               &lt;/mat-list-item&gt;
-              &lt;mat-list-item role&#x3D;&quot;listitem&quot;&gt;Step 2 :
+              &lt;mat-list-item role&#x3D;&quot;listitem&quot;&gt;&lt;b&gt;Step 2 :&lt;/b&gt;
                   Installation&lt;br&gt;
-                  npm i -g ap-io
+                  # Install compodoc with npm&lt;br&gt;
+                  $ npm install -g @compodoc/compodoc
               &lt;/mat-list-item&gt;
-              &lt;mat-list-item role&#x3D;&quot;listitem&quot;&gt;Item 3&lt;/mat-list-item&gt;
+              &lt;mat-list-item role&#x3D;&quot;listitem&quot;&gt;&lt;b&gt;Step 3 :&lt;/b&gt;
+                  # Run compodoc in your project (generated with Angular CLI for example) and serve it&lt;br&gt;
+                  $ compodoc -p src/tsconfig.app.json -s
+                  
+              &lt;/mat-list-item&gt;
             &lt;/mat-list&gt;
       &lt;/mat-card-content&gt;
     &lt;/mat-card&gt;
@@ -612,17 +617,20 @@ mat-card{
       height: 100%;
       display: flex;
       flex-direction:column;
-
+      overflow: hidden;
   }
   .document{
       width: 96%;
       height: 100%;
       border-right:none;
-      overflow: auto;
       }
       .steps{
       width: 100%;
       height: 100%;
+      }
+      .DocumentService{
+        margin-top: -9em !important;
+        width:411px;
       }
   }
 @media only screen and  (min-width:1281px){
@@ -657,7 +665,7 @@ mat-card{
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="row">  <div class="document">    <iframe id="iframe" class="DocumentService" [src]="DocumentURL()"  frameborder="0"></iframe>    </div>  <div class="steps">  <mat-card class="example-card">          <b>Steps to use this Component</b>      <mat-card-content>          <mat-list role="list">              <mat-list-item role="listitem">Step 1 :                Install Dependencies<br>                  Node (>6.0.0)                  Npm (>3.8.6)              </mat-list-item>              <mat-list-item role="listitem">Step 2 :                  Installation<br>                  npm i -g ap-io              </mat-list-item>              <mat-list-item role="listitem">Item 3</mat-list-item>            </mat-list>      </mat-card-content>    </mat-card>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="row">  <div class="document">    <iframe id="iframe" class="DocumentService" [src]="DocumentURL()"  frameborder="0"></iframe>    </div>  <div class="steps">  <mat-card class="example-card">          <b>Steps to use this Component</b>      <mat-card-content>          <mat-list role="list">              <mat-list-item role="listitem"><b>Step 1 :</b>                Install Dependencies<br>                  Node (>6.0.0)                  Npm (>3.8.6)              </mat-list-item>              <mat-list-item role="listitem"><b>Step 2 :</b>                  Installation<br>                  # Install compodoc with npm<br>                  $ npm install -g @compodoc/compodoc              </mat-list-item>              <mat-list-item role="listitem"><b>Step 3 :</b>                  # Run compodoc in your project (generated with Angular CLI for example) and serve it<br>                  $ compodoc -p src/tsconfig.app.json -s                                </mat-list-item>            </mat-list>      </mat-card-content>    </mat-card>  </div></div></div>'
     var COMPONENTS = [{'name': 'ApiComponent', 'selector': 'app-api'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CodepenComponent', 'selector': 'app-codepen'},{'name': 'ComponentsComponent', 'selector': 'app-components'},{'name': 'DescriptionComponent', 'selector': 'app-description'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'MainComponent', 'selector': 'app-main'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ApiComponent'};
