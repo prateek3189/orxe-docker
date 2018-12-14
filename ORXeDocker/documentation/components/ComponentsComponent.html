@@ -513,8 +513,9 @@ export class ComponentsComponent {
       &lt;mat-toolbar&gt;
         &lt;mat-icon&gt;label_important&lt;/mat-icon&gt; Components
       &lt;/mat-toolbar&gt;
-    &lt;mat-nav-list *ngFor&#x3D;&quot;let data of data&quot;&gt;
-        &lt;a mat-list-item&gt;&lt;button mat-raised-button color&#x3D;&quot;warn&quot; (click)&#x3D;&quot;MoreInfo(data.ComponentName)&quot; routerLink&#x3D;&quot;/{{data.ComponentName}}&quot;&gt;{{data.ComponentName}}&lt;/button&gt;&lt;/a&gt;
+    &lt;mat-nav-list *ngFor&#x3D;&quot;let data of data&quot; class&#x3D;&quot;component&quot;&gt;
+        &lt;a mat-raised-button color&#x3D;&quot;accent&quot; (click)&#x3D;&quot;MoreInfo(data.ComponentName)&quot; routerLink&#x3D;&quot;/{{data.ComponentName}}&quot; [routerLinkActive]&#x3D;&#x27;[&quot;link-active&quot;]&#x27;
+        [routerLinkActiveOptions]&#x3D;&#x27;{ exact: true }&#x27; queryParamsHandling&#x3D;&quot;preserve&quot; class&#x3D;&quot;componenet-button&quot;&gt;{{data.ComponentName}}&lt;/a&gt;
     &lt;/mat-nav-list&gt;
   &lt;/mat-sidenav&gt;
   &lt;mat-sidenav-content&gt;
@@ -558,7 +559,14 @@ export class ComponentsComponent {
   z-index: 1;
 }
 .mat-raised-button{
-  width: 150px;
+  width: 100%
+}
+.component{
+  padding: .5em;
+}
+a.link-active, a.link-active a:hover, a.link-active a:focus {
+  background-color: #4189C7;
+  color: white;
 }
 </code></pre>
     </div>
@@ -588,7 +596,7 @@ export class ComponentsComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-sidenav-container class="sidenav-container">  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"      [attr.role]="(isHandset$ | async) ? \'dialog\' : \'navigation\'"      [mode]="(isHandset$ | async) ? \'over\' : \'side\'"      [opened]="!(isHandset$ | async)">      <mat-toolbar>        <mat-icon>label_important</mat-icon> Components      </mat-toolbar>    <mat-nav-list *ngFor="let data of data">        <a mat-list-item><button mat-raised-button color="warn" (click)="MoreInfo(data.ComponentName)" routerLink="/{{data.ComponentName}}">{{data.ComponentName}}</button></a>    </mat-nav-list>  </mat-sidenav>  <mat-sidenav-content>    <mat-toolbar>      <button        type="button"        aria-label="Toggle sidenav"        mat-icon-button        (click)="drawer.toggle()"        *ngIf="isHandset$ | async">        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>      </button>      <i>Select Component To Get Detail</i>    </mat-toolbar>    <ng-content></ng-content>  </mat-sidenav-content></mat-sidenav-container></div>'
+        var COMPONENT_TEMPLATE = '<div><mat-sidenav-container class="sidenav-container">  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"      [attr.role]="(isHandset$ | async) ? \'dialog\' : \'navigation\'"      [mode]="(isHandset$ | async) ? \'over\' : \'side\'"      [opened]="!(isHandset$ | async)">      <mat-toolbar>        <mat-icon>label_important</mat-icon> Components      </mat-toolbar>    <mat-nav-list *ngFor="let data of data" class="component">        <a mat-raised-button color="accent" (click)="MoreInfo(data.ComponentName)" routerLink="/{{data.ComponentName}}" [routerLinkActive]=\'["link-active"]\'        [routerLinkActiveOptions]=\'{ exact: true }\' queryParamsHandling="preserve" class="componenet-button">{{data.ComponentName}}</a>    </mat-nav-list>  </mat-sidenav>  <mat-sidenav-content>    <mat-toolbar>      <button        type="button"        aria-label="Toggle sidenav"        mat-icon-button        (click)="drawer.toggle()"        *ngIf="isHandset$ | async">        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>      </button>      <i>Select Component To Get Detail</i>    </mat-toolbar>    <ng-content></ng-content>  </mat-sidenav-content></mat-sidenav-container></div>'
     var COMPONENTS = [{'name': 'ApiComponent', 'selector': 'app-api'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CodepenComponent', 'selector': 'app-codepen'},{'name': 'ComponentsComponent', 'selector': 'app-components'},{'name': 'DescriptionComponent', 'selector': 'app-description'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'MainComponent', 'selector': 'app-main'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ComponentsComponent'};

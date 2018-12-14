@@ -1,4 +1,4 @@
-#ORXe3.0 Docker
+# ORXe3.0 Docker
 
 ## Dependencies
 
@@ -10,6 +10,15 @@
 ```
 $ npm install
 ```
-##Documentation Server
+## Run Angular Server
+
+```
+$ ng serve
+```
+
+## Run Documentation Server
 ### Run compodoc in your project (generated with Angular CLI) and serve it
+
+```
 $ compodoc -p src/tsconfig.app.json -s
+```

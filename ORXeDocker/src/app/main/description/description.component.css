@@ -8,15 +8,14 @@ mat-card{
     float: left;
     width: 70%;
     padding: 10px;
-    height:33em;
-    overflow-y:auto;
+    height:79vh;
     border-right: 4px double blue;
+    overflow-y:auto;
 }
 .operation{
     float: left;
     width: 30%;
     padding: 10px;
-    height:33em;
     overflow-y:auto;
 }
 .form-full-width {
@@ -51,8 +50,8 @@ mat-card{
         height: 100%;
         }
     }
-@media only screen and  (min-width:1281px){
+/* @media only screen and  (min-width:1281px){
     .codepen{
         height:48em;
     }
-    }
+    } */

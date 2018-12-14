@@ -534,29 +534,32 @@ export class ApiComponent implements OnInit {
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;row&quot;&gt;
   &lt;div class&#x3D;&quot;document&quot;&gt;
-    &lt;iframe id&#x3D;&quot;iframe&quot; class&#x3D;&quot;DocumentService&quot; [src]&#x3D;&quot;DocumentURL()&quot;  frameborder&#x3D;&quot;0&quot;&gt;&lt;/iframe&gt;
-    &lt;/div&gt;
+    &lt;iframe id&#x3D;&quot;iframe&quot; class&#x3D;&quot;DocumentService&quot; [src]&#x3D;&quot;DocumentURL()&quot; frameborder&#x3D;&quot;0&quot;&gt;&lt;/iframe&gt;
+  &lt;/div&gt;
   &lt;div class&#x3D;&quot;steps&quot;&gt;
-  &lt;mat-card class&#x3D;&quot;example-card&quot;&gt;
-          &lt;b&gt;Steps to use this Component&lt;/b&gt;
+    &lt;mat-card class&#x3D;&quot;example-card&quot;&gt;
       &lt;mat-card-content&gt;
-          &lt;mat-list role&#x3D;&quot;list&quot;&gt;
-              &lt;mat-list-item role&#x3D;&quot;listitem&quot;&gt;&lt;b&gt;Step 1 :&lt;/b&gt;
-                Install Dependencies&lt;br&gt;
-                  Node (&gt;6.0.0)
-                  Npm (&gt;3.8.6)
-              &lt;/mat-list-item&gt;
-              &lt;mat-list-item role&#x3D;&quot;listitem&quot;&gt;&lt;b&gt;Step 2 :&lt;/b&gt;
-                  Installation&lt;br&gt;
-                  # Install compodoc with npm&lt;br&gt;
-                  $ npm install -g @compodoc/compodoc
-              &lt;/mat-list-item&gt;
-              &lt;mat-list-item role&#x3D;&quot;listitem&quot;&gt;&lt;b&gt;Step 3 :&lt;/b&gt;
-                  # Run compodoc in your project (generated with Angular CLI for example) and serve it&lt;br&gt;
-                  $ compodoc -p src/tsconfig.app.json -s
-                  
-              &lt;/mat-list-item&gt;
-            &lt;/mat-list&gt;
+        &lt;mat-list role&#x3D;&quot;list&quot;&gt;
+          &lt;h3 mat-subheader&gt;To use this element on a web page&lt;/h3&gt;
+          &lt;mat-list-item&gt;
+            &lt;mat-icon mat-list-icon&gt;label_important&lt;/mat-icon&gt;
+            &lt;h4 mat-line&gt;Step 1 : Get the dependencies&lt;/h4&gt;
+            &lt;p mat-line&gt;Node (&gt;6.0.0)&lt;/p&gt;
+            &lt;p mat-line&gt;Npm (&gt;3.8.6)&lt;/p&gt;
+          &lt;/mat-list-item&gt;
+          &lt;mat-list-item&gt;
+            &lt;mat-icon mat-list-icon&gt;label_important&lt;/mat-icon&gt;
+            &lt;h4 mat-line&gt;Step 2 : Install the libraries&lt;/h4&gt;
+            &lt;p mat-line&gt;# Install compodoc with npm&lt;/p&gt;
+            &lt;p mat-line&gt; $ npm install -g @compodoc/compodoc&lt;/p&gt;
+          &lt;/mat-list-item&gt;
+          &lt;mat-list-item&gt;
+            &lt;mat-icon mat-list-icon&gt;label_important&lt;/mat-icon&gt;
+            &lt;h4 mat-line&gt;Step 3 : Serve It&lt;/h4&gt;
+            &lt;p mat-line&gt;# Run compodoc in your project (generated with Angular CLI for example) and serve it&lt;/p&gt;
+            &lt;p mat-line&gt;$ compodoc -p src/tsconfig.app.json -s&lt;/p&gt;
+          &lt;/mat-list-item&gt;
+        &lt;/mat-list&gt;
       &lt;/mat-card-content&gt;
     &lt;/mat-card&gt;
   &lt;/div&gt;
@@ -570,8 +573,8 @@ export class ApiComponent implements OnInit {
                 <pre class="line-numbers"><code class="language-scss">.DocumentService{
   margin-top: -7em !important;
   margin: 0 auto;
-  width:767px;
-   height:53.7em;
+  width:102%;
+   height:88vh;
    display: flex;
 }
 mat-card{
@@ -611,33 +614,41 @@ mat-card{
   color: white;
   text-decoration: none;
 }
-@media only screen and (max-width: 600px),(max-width: 768px),(max-width:1024px){
+@media only screen and (max-width: 600px),(max-width:768px){
   .row {
       width: 100%;
-      height: 100%;
       display: flex;
       flex-direction:column;
       overflow: hidden;
   }
   .document{
-      width: 96%;
-      height: 100%;
+      width: 100%;
+      height: 30em;
       border-right:none;
       }
       .steps{
       width: 100%;
-      height: 100%;
       }
       .DocumentService{
         margin-top: -9em !important;
-        width:411px;
+        width:102%;
       }
   }
-@media only screen and  (min-width:1281px){
+  @media only screen and (max-width:1169px),(max-width:1024px){
+    .DocumentService{
+      margin-top: -9em !important;
+    }
+  } 
+  /* @media only screen and (max-width:768px){
+    .DocumentService{
+      height: 92vh;
+    }
+  } */
+/* @media only screen and  (min-width:1281px){
   .document{
       height:48em;
   }
-  }</code></pre>
+  } */</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -665,7 +676,7 @@ mat-card{
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="row">  <div class="document">    <iframe id="iframe" class="DocumentService" [src]="DocumentURL()"  frameborder="0"></iframe>    </div>  <div class="steps">  <mat-card class="example-card">          <b>Steps to use this Component</b>      <mat-card-content>          <mat-list role="list">              <mat-list-item role="listitem"><b>Step 1 :</b>                Install Dependencies<br>                  Node (>6.0.0)                  Npm (>3.8.6)              </mat-list-item>              <mat-list-item role="listitem"><b>Step 2 :</b>                  Installation<br>                  # Install compodoc with npm<br>                  $ npm install -g @compodoc/compodoc              </mat-list-item>              <mat-list-item role="listitem"><b>Step 3 :</b>                  # Run compodoc in your project (generated with Angular CLI for example) and serve it<br>                  $ compodoc -p src/tsconfig.app.json -s                                </mat-list-item>            </mat-list>      </mat-card-content>    </mat-card>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="row">  <div class="document">    <iframe id="iframe" class="DocumentService" [src]="DocumentURL()" frameborder="0"></iframe>  </div>  <div class="steps">    <mat-card class="example-card">      <mat-card-content>        <mat-list role="list">          <h3 mat-subheader>To use this element on a web page</h3>          <mat-list-item>            <mat-icon mat-list-icon>label_important</mat-icon>            <h4 mat-line>Step 1 : Get the dependencies</h4>            <p mat-line>Node (>6.0.0)</p>            <p mat-line>Npm (>3.8.6)</p>          </mat-list-item>          <mat-list-item>            <mat-icon mat-list-icon>label_important</mat-icon>            <h4 mat-line>Step 2 : Install the libraries</h4>            <p mat-line># Install compodoc with npm</p>            <p mat-line> $ npm install -g @compodoc/compodoc</p>          </mat-list-item>          <mat-list-item>            <mat-icon mat-list-icon>label_important</mat-icon>            <h4 mat-line>Step 3 : Serve It</h4>            <p mat-line># Run compodoc in your project (generated with Angular CLI for example) and serve it</p>            <p mat-line>$ compodoc -p src/tsconfig.app.json -s</p>          </mat-list-item>        </mat-list>      </mat-card-content>    </mat-card>  </div></div></div>'
     var COMPONENTS = [{'name': 'ApiComponent', 'selector': 'app-api'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CodepenComponent', 'selector': 'app-codepen'},{'name': 'ComponentsComponent', 'selector': 'app-components'},{'name': 'DescriptionComponent', 'selector': 'app-description'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'MainComponent', 'selector': 'app-main'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ApiComponent'};
