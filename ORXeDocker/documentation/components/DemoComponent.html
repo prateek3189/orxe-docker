@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>HeaderComponent</li>
+  <li>DemoComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,7 +61,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/header/header.component.ts</code>
+    <code>src/app/main/description/orxe/demo/demo.component.ts</code>
 </p>
 
 
@@ -91,19 +91,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-header</code></td>
+                <td class="col-md-9"><code>app-demo</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./header.component.css</code></td>
+                <td class="col-md-9"><code>./demo.component.css</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./header.component.html</code></td>
+                <td class="col-md-9"><code>./demo.component.html</code></td>
             </tr>
 
 
@@ -137,6 +137,26 @@
                     </td>
                 </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#data">data</a>
+                            </li>
+                            <li>
+                                <a href="#disabled">disabled</a>
+                            </li>
+                            <li>
+                                <a href="#label">label</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
 
 
@@ -156,7 +176,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/header/header.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/main/description/orxe/demo/demo.component.ts:12</a></div>
                             </td>
                         </tr>
 
@@ -164,7 +184,78 @@
         </table>
 </section>
 
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="data"></a>
+                        <code>data</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/main/description/orxe/demo/demo.component.ts:10</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="disabled"></a>
+                        <code>disabled</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>false</code>
+                        </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/main/description/orxe/demo/demo.component.ts:12</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="label"></a>
+                        <code>label</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>&quot;&quot;</code>
+                        </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/main/description/orxe/demo/demo.component.ts:11</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
 
 
 
@@ -195,7 +286,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/header/header.component.ts:12</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/main/description/orxe/demo/demo.component.ts:17</a></div>
                             </td>
                         </tr>
 
@@ -218,49 +309,42 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input } from &#x27;@angular/core&#x27;;
 
 @Component({
-  selector: &#x27;app-header&#x27;,
-  templateUrl: &#x27;./header.component.html&#x27;,
-  styleUrls: [&#x27;./header.component.css&#x27;]
+  selector: &#x27;app-demo&#x27;,
+  templateUrl: &#x27;./demo.component.html&#x27;,
+  styleUrls: [&#x27;./demo.component.css&#x27;]
 })
-export class HeaderComponent implements OnInit {
+export class DemoComponent implements OnInit {
 
-  constructor() { }
+  @Input() data : any ;
+  @Input() label: string &#x3D; &quot;&quot;;
+  @Input() disabled: boolean &#x3D; false;
 
+  constructor() {
+    this.data &#x3D; &quot;Angular is good&quot;;
+   }
   ngOnInit() {
+      
   }
-
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;mat-toolbar color&#x3D;&quot;primary&quot;&gt;
-  &lt;span&gt;&lt;mat-icon&gt;file_copy&lt;/mat-icon&gt;ORXe 3.0 Docker&lt;/span&gt;
-  &lt;span class&#x3D;&quot;spacer&quot;&gt;&lt;/span&gt;
-
-  &lt;mat-chip-list&gt;
-    &lt;a mat-list-item href&#x3D;&quot;https://github.com/prateek3189/orxe-docker&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;mat-chip color&#x3D;&quot;accent&quot; selected&gt;&lt;mat-icon aria-label&#x3D;&quot;Github Icon&quot;&gt;code&lt;/mat-icon&gt; Github&lt;/mat-chip&gt;
- &lt;/a&gt;&lt;/mat-chip-list&gt;
-&lt;/mat-toolbar&gt;</code></pre>
+        <pre class="line-numbers"><code class="language-html">&lt;p&gt;
+  demo works! {{data}}
+&lt;/p&gt;
+&lt;input type&#x3D;&quot;text&quot; [placeholder]&#x3D; &#x27;label&#x27; [disabled]&#x3D;&#x27;disabled&#x27; /&gt;
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./header.component.css</code>
+                    <code>./demo.component.css</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">.spacer{
-    flex: 1 1 auto;
-  }
-  
-.mat-toolbar a{
-    display: inline-block;
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
-}</code></pre>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -288,10 +372,10 @@ export class HeaderComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-toolbar color="primary">  <span><mat-icon>file_copy</mat-icon>ORXe 3.0 Docker</span>  <span class="spacer"></span>  <mat-chip-list>    <a mat-list-item href="https://github.com/prateek3189/orxe-docker" target="_blank"><mat-chip color="accent" selected><mat-icon aria-label="Github Icon">code</mat-icon> Github</mat-chip> </a></mat-chip-list></mat-toolbar></div>'
+        var COMPONENT_TEMPLATE = '<div><p>  demo works! {{data}}</p><input type="text" [placeholder]= \'label\' [disabled]=\'disabled\' /></div>'
     var COMPONENTS = [{'name': 'ApiComponent', 'selector': 'app-api'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CodepenComponent', 'selector': 'app-codepen'},{'name': 'ComponentsComponent', 'selector': 'app-components'},{'name': 'DemoComponent', 'selector': 'app-demo'},{'name': 'DescriptionComponent', 'selector': 'app-description'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'OrxeComponent', 'selector': 'app-orxe'},{'name': 'OverviewComponent', 'selector': 'app-overview'}];
     var DIRECTIVES = [{'name': 'ComponentLoaderDirective', 'selector': '[appComponentLoader]'}];
-    var ACTUAL_COMPONENT = {'name': 'HeaderComponent'};
+    var ACTUAL_COMPONENT = {'name': 'DemoComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -325,7 +409,7 @@ export class HeaderComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'HeaderComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'DemoComponent.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

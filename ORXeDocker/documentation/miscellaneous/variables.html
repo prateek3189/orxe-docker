@@ -57,6 +57,9 @@
                 <td class="col-md-4">
                     <ul class="index-list">
                         <li>
+                            <a href="#appliCationComponentList" title="src/app/componentList.ts"><b>appliCationComponentList</b>&nbsp;&nbsp;&nbsp;(src/.../componentList.ts)</a>
+                        </li>
+                        <li>
                             <a href="#environment" title="src/environments/environment.prod.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.prod.ts)</a>
                         </li>
                         <li>
@@ -69,6 +72,112 @@
     </table>
 </section>
 
+    <h3>src/app/componentList.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="appliCationComponentList"></a>
+                        <span class="name">
+                            <b>
+                            appliCationComponentList
+                            </b>
+                            <a href="#appliCationComponentList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>appliCationComponentList:     <code>[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+ {
+     name : &quot;In Application Componet&quot;,
+     className : &quot;DemoComponent&quot;,
+     moduleDetails: {
+      module: null,
+    },
+     template: &#x60;&lt;app-demo [label] &#x3D;&#x27;label&#x27; [disabled] &#x3D; &#x27;disabled&#x27; [data]&#x3D;&#x27;data&#x27;&gt;&lt;/app-demo&gt;&#x60;,
+     defaultProperties: {
+      label: &#x27;&#x27;,
+      data:&#x27;Data Value&#x27;
+     },
+     properties:[
+      { name : &#x27;label&#x27;, value: &quot;&quot;, type: &#x27;inputText&#x27;},
+      { name : &#x27;data&#x27;, value: &quot;&quot;, type: &#x27;inputText&#x27;}
+    ]
+  },
+  {
+    name : &quot;Prime NG&quot;,
+    className : null,
+    moduleDetails: {
+      module: [&quot;ButtonModule&quot;],
+      modulePath: &#x60;primeng/button&#x60;
+    },
+    template : &#x60;&lt;button pButton type&#x3D;&quot;button&quot; icon&#x3D;&quot;pi pi-check&quot; [iconPos]&#x3D;&#x27;iconPos&#x27; [label]&#x3D;&#x27;label&#x27;&gt;&lt;/button&gt;&#x60;,
+    defaultProperties: {
+      iconPos: &#x27;right&#x27;,
+      label: &#x27;Prime NG Button Demo&#x27;
+    },
+    properties:[
+      { name : &#x27;iconPos&#x27;, value: [&#x27;left&#x27;,&#x27;right&#x27;], type: &#x27;list&#x27;},
+      { name : &#x27;label&#x27;, value: &quot;&quot;, type: &#x27;inputText&#x27;}
+    ]
+  },
+  {
+    name : &quot;Defualt AM Button &quot;,
+    className : null,
+    moduleDetails: {
+      module: null,
+    },
+    template : &#x60;&lt;button mat-raised-button [color]&#x3D;&#x27;color&#x27; [disabled]&#x3D;&quot;disabled&quot;&gt;AM Primary&lt;/button&gt;&#x60;,
+    defaultProperties: {
+      color: &#x27;primary&#x27;,
+      disabled: false,
+    },
+    properties:[
+      { name : &#x27;color&#x27;, value: &quot;&quot;, type: &#x27;inputText&#x27;},
+      { name : &#x27;disabled&#x27;, value:&quot;true&quot;, type: &quot;checkbox&quot;},
+    ]
+  },
+  {
+    name : &quot;Defualt AM Menu List&quot;,
+    className : null,
+    moduleDetails: {
+      module: [&#x27;MatButtonModule&#x27;, &#x27;MatIconModule&#x27;, &#x27;MatMenuModule&#x27;],
+      template : &#x60;&lt;button mat-button [matMenuTriggerFor]&#x3D;&quot;menu&quot;&gt;Menu&lt;/button&gt; &lt;mat-menu #menu&#x3D;&quot;matMenu&quot;&gt;
+        &lt;button mat-menu-item *ngFor&#x3D;&quot;let shoe of typesOfShoes&quot;&gt;{{shoe}}&lt;/button&gt;
+      &lt;/mat-menu&gt;&#x60;,
+    },
+    template : &#x60;&lt;button mat-button [matMenuTriggerFor]&#x3D;&quot;menu&quot;&gt;Menu&lt;/button&gt; &lt;mat-menu #menu&#x3D;&quot;matMenu&quot;&gt;
+      &lt;button mat-menu-item *ngFor&#x3D;&quot;let shoe of typesOfShoes&quot;&gt;{{shoe}}&lt;/button&gt;
+    &lt;/mat-menu&gt;&#x60;,
+    defaultProperties: {
+      typesOfShoes: [&#x27;Boots&#x27;, &#x27;Clogs&#x27;]
+    },
+    properties:[
+      { name : &#x27;typesOfShoes&#x27;, value: &quot;&quot;, type: &#x27;Text&#x27;},
+    ]
+  }
+]</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
     <h3>src/environments/environment.prod.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">

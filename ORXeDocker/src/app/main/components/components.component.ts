@@ -3,6 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { ComponentService } from 'src/app/component.service';
+import { ComponentdataService } from 'src/app/componentdata.service';
 
 @Component({
   selector: 'app-components',
@@ -17,18 +18,25 @@ export class ComponentsComponent {
       map(result => result.matches)
     );
 
-  constructor(private breakpointObserver: BreakpointObserver , private _componentdata: ComponentService) {}
+  constructor(private breakpointObserver: BreakpointObserver , private _componentdata: ComponentdataService) {}
 
+  // ngOnInit(){
+  //   this._componentdata.getComponentData()
+  //   .subscribe(data=>{
+  //     this.data = data;
+  //     //console.log(this.data);
+  //     this._componentdata.response = this.data;
+  //   });
+  // }
+  // MoreInfo(component: string) {
+  //   this.component.emit(component);
+  // }
   ngOnInit(){
-    this._componentdata.getComponentData()
-    .subscribe(data=>{
-      this.data = data;
-      //console.log(this.data);
-      this._componentdata.response = this.data;
-    });
+    this.data= this._componentdata.getComponentData();
   }
-  MoreInfo(component: string) {
+  MoreInfo(component) {
     this.component.emit(component);
+    this._componentdata.setComponent(component);
   }
 
 }

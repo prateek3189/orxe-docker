@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="codepen" *ngIf="Component">
+      {{Component.name}}
+      <ng-template appComponentLoader></ng-template> 
+  </div>
+  <div class="operation">
+      <div class="propertyModifySections" *ngIf="propertyArray">
+        <div *ngFor="let prop of propertyArray">
+          <div>
+            <input type={{prop.type}} placeholder="{{prop.name}}" value="{{prop.value}}" (change)="valuechange(prop.name, $event.target.value,prop.type)">			
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

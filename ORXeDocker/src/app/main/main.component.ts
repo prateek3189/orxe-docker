@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ComponentService } from 'src/app/component.service';
+import { ComponentdataService } from '../componentdata.service';
 
 @Component({
   selector: 'app-main',
@@ -8,12 +8,16 @@ import { ComponentService } from 'src/app/component.service';
 })
 export class MainComponent implements OnInit {
 Component:any=null;
-  constructor(public componentdata: ComponentService) { }
 
-  ngOnInit() {
-  }
+constructor(public componentdata: ComponentdataService) { }
 
-  MoreInfo(Component: string) {
+ngOnInit() {
+  //this.Component = this.componentdata.getComponent();
+}
+ngOnChanges(){
+ // this.Component = this.componentdata.getComponent();
+}
+  MoreInfo(Component) {
     this.Component = Component;
   }
 

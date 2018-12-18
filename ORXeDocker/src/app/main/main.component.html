@@ -1,11 +1,11 @@
 <app-components (component)="MoreInfo($event)">
-  <mat-tab-group *ngIf="Component!=null">
+  <mat-tab-group *ngIf="Component">
     <mat-tab>
       <ng-template mat-tab-label>
         <mat-icon class="example-tab-icon">remove_red_eye</mat-icon>
         Overview
       </ng-template>
-      <app-description [Component]="Component"></app-description>
+      <app-overview [Component]="Component"></app-overview>
     </mat-tab>
 
     <mat-tab>
@@ -13,10 +13,10 @@
         <mat-icon class="example-tab-icon">description</mat-icon>
         <!--API-->Documentation
       </ng-template>
-      <app-api [Component]="Component"></app-api>
+      <app-api></app-api>
     </mat-tab>
   </mat-tab-group>
-  <div *ngIf="Component==null">
+  <div *ngIf="!Component">
     <mat-card>
       Web Components are a set of standards that allow for the creation of custom HTML elements. With this, people can
       easily create elements which

@@ -15,7 +15,11 @@ import {HttpClientModule} from '@angular/common/http';
 import { ComponentService } from './component.service';
 import { FormsModule } from '@angular/forms';
 import { CodepenComponent } from './main/description/codepen/codepen.component';
-import { ApiComponent } from './main/description/api/api.component'
+import { ApiComponent } from './main/description/api/api.component';
+import { ComponentLoaderDirective } from './component-loader.directive';
+import { OverviewComponent } from './main/description/overview/overview.component';
+import { OrxeComponent } from './main/description/orxe/orxe.component';
+import {ButtonModule} from 'primeng/button';
 
 
 @NgModule({
@@ -27,7 +31,10 @@ import { ApiComponent } from './main/description/api/api.component'
     ComponentsComponent,
     FooterComponent,
     CodepenComponent,
-    ApiComponent
+    ApiComponent,
+    ComponentLoaderDirective,
+    OverviewComponent,
+    OrxeComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,9 +43,10 @@ import { ApiComponent } from './main/description/api/api.component'
     MaterialModule,
     LayoutModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ButtonModule
   ],
   providers: [ComponentService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

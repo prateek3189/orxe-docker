@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ComponentService } from 'src/app/component.service';
 import { DomSanitizer } from '@angular/platform-browser';
+import { ComponentdataService } from 'src/app/componentdata.service';
 
 @Component({
   selector: 'app-api',
@@ -13,13 +13,15 @@ export class ApiComponent implements OnInit {
   /**
   * Get Component Name
   */
-  @Input() Component: string = null;
-  constructor(public componentdata: ComponentService, private sanitizer: DomSanitizer) {
+  Component;
+  constructor(private sanitizer: DomSanitizer,public componentdata: ComponentdataService) {
     this.sanitizer = sanitizer;
   }
 
   ngOnInit() {
-    this.Url = "http://127.0.0.1:8080/components/" + this.Component + ".html";
+    //this.Component = this.componentdata.selectedComponent.name;
+    //console.log(this.componentdata.selectedComponent.name);
+    this.Url = "http://127.0.0.1:8080/components/" + "ApiComponent" + ".html";
     //$('#iframeID').contents().find('#toppanel').hide();
 
     // this.printContents = document.getElementById('iframe').content;
@@ -36,6 +38,7 @@ export class ApiComponent implements OnInit {
     return this.sanitizer.bypassSecurityTrustResourceUrl(this.Url);
   }
   ngOnChanges() {
+    console.log(this.componentdata.selectedComponent);
     this.Url = "http://127.0.0.1:8080/components/" + this.Component + ".html";
   }
 }
