@@ -18,21 +18,26 @@ mat-card{
     padding: 10px;
     overflow-y:auto;
 }
-.form-full-width {
-    width: 100%;
-}
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
 .github{
     display: inline-block;
     margin: 0 10px;
     color: white;
     text-decoration: none;
 }
+.example-card {
+    margin-top: 5em !important;
+     margin: 0 auto;
+     max-width: 500px;
+   } 
+   mat-card-content{
+      text-align: center;
+   }
+   mat-chip {
+     max-width: 200px;
+   }
+   input[type=text] {
+    margin: 8px 0;
+  }
 @media only screen and (max-width: 600px),(max-width: 768px),(max-width:1024px){
     .row {
         width: 100%;

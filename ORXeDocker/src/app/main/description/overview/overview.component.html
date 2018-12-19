@@ -1,15 +1,37 @@
 <div class="row">
   <div class="codepen" *ngIf="Component">
-      {{Component.name}}
-      <ng-template appComponentLoader></ng-template> 
+      <mat-card>
+          <mat-chip-list>
+              <mat-chip> {{Component.name}}</mat-chip>
+            </mat-chip-list>
+        </mat-card>
+      <mat-card class="example-card">
+          <mat-card-content>
+              <ng-template appComponentLoader></ng-template> 
+          </mat-card-content>
+        </mat-card>
+        
   </div>
   <div class="operation">
-      <div class="propertyModifySections" *ngIf="propertyArray">
-        <div *ngFor="let prop of propertyArray">
-          <div>
-            <input type={{prop.type}} placeholder="{{prop.name}}" value="{{prop.value}}" (change)="valuechange(prop.name, $event.target.value,prop.type)">			
-          </div>
-        </div>
-      </div>
+      <mat-card>
+          <h3>Properties:</h3>
+          <mat-list role="list" *ngIf="propertyArray">
+              <mat-list-item role="listitem">
+                  <div class="propertyModifySections" *ngIf="propertyArray">
+                      <div *ngFor="let prop of propertyArray">
+                        <div>
+                            {{prop.name}}: 
+                          <input type={{prop.type}} placeholder="{{prop.name}}" value="{{prop.value}}" (change)="valuechange(prop.name, $event.target.value,prop.type)">			
+                        </div>
+                      </div>
+                    </div>
+              </mat-list-item>
+          </mat-list>
+          <mat-list role="list" *ngIf="!propertyArray">
+            <mat-list-item role="listitem">
+              Operations Not Found Please Add in Json File.
+            </mat-list-item>
+          </mat-list>
+        </mat-card>
   </div>
 </div>

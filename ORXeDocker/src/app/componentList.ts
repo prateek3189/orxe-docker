@@ -11,8 +11,8 @@ export const appliCationComponentList  = [
       data:'Data Value'
      },
      properties:[
-      { name : 'label', value: "", type: 'inputText'},
-      { name : 'data', value: "", type: 'inputText'}
+      { name : 'label', value: "", type: 'text'},
+      { name : 'data', value: "", type: 'text'}
     ]
   },
   {
@@ -22,14 +22,12 @@ export const appliCationComponentList  = [
       module: ["ButtonModule"],
       modulePath: `primeng/button`
     },
-    template : `<button pButton type="button" icon="pi pi-check" [iconPos]='iconPos' [label]='label'></button>`,
+    template : `<button pButton type="button" icon="pi pi-check" [label]='label'></button>`,
     defaultProperties: {
-      iconPos: 'right',
       label: 'Prime NG Button Demo'
     },
     properties:[
-      { name : 'iconPos', value: ['left','right'], type: 'list'},
-      { name : 'label', value: "", type: 'inputText'}
+      { name : 'label', value: "", type: 'text'}
     ]
   },
   {
@@ -44,7 +42,7 @@ export const appliCationComponentList  = [
       disabled: false,
     },
     properties:[
-      { name : 'color', value: "", type: 'inputText'},
+      { name : 'color', value: "", type: 'text'},
       { name : 'disabled', value:"true", type: "checkbox"},
     ]
   },
@@ -64,7 +62,7 @@ export const appliCationComponentList  = [
       typesOfShoes: ['Boots', 'Clogs']
     },
     properties:[
-      { name : 'typesOfShoes', value: "", type: 'Text'},
+      { name : 'typesOfShoes', value: "", type: 'text'},
     ]
   }
 ]
