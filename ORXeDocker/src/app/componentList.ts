@@ -6,13 +6,10 @@ export const appliCationComponentList  = [
       module: null,
     },
      template: `<app-demo [label] ='label' [disabled] = 'disabled' [data]='data'></app-demo>`,
-     defaultProperties: {
-      label: '',
-      data:'Data Value'
-     },
+
      properties:[
-      { name : 'label', value: "", type: 'text'},
-      { name : 'data', value: "", type: 'text'}
+      { name : 'label', value: "", type: String , defaultValue:''},
+      { name : 'data', value: "", type: String , defaultValue: 'Data Value'}
     ]
   },
   {
@@ -23,27 +20,23 @@ export const appliCationComponentList  = [
       modulePath: `primeng/button`
     },
     template : `<button pButton type="button" icon="pi pi-check" [label]='label'></button>`,
-    defaultProperties: {
-      label: 'Prime NG Button Demo'
-    },
+
     properties:[
-      { name : 'label', value: "", type: 'text'}
+      { name : 'label', value: "", type: String , defaultValue:'Prime NG Button Demo'}
     ]
   },
   {
     name : "Defualt AM Button ",
     className : null,
     moduleDetails: {
-      module: null,
+      module: ['MatButtonModule'],
+      modulePath: `angular/material`
     },
     template : `<button mat-raised-button [color]='color' [disabled]="disabled">AM Primary</button>`,
-    defaultProperties: {
-      color: 'primary',
-      disabled: false,
-    },
+
     properties:[
-      { name : 'color', value: "", type: 'text'},
-      { name : 'disabled', value:"true", type: "checkbox"},
+      { name : 'color', value: "", type: Array , defaultValue: 'primary', List: ['accent', 'primary', 'warn']},
+      { name : 'disabled', value:"true", type: Boolean , defaultValue: false},
     ]
   },
   {
@@ -51,18 +44,14 @@ export const appliCationComponentList  = [
     className : null,
     moduleDetails: {
       module: ['MatButtonModule', 'MatIconModule', 'MatMenuModule'],
-      template : `<button mat-button [matMenuTriggerFor]="menu">Menu</button> <mat-menu #menu="matMenu">
-        <button mat-menu-item *ngFor="let shoe of typesOfShoes">{{shoe}}</button>
-      </mat-menu>`,
+      modulePath: `angular/material`,
     },
     template : `<button mat-button [matMenuTriggerFor]="menu">Menu</button> <mat-menu #menu="matMenu">
-      <button mat-menu-item *ngFor="let shoe of typesOfShoes">{{shoe}}</button>
+      <button  mat-menu-item *ngFor="let shoe of typesOfShoes" value="{{shoe.value}}">{{shoe.label}}</button>
     </mat-menu>`,
-    defaultProperties: {
-      typesOfShoes: ['Boots', 'Clogs']
-    },
+
     properties:[
-      { name : 'typesOfShoes', value: "", type: 'text'},
+      { name : 'typesOfShoes', value: "", type: Object , defaultValue:[{label:'IN', value: 'INDIA'}, {label: 'US', value: 'UNITED STATES'} ]},
     ]
   }
 ]

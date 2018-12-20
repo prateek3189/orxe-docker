@@ -1,11 +1,12 @@
 import { Component, OnInit, Input, ViewContainerRef, Compiler, ComponentFactory, ViewChild, CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { ComponentdataService } from 'src/app/componentdata.service';
 import { ComponentLoaderDirective } from 'src/app/component-loader.directive';
-import { DemoComponent } from '../orxe/demo/demo.component';
+
 import { CommonModule } from '@angular/common';
 import * as _ from 'underscore';
 import { MatMenuModule, MatButtonModule } from '@angular/material';
 import {ButtonModule} from 'primeng/button';
+import { DemoComponent } from 'src/app/customiseComponents/demo/demo.component';
 
 
 
@@ -20,8 +21,11 @@ export class OverviewComponent implements OnInit {
   @Input() Component;
   propertyArray; componentRef; componentList; CurrentComponent; ngMdlRef;
   dynamicImports = []; modulePath; moduleName; dynamicDeclarations = [];
+  
+  MenuLabel="Label";
+  MenuValue="Value";
 
-  @ViewChild(ComponentLoaderDirective) appComponetLoder: ComponentLoaderDirective;
+  @ViewChild(ComponentLoaderDirective) appComponentLoder: ComponentLoaderDirective;
 
 
   constructor(private compiler: Compiler, private vcRef: ViewContainerRef,public componentdata: ComponentdataService) { }
@@ -33,12 +37,54 @@ ngOnInit() {
   //console.log(this.Component);
   this.componentList = this.Component;
 }
+
 ngOnChanges(){
   //console.log(this.Component.name);
   if(this.Component){
   this.loadComponent(this.Component);
   }
 }
+
+isString(Proptype) {
+  if(Proptype === String) 
+    return true;
+  else
+    return false;
+}
+
+isBoolean(Proptype) {
+  if(Proptype === Boolean) 
+    return true;
+  else
+    return false;
+}
+
+isArray(Proptype) {
+  if(Proptype === Array )
+    return true;
+  else
+    return false;
+} 
+
+isObject(Proptype) {
+  if(Proptype === Object )
+    return true;
+  else
+    return false;
+}
+
+OnPropertySubmit(propName, propType) {
+  let MenuObject= {
+    label: this.MenuLabel,
+    value: this.MenuValue
+  };
+  this.valuechange(propName, MenuObject, propType);
+}
+
+check() {
+  alert("hiiii");
+}
+
 loadComponent(component) {
   //  debugger;
     if (this.componentRef) {
@@ -49,18 +95,16 @@ loadComponent(component) {
     let classname = this.CurrentComponent.className;
     let template = this.CurrentComponent.template;
     
-    let componentProps = this.CurrentComponent.defaultProperties; 
-    
     this.propertyArray = this.CurrentComponent.properties;
 
     this.createComponentFactory(template,modulevalue,classname)
       .then((factory: ComponentFactory<IHaveDynamicData>) =>
     {
-            this.componentRef = this.appComponetLoder.viewContainerRef.createComponent(factory);
-           for (var property in componentProps) {
-            if (componentProps.hasOwnProperty(property)) {
-                this.componentRef.instance[property] = componentProps[property];
-            }
+            
+          this.componentRef = this.appComponentLoder.viewContainerRef.createComponent(factory);
+           for (let index = 0; index< this.propertyArray.length;index++) {
+             let comp = this.propertyArray[index];
+            this.componentRef.instance[comp.name] = comp.defaultValue
         }
 
     });    
@@ -145,9 +189,12 @@ loadComponent(component) {
       }
     }
   
-    valuechange(propName, value,type){
+    valuechange(propName, value, type){
      debugger; 
-      if(type=="checkbox"){
+     console.log("name", propName);
+     console.log("value", value);
+     console.log("type", type);
+      if(type== Boolean){
         if(this.componentRef.instance[propName] =="true"){
           this.componentRef.instance[propName] ="false";
         }

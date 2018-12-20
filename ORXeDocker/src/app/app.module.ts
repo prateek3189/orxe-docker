@@ -18,7 +18,6 @@ import { CodepenComponent } from './main/description/codepen/codepen.component';
 import { ApiComponent } from './main/description/api/api.component';
 import { ComponentLoaderDirective } from './component-loader.directive';
 import { OverviewComponent } from './main/description/overview/overview.component';
-import { OrxeComponent } from './main/description/orxe/orxe.component';
 import {ButtonModule} from 'primeng/button';
 
 
@@ -33,8 +32,7 @@ import {ButtonModule} from 'primeng/button';
     CodepenComponent,
     ApiComponent,
     ComponentLoaderDirective,
-    OverviewComponent,
-    OrxeComponent,
+    OverviewComponent
   ],
   imports: [
     BrowserModule,
