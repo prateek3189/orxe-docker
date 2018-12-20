@@ -35,9 +35,7 @@ mat-card{
    mat-chip {
      max-width: 200px;
    }
-   input[type=text] {
-    margin: 8px 0;
-  }
+   
 @media only screen and (max-width: 600px),(max-width: 768px),(max-width:1024px){
     .row {
         width: 100%;

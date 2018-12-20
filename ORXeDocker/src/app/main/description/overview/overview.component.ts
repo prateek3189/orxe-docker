@@ -7,6 +7,7 @@ import * as _ from 'underscore';
 import { MatMenuModule, MatButtonModule } from '@angular/material';
 import {ButtonModule} from 'primeng/button';
 import { DemoComponent } from 'src/app/customiseComponents/demo/demo.component';
+import { throwError } from 'rxjs';
 
 
 
@@ -22,8 +23,8 @@ export class OverviewComponent implements OnInit {
   propertyArray; componentRef; componentList; CurrentComponent; ngMdlRef;
   dynamicImports = []; modulePath; moduleName; dynamicDeclarations = [];
   
-  MenuLabel="Label";
-  MenuValue="Value";
+  MenuLabel="";
+  MenuValue="";
 
   @ViewChild(ComponentLoaderDirective) appComponentLoder: ComponentLoaderDirective;
 
@@ -74,15 +75,15 @@ isObject(Proptype) {
 }
 
 OnPropertySubmit(propName, propType) {
-  let MenuObject= {
-    label: this.MenuLabel,
-    value: this.MenuValue
-  };
-  this.valuechange(propName, MenuObject, propType);
-}
-
-check() {
-  alert("hiiii");
+  if (this.MenuValue != "" && this.MenuLabel != "") {
+    let MenuObject = {
+      label: this.MenuLabel,
+      value: this.MenuValue
+    };
+    this.MenuLabel = "";
+    this.MenuValue = "";
+    this.valuechange(propName, MenuObject, propType);
+  }
 }
 
 loadComponent(component) {
@@ -190,10 +191,6 @@ loadComponent(component) {
     }
   
     valuechange(propName, value, type){
-     debugger; 
-     console.log("name", propName);
-     console.log("value", value);
-     console.log("type", type);
       if(type== Boolean){
         if(this.componentRef.instance[propName] =="true"){
           this.componentRef.instance[propName] ="false";

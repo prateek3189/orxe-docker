@@ -15,32 +15,32 @@
   <div class="operation">
       <mat-card>
           <h3>Properties:</h3>
-          <mat-list role="list" *ngIf="propertyArray" >
-              <mat-list-item role="listitem" *ngFor="let prop of propertyArray">
-                          <label>{{prop.name}}</label>
-                          <input type="text" *ngIf="isString(prop.type)" placeholder="{{prop.name}}" value="{{prop.value}}" (change)="valuechange(prop.name, $event.target.value,prop.type)">
-                          <input type="checkbox" *ngIf="isBoolean(prop.type)" (change)="valuechange(prop.name, $event.target.value,prop.type)">
-                          <div *ngIf="isArray(prop.type)">
-                            <div *ngFor="let val of prop.List">
-                              <input type="radio"  name= "{{prop.name}}"  value= "{{val}}" (click)="valuechange(prop.name, $event.target.value, prop.type)">{{val}}<br>
-                            </div>
-                          </div>
-                          <div *ngIf="isObject(prop.type)">
-                              <label>Label</label>
-                              <input type="text" placeholder="Label" [(ngModel)]="MenuLabel"><br>
-                              <label>Value</label>
-                              <input type="text" placeholder="Value" [(ngModel)]="MenuValue"><br>
-                              <button (click)="OnPropertySubmit(prop.name, prop.type)">Submit</button>
-                            </div>
-                          
-                          
-              </mat-list-item>
-          </mat-list>
-          <mat-list role="list" *ngIf="!propertyArray">
-            <mat-list-item role="listitem">
+          <div role="list" *ngIf="propertyArray" >
+              <div role="listitem" *ngFor="let prop of propertyArray">
+                <div>{{prop.name}}</div>
+                <input type="text" *ngIf="isString(prop.type)" placeholder="{{prop.name}}" value="{{prop.value}}" (change)="valuechange(prop.name, $event.target.value,prop.type)">
+                <input type="checkbox" *ngIf="isBoolean(prop.type)" (change)="valuechange(prop.name, $event.target.value,prop.type)">
+                <div *ngIf="isArray(prop.type)">
+                  <div *ngFor="let val of prop.List">
+                    <input type="radio" name="{{prop.name}}" value="{{val}}" (click)="valuechange(prop.name, $event.target.value, prop.type)">{{val}}<br>
+                  </div>
+                </div>
+                <div *ngIf="isObject(prop.type)">
+                    <mat-form-field >
+                        <input matInput required placeholder="Label" [(ngModel)]="MenuLabel"><br>
+                    </mat-form-field>
+                    <mat-form-field >
+                        <input matInput required placeholder="Value" [(ngModel)]="MenuValue"><br>
+                    </mat-form-field> 
+                  <button (click)="OnPropertySubmit(prop.name, prop.type)">Submit</button>
+                </div>
+              </div>
+          </div>
+          <div role="list" *ngIf="!propertyArray">
+            <div role="listitem">
               Operations Not Found Please Add in Json File.
-            </mat-list-item>
-          </mat-list>
+            </div>
+          </div>
         </mat-card>
   </div>
 </div>
