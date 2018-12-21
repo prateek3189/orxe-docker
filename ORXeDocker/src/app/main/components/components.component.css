@@ -1,6 +1,9 @@
-.sidenav-container {
-  height: 91vh;
-}
+/* .sidenav-container {
+  height: 100%;
+} */
+/* mat-sidenav-content{
+  height: 100%;
+} */
 
 .sidenav {
   position: absolute;

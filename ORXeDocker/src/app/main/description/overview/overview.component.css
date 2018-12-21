@@ -1,14 +1,15 @@
-mat-card{
-    margin: 1em;
-}
+
 * {
     box-sizing: border-box;
+}
+.cpen{
+    height: 86vh;
 }
 .codepen{
     float: left;
     width: 70%;
     padding: 10px;
-    height:79vh;
+    height:100%;
     border-right: 4px double blue;
     overflow-y:auto;
 }
@@ -16,7 +17,6 @@ mat-card{
     float: left;
     width: 30%;
     padding: 10px;
-    overflow-y:auto;
 }
 .github{
     display: inline-block;
@@ -28,6 +28,7 @@ mat-card{
     margin-top: 5em !important;
      margin: 0 auto;
      max-width: 500px;
+     background-color: whitesmoke;
    } 
    mat-card-content{
       text-align: center;

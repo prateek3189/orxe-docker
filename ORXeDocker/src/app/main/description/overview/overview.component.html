@@ -1,46 +1,73 @@
 <div class="row">
   <div class="codepen" *ngIf="Component">
-      <mat-card>
-          <mat-chip-list>
-              <mat-chip> {{Component.name}}</mat-chip>
-            </mat-chip-list>
-        </mat-card>
-      <mat-card class="example-card">
-          <mat-card-content>
-              <ng-template appComponentLoader></ng-template> 
-          </mat-card-content>
-        </mat-card>
-        
+    <mat-card class="cpen">
+      <mat-chip-list>
+        <mat-chip> {{Component.name}}</mat-chip>
+      </mat-chip-list>
+    <mat-card class="example-card">
+      <mat-card-content>
+        <ng-template appComponentLoader></ng-template>
+      </mat-card-content>
+    </mat-card><br>
+    <mat-divider></mat-divider>
+    <h3 mat-subheader><mat-icon>chevron_right</mat-icon>Json Data of {{Component.name}}</h3>
+    <p mat-line> {{Component.name}}</p>
+    <p mat-line *ngIf="Component.className"> <b>Class Name:</b> {{Component.className}}</p>
+    <p mat-line *ngIf="Component.moduleDetails.module"> <b>Module:</b> {{Component.moduleDetails.module}}</p>
+    <p mat-line *ngIf="Component.moduleDetails.modulePath"> <b>Module Path:</b> {{Component.moduleDetails.modulePath}}</p>
+    <p mat-line *ngIf="Component.template"> <b>Template:</b> {{Component.template}}</p>
+    <p mat-line *ngIf="Component.properties"><b>Properties:</b> 
+      <mat-list role="list" *ngFor="let prop of Component.properties">
+          <mat-list-item role="listitem">{{prop.name}}</mat-list-item>
+        </mat-list>
+    </p>
+  </mat-card>
+  <!-- <mat-card>
+      <h3 mat-subheader>Json Data of {{Component.name}}</h3>
+  </mat-card> -->
   </div>
   <div class="operation">
-      <mat-card>
-          <h3>Properties:</h3>
-          <div role="list" *ngIf="propertyArray" >
-              <div role="listitem" *ngFor="let prop of propertyArray">
-                <div>{{prop.name}}</div>
-                <input type="text" *ngIf="isString(prop.type)" placeholder="{{prop.name}}" value="{{prop.value}}" (change)="valuechange(prop.name, $event.target.value,prop.type)">
-                <input type="checkbox" *ngIf="isBoolean(prop.type)" (change)="valuechange(prop.name, $event.target.value,prop.type)">
-                <div *ngIf="isArray(prop.type)">
-                  <div *ngFor="let val of prop.List">
-                    <input type="radio" name="{{prop.name}}" value="{{val}}" (click)="valuechange(prop.name, $event.target.value, prop.type)">{{val}}<br>
-                  </div>
-                </div>
-                <div *ngIf="isObject(prop.type)">
-                    <mat-form-field >
-                        <input matInput required placeholder="Label" [(ngModel)]="MenuLabel"><br>
-                    </mat-form-field>
-                    <mat-form-field >
-                        <input matInput required placeholder="Value" [(ngModel)]="MenuValue"><br>
-                    </mat-form-field> 
-                  <button (click)="OnPropertySubmit(prop.name, prop.type)">Submit</button>
-                </div>
-              </div>
-          </div>
-          <div role="list" *ngIf="!propertyArray">
-            <div role="listitem">
-              Operations Not Found Please Add in Json File.
+    <mat-card class="properties">
+      <h3>Properties:</h3>
+      <mat-list *ngIf="propertyArray">
+        <mat-list-item *ngFor="let prop of propertyArray">
+          <h3 mat-subheader>{{prop.name}}</h3>
+          <mat-icon mat-list-icon>arrow_right_alt</mat-icon>
+          <!-- <h4 mat-line>{{folder.name}}</h4>
+              <p mat-line> {{folder.updated | date}} </p> -->
+          <mat-form-field class="example-full-width" *ngIf="isString(prop.type)">
+            <input matInput required placeholder="{{prop.name}}" value="{{prop.value}}" (change)="valuechange(prop.name, $event.target.value,prop.type)">
+          </mat-form-field>
+          <input type="checkbox" *ngIf="isBoolean(prop.type)" (change)="valuechange(prop.name, $event.target.value,prop.type)">
+          <mat-list role="list" *ngIf="isArray(prop.type)">
+            <div *ngFor="let val of prop.List">
+              <input type="radio" name="{{prop.name}}" value="{{val}}" (click)="valuechange(prop.name, $event.target.value, prop.type)">{{val}}<br>
             </div>
-          </div>
-        </mat-card>
+          </mat-list>
+          <mat-list role="list" *ngIf="isObject(prop.type)">
+            <mat-list-item role="listitem">
+              <mat-form-field>
+                <input matInput required placeholder="Label" [(ngModel)]="MenuLabel"><br>
+              </mat-form-field>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+              <mat-form-field>
+                <input matInput required placeholder="Value" [(ngModel)]="MenuValue"><br>
+              </mat-form-field>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+              <button mat-mini-fab (click)="OnPropertySubmit(prop.name, prop.type)">
+                <mat-icon aria-label="Example icon-button with a heart icon">done</mat-icon>
+              </button>
+            </mat-list-item>
+          </mat-list>
+        </mat-list-item>
+      </mat-list>
+      <div role="list" *ngIf="!propertyArray">
+        <div role="listitem">
+          Operations Not Found Please Add in Json File.
+        </div>
+      </div>
+    </mat-card>
   </div>
 </div>

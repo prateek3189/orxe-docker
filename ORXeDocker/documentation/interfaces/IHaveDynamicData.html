@@ -76,11 +76,13 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input, ViewContainerRef, Compiler, ComponentFactory, ViewChild, CUSTOM_ELEMENTS_SCHEMA, NgModule } from &#x27;@angular/core&#x27;;
 import { ComponentdataService } from &#x27;src/app/componentdata.service&#x27;;
 import { ComponentLoaderDirective } from &#x27;src/app/component-loader.directive&#x27;;
-import { DemoComponent } from &#x27;../orxe/demo/demo.component&#x27;;
+
 import { CommonModule } from &#x27;@angular/common&#x27;;
 import * as _ from &#x27;underscore&#x27;;
 import { MatMenuModule, MatButtonModule } from &#x27;@angular/material&#x27;;
 import {ButtonModule} from &#x27;primeng/button&#x27;;
+import { DemoComponent } from &#x27;src/app/customiseComponents/demo/demo.component&#x27;;
+import { throwError } from &#x27;rxjs&#x27;;
 
 
 
@@ -95,8 +97,11 @@ export class OverviewComponent implements OnInit {
   @Input() Component;
   propertyArray; componentRef; componentList; CurrentComponent; ngMdlRef;
   dynamicImports &#x3D; []; modulePath; moduleName; dynamicDeclarations &#x3D; [];
+  
+  MenuLabel&#x3D;&quot;&quot;;
+  MenuValue&#x3D;&quot;&quot;;
 
-  @ViewChild(ComponentLoaderDirective) appComponetLoder: ComponentLoaderDirective;
+  @ViewChild(ComponentLoaderDirective) appComponentLoder: ComponentLoaderDirective;
 
 
   constructor(private compiler: Compiler, private vcRef: ViewContainerRef,public componentdata: ComponentdataService) { }
@@ -108,12 +113,54 @@ ngOnInit() {
   //console.log(this.Component);
   this.componentList &#x3D; this.Component;
 }
+
 ngOnChanges(){
   //console.log(this.Component.name);
   if(this.Component){
   this.loadComponent(this.Component);
   }
 }
+
+isString(Proptype) {
+  if(Proptype &#x3D;&#x3D;&#x3D; String) 
+    return true;
+  else
+    return false;
+}
+
+isBoolean(Proptype) {
+  if(Proptype &#x3D;&#x3D;&#x3D; Boolean) 
+    return true;
+  else
+    return false;
+}
+
+isArray(Proptype) {
+  if(Proptype &#x3D;&#x3D;&#x3D; Array )
+    return true;
+  else
+    return false;
+} 
+
+isObject(Proptype) {
+  if(Proptype &#x3D;&#x3D;&#x3D; Object )
+    return true;
+  else
+    return false;
+}
+
+OnPropertySubmit(propName, propType) {
+  if (this.MenuValue !&#x3D; &quot;&quot; &amp;&amp; this.MenuLabel !&#x3D; &quot;&quot;) {
+    let MenuObject &#x3D; {
+      label: this.MenuLabel,
+      value: this.MenuValue
+    };
+    this.MenuLabel &#x3D; &quot;&quot;;
+    this.MenuValue &#x3D; &quot;&quot;;
+    this.valuechange(propName, MenuObject, propType);
+  }
+}
+
 loadComponent(component) {
   //  debugger;
     if (this.componentRef) {
@@ -124,18 +171,16 @@ loadComponent(component) {
     let classname &#x3D; this.CurrentComponent.className;
     let template &#x3D; this.CurrentComponent.template;
     
-    let componentProps &#x3D; this.CurrentComponent.defaultProperties; 
-    
     this.propertyArray &#x3D; this.CurrentComponent.properties;
 
     this.createComponentFactory(template,modulevalue,classname)
       .then((factory: ComponentFactory&lt;IHaveDynamicData&gt;) &#x3D;&gt;
     {
-            this.componentRef &#x3D; this.appComponetLoder.viewContainerRef.createComponent(factory);
-           for (var property in componentProps) {
-            if (componentProps.hasOwnProperty(property)) {
-                this.componentRef.instance[property] &#x3D; componentProps[property];
-            }
+            
+          this.componentRef &#x3D; this.appComponentLoder.viewContainerRef.createComponent(factory);
+           for (let index &#x3D; 0; index&lt; this.propertyArray.length;index++) {
+             let comp &#x3D; this.propertyArray[index];
+            this.componentRef.instance[comp.name] &#x3D; comp.defaultValue
         }
 
     });    
@@ -220,9 +265,8 @@ loadComponent(component) {
       }
     }
   
-    valuechange(propName, value,type){
-     debugger; 
-      if(type&#x3D;&#x3D;&quot;checkbox&quot;){
+    valuechange(propName, value, type){
+      if(type&#x3D;&#x3D; Boolean){
         if(this.componentRef.instance[propName] &#x3D;&#x3D;&quot;true&quot;){
           this.componentRef.instance[propName] &#x3D;&quot;false&quot;;
         }

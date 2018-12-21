@@ -13,12 +13,13 @@ export class ApiComponent implements OnInit {
   /**
   * Get Component Name
   */
-  Component;
+ @Input() Component;
   constructor(private sanitizer: DomSanitizer,public componentdata: ComponentdataService) {
     this.sanitizer = sanitizer;
   }
 
   ngOnInit() {
+   // console.log(this.Component);
     //this.Component = this.componentdata.selectedComponent.name;
     //console.log(this.componentdata.selectedComponent.name);
     this.Url = "http://127.0.0.1:8080/components/" + "ApiComponent" + ".html";
@@ -38,7 +39,8 @@ export class ApiComponent implements OnInit {
     return this.sanitizer.bypassSecurityTrustResourceUrl(this.Url);
   }
   ngOnChanges() {
-    console.log(this.componentdata.selectedComponent);
-    this.Url = "http://127.0.0.1:8080/components/" + this.Component + ".html";
+   console.log(this.Component);
+    console.log(this.Component.name);
+    this.Url = "http://127.0.0.1:8080/components/" + "ApiComponent" + ".html";
   }
 }

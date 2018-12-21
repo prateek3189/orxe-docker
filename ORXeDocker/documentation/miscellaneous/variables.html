@@ -108,14 +108,11 @@
      moduleDetails: {
       module: null,
     },
-     template: &#x60;&lt;app-demo [label] &#x3D;&#x27;label&#x27; [disabled] &#x3D; &#x27;disabled&#x27; [data]&#x3D;&#x27;data&#x27;&gt;&lt;/app-demo&gt;&#x60;,
-     defaultProperties: {
-      label: &#x27;&#x27;,
-      data:&#x27;Data Value&#x27;
-     },
+     template: &#x60;&lt;app-demo [label] &#x3D;&#x27;Label&#x27; [disabled] &#x3D; &#x27;disabled&#x27; [data]&#x3D;&#x27;Data&#x27;&gt;&lt;/app-demo&gt;&#x60;,
+
      properties:[
-      { name : &#x27;label&#x27;, value: &quot;&quot;, type: &#x27;inputText&#x27;},
-      { name : &#x27;data&#x27;, value: &quot;&quot;, type: &#x27;inputText&#x27;}
+      { name : &#x27;Label&#x27;, value: &quot;&quot;, type: String , defaultValue:&#x27;&#x27;},
+      { name : &#x27;Data&#x27;, value: &quot;&quot;, type: String , defaultValue: &#x27;Data Value&#x27;}
     ]
   },
   {
@@ -125,30 +122,24 @@
       module: [&quot;ButtonModule&quot;],
       modulePath: &#x60;primeng/button&#x60;
     },
-    template : &#x60;&lt;button pButton type&#x3D;&quot;button&quot; icon&#x3D;&quot;pi pi-check&quot; [iconPos]&#x3D;&#x27;iconPos&#x27; [label]&#x3D;&#x27;label&#x27;&gt;&lt;/button&gt;&#x60;,
-    defaultProperties: {
-      iconPos: &#x27;right&#x27;,
-      label: &#x27;Prime NG Button Demo&#x27;
-    },
+    template : &#x60;&lt;button pButton type&#x3D;&quot;button&quot; icon&#x3D;&quot;pi pi-check&quot; [label]&#x3D;&#x27;Label&#x27;&gt;&lt;/button&gt;&#x60;,
+
     properties:[
-      { name : &#x27;iconPos&#x27;, value: [&#x27;left&#x27;,&#x27;right&#x27;], type: &#x27;list&#x27;},
-      { name : &#x27;label&#x27;, value: &quot;&quot;, type: &#x27;inputText&#x27;}
+      { name : &#x27;Label&#x27;, value: &quot;&quot;, type: String , defaultValue:&#x27;Prime NG Button Demo&#x27;}
     ]
   },
   {
     name : &quot;Defualt AM Button &quot;,
     className : null,
     moduleDetails: {
-      module: null,
+      module: [&#x27;MatButtonModule&#x27;],
+      modulePath: &#x60;angular/material&#x60;
     },
-    template : &#x60;&lt;button mat-raised-button [color]&#x3D;&#x27;color&#x27; [disabled]&#x3D;&quot;disabled&quot;&gt;AM Primary&lt;/button&gt;&#x60;,
-    defaultProperties: {
-      color: &#x27;primary&#x27;,
-      disabled: false,
-    },
+    template : &#x60;&lt;button mat-raised-button [color]&#x3D;&#x27;Color&#x27; [disabled]&#x3D;&quot;Disabled&quot;&gt;AM Primary&lt;/button&gt;&#x60;,
+
     properties:[
-      { name : &#x27;color&#x27;, value: &quot;&quot;, type: &#x27;inputText&#x27;},
-      { name : &#x27;disabled&#x27;, value:&quot;true&quot;, type: &quot;checkbox&quot;},
+      { name : &#x27;Color&#x27;, value: &quot;&quot;, type: Array , defaultValue: &#x27;primary&#x27;, List: [&#x27;accent&#x27;, &#x27;primary&#x27;, &#x27;warn&#x27;]},
+      { name : &#x27;Disabled&#x27;, value:&quot;true&quot;, type: Boolean , defaultValue: false},
     ]
   },
   {
@@ -156,18 +147,14 @@
     className : null,
     moduleDetails: {
       module: [&#x27;MatButtonModule&#x27;, &#x27;MatIconModule&#x27;, &#x27;MatMenuModule&#x27;],
-      template : &#x60;&lt;button mat-button [matMenuTriggerFor]&#x3D;&quot;menu&quot;&gt;Menu&lt;/button&gt; &lt;mat-menu #menu&#x3D;&quot;matMenu&quot;&gt;
-        &lt;button mat-menu-item *ngFor&#x3D;&quot;let shoe of typesOfShoes&quot;&gt;{{shoe}}&lt;/button&gt;
-      &lt;/mat-menu&gt;&#x60;,
+      modulePath: &#x60;angular/material&#x60;,
     },
     template : &#x60;&lt;button mat-button [matMenuTriggerFor]&#x3D;&quot;menu&quot;&gt;Menu&lt;/button&gt; &lt;mat-menu #menu&#x3D;&quot;matMenu&quot;&gt;
-      &lt;button mat-menu-item *ngFor&#x3D;&quot;let shoe of typesOfShoes&quot;&gt;{{shoe}}&lt;/button&gt;
+      &lt;button  mat-menu-item *ngFor&#x3D;&quot;let item of ListItems&quot; value&#x3D;&quot;{{item.value}}&quot;&gt;{{item.label}}&lt;/button&gt;
     &lt;/mat-menu&gt;&#x60;,
-    defaultProperties: {
-      typesOfShoes: [&#x27;Boots&#x27;, &#x27;Clogs&#x27;]
-    },
+
     properties:[
-      { name : &#x27;typesOfShoes&#x27;, value: &quot;&quot;, type: &#x27;Text&#x27;},
+      { name : &#x27;ListItems&#x27;, value: &quot;&quot;, type: Object , defaultValue:[{label:&#x27;IN&#x27;, value: &#x27;INDIA&#x27;}, {label: &#x27;US&#x27;, value: &#x27;UNITED STATES&#x27;} ]},
     ]
   }
 ]</code>
