@@ -19,10 +19,10 @@ export class ApiComponent implements OnInit {
   }
 
   ngOnInit() {
-   // console.log(this.Component);
+    //console.log(this.Component.componentname);
     //this.Component = this.componentdata.selectedComponent.name;
     //console.log(this.componentdata.selectedComponent.name);
-    this.Url = "http://127.0.0.1:8080/components/" + "ApiComponent" + ".html";
+    this.Url = "http://127.0.0.1:8080/components/" + this.Component.componentname + "Component.html";
     //$('#iframeID').contents().find('#toppanel').hide();
 
     // this.printContents = document.getElementById('iframe').content;
@@ -39,8 +39,8 @@ export class ApiComponent implements OnInit {
     return this.sanitizer.bypassSecurityTrustResourceUrl(this.Url);
   }
   ngOnChanges() {
-   console.log(this.Component);
-    console.log(this.Component.name);
-    this.Url = "http://127.0.0.1:8080/components/" + "ApiComponent" + ".html";
+  //  console.log(this.Component);
+  //   console.log(this.Component.componentname);
+    this.Url = "http://127.0.0.1:8080/components/" + this.Component.componentname + "Component.html";
   }
 }

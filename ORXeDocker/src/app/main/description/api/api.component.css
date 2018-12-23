@@ -24,7 +24,6 @@ mat-card{
   float: left;
   width: 55%;
   padding: 10px;
-  height:33em;
   overflow-y:auto;
 }
 .form-full-width {
@@ -72,8 +71,11 @@ mat-card{
       height: 92vh;
     }
   } */
-/* @media only screen and  (min-width:1281px){
+  @media only screen and (max-height: 864px){
   .document{
-      height:48em;
+    width: 57%;
   }
-  } */
+  .steps{
+    width: 43%;
+  }
+} 

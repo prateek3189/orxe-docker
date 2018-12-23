@@ -11,7 +11,7 @@ import { DescriptionComponent } from './main/description/description.component';
 import { ComponentsComponent } from './main/components/components.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { FooterComponent } from './footer/footer.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HttpClient} from '@angular/common/http';
 import { ComponentService } from './component.service';
 import { FormsModule } from '@angular/forms';
 import { CodepenComponent } from './main/description/codepen/codepen.component';
@@ -19,6 +19,7 @@ import { ApiComponent } from './main/description/api/api.component';
 import { ComponentLoaderDirective } from './component-loader.directive';
 import { OverviewComponent } from './main/description/overview/overview.component';
 import {ButtonModule} from 'primeng/button';
+import { MarkdownModule } from 'ngx-markdown';
 
 
 
@@ -33,7 +34,7 @@ import {ButtonModule} from 'primeng/button';
     CodepenComponent,
     ApiComponent,
     ComponentLoaderDirective,
-    OverviewComponent
+    OverviewComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +44,8 @@ import {ButtonModule} from 'primeng/button';
     LayoutModule,
     HttpClientModule,
     FormsModule,
-    ButtonModule
+    ButtonModule,
+    MarkdownModule.forRoot({ loader: HttpClient }),
   ],
   providers: [ComponentService],
   bootstrap: [AppComponent],

@@ -2,14 +2,21 @@
 * {
     box-sizing: border-box;
 }
+mat-card{
+    margin: 1em;
+  }
 .cpen{
-    height: 86vh;
-}
+    margin-top: 5em !important;
+    padding: 0.39em;
+    margin: 0 auto;
+    max-width: 500px;
+    background-color: whitesmoke;
+} 
 .codepen{
     float: left;
     width: 70%;
+    height: 100vh;
     padding: 10px;
-    height:100%;
     border-right: 4px double blue;
     overflow-y:auto;
 }
@@ -24,38 +31,50 @@
     color: white;
     text-decoration: none;
 }
-.example-card {
+/* .example-card {
     margin-top: 5em !important;
      margin: 0 auto;
      max-width: 500px;
      background-color: whitesmoke;
-   } 
+   }  */
+
+   .form-full-width {
+    width: 100%;
+  } 
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .doneButton{
+      margin: 0 auto !important;
+  }
+
    mat-card-content{
       text-align: center;
    }
    mat-chip {
      max-width: 200px;
    }
-   
 @media only screen and (max-width: 600px),(max-width: 768px),(max-width:1024px){
     .row {
         width: 100%;
-        height: 100%;
+        height: 60em;
         display: flex;
         flex-direction:column;
     }
     .codepen{
         width: 100%;
-        height: 100%;
         border-right:none;
         }
         .operation{
         width: 100%;
-        height: 100%;
         }
+
     }
-/* @media only screen and  (min-width:1281px){
-    .codepen{
-        height:48em;
+    @media only screen and (max-height: 864px){
+        .codepen{
+            height: 84.4vh;
+        } 
     }
-    } */

@@ -6,7 +6,10 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./demo.component.css']
 })
 export class DemoComponent implements OnInit {
-
+  /**
+  * @example
+  * Declares a data-bound input property, which Angular automatically updates during change detection.
+  */
   @Input() data : any ;
   @Input() label: string = "";
   @Input() disabled: boolean = false;

@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>HeaderComponent</li>
+  <li>DefualtAMMenuListComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,7 +61,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/header/header.component.ts</code>
+    <code>src/app/customiseComponents/defualt-ammenu-list/defualt-ammenu-list.component.ts</code>
 </p>
 
 
@@ -91,19 +91,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-header</code></td>
+                <td class="col-md-9"><code>app-defualt-ammenu-list</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./header.component.css</code></td>
+                <td class="col-md-9"><code>./defualt-ammenu-list.component.css</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./header.component.html</code></td>
+                <td class="col-md-9"><code>./defualt-ammenu-list.component.html</code></td>
             </tr>
 
 
@@ -156,7 +156,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/header/header.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/customiseComponents/defualt-ammenu-list/defualt-ammenu-list.component.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -195,7 +195,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/header/header.component.ts:12</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/customiseComponents/defualt-ammenu-list/defualt-ammenu-list.component.ts:12</a></div>
                             </td>
                         </tr>
 
@@ -221,11 +221,11 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 
 @Component({
-  selector: &#x27;app-header&#x27;,
-  templateUrl: &#x27;./header.component.html&#x27;,
-  styleUrls: [&#x27;./header.component.css&#x27;]
+  selector: &#x27;app-defualt-ammenu-list&#x27;,
+  templateUrl: &#x27;./defualt-ammenu-list.component.html&#x27;,
+  styleUrls: [&#x27;./defualt-ammenu-list.component.css&#x27;]
 })
-export class HeaderComponent implements OnInit {
+export class DefualtAMMenuListComponent implements OnInit {
 
   constructor() { }
 
@@ -237,30 +237,18 @@ export class HeaderComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;mat-toolbar color&#x3D;&quot;primary&quot;&gt;
-  &lt;span&gt;&lt;mat-icon&gt;file_copy&lt;/mat-icon&gt;ORXe 3.0 Docker&lt;/span&gt;
-  &lt;span class&#x3D;&quot;spacer&quot;&gt;&lt;/span&gt;
-
-  &lt;mat-chip-list&gt;
-    &lt;a mat-list-item href&#x3D;&quot;https://github.com/prateek3189/orxe-docker&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;mat-chip color&#x3D;&quot;accent&quot; selected&gt;&lt;mat-icon aria-label&#x3D;&quot;Github Icon&quot;&gt;code&lt;/mat-icon&gt; Github&lt;/mat-chip&gt;
- &lt;/a&gt;&lt;/mat-chip-list&gt;
-&lt;/mat-toolbar&gt;</code></pre>
+        <pre class="line-numbers"><code class="language-html">&lt;button mat-raised-button [matMenuTriggerFor]&#x3D;&quot;menu&quot;&gt;Menu&lt;/button&gt;
+&lt;mat-menu #menu&#x3D;&quot;matMenu&quot;&gt;
+  &lt;button mat-menu-item&gt;Item 1&lt;/button&gt;
+  &lt;button mat-menu-item&gt;Item 2&lt;/button&gt;
+&lt;/mat-menu&gt;</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./header.component.css</code>
+                    <code>./defualt-ammenu-list.component.css</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">.spacer{
-    flex: 1 1 auto;
-  }
-  
-.mat-toolbar a{
-    display: inline-block;
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
-}</code></pre>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -288,10 +276,10 @@ export class HeaderComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-toolbar color="primary">  <span><mat-icon>file_copy</mat-icon>ORXe 3.0 Docker</span>  <span class="spacer"></span>  <mat-chip-list>    <a mat-list-item href="https://github.com/prateek3189/orxe-docker" target="_blank"><mat-chip color="accent" selected><mat-icon aria-label="Github Icon">code</mat-icon> Github</mat-chip> </a></mat-chip-list></mat-toolbar></div>'
+        var COMPONENT_TEMPLATE = '<div><button mat-raised-button [matMenuTriggerFor]="menu">Menu</button><mat-menu #menu="matMenu">  <button mat-menu-item>Item 1</button>  <button mat-menu-item>Item 2</button></mat-menu></div>'
     var COMPONENTS = [{'name': 'ApiComponent', 'selector': 'app-api'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CodepenComponent', 'selector': 'app-codepen'},{'name': 'ComponentsComponent', 'selector': 'app-components'},{'name': 'DefualtAMButtonComponent', 'selector': 'app-defualt-ambutton'},{'name': 'DefualtAMMenuListComponent', 'selector': 'app-defualt-ammenu-list'},{'name': 'DemoComponent', 'selector': 'app-demo'},{'name': 'DescriptionComponent', 'selector': 'app-description'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'OverviewComponent', 'selector': 'app-overview'}];
     var DIRECTIVES = [{'name': 'ComponentLoaderDirective', 'selector': '[appComponentLoader]'}];
-    var ACTUAL_COMPONENT = {'name': 'HeaderComponent'};
+    var ACTUAL_COMPONENT = {'name': 'DefualtAMMenuListComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -325,7 +313,7 @@ export class HeaderComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'HeaderComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'DefualtAMMenuListComponent.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

@@ -176,7 +176,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/customiseComponents/demo/demo.component.ts:12</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/customiseComponents/demo/demo.component.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -202,7 +202,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/customiseComponents/demo/demo.component.ts:10</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/customiseComponents/demo/demo.component.ts:13</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -226,7 +226,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/customiseComponents/demo/demo.component.ts:12</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/customiseComponents/demo/demo.component.ts:15</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -250,7 +250,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/customiseComponents/demo/demo.component.ts:11</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/customiseComponents/demo/demo.component.ts:14</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -286,7 +286,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/customiseComponents/demo/demo.component.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/customiseComponents/demo/demo.component.ts:20</a></div>
                             </td>
                         </tr>
 
@@ -317,7 +317,10 @@
   styleUrls: [&#x27;./demo.component.css&#x27;]
 })
 export class DemoComponent implements OnInit {
-
+  /**
+  * @example
+  * Declares a data-bound input property, which Angular automatically updates during change detection.
+  */
   @Input() data : any ;
   @Input() label: string &#x3D; &quot;&quot;;
   @Input() disabled: boolean &#x3D; false;
@@ -328,8 +331,7 @@ export class DemoComponent implements OnInit {
   ngOnInit() {
       
   }
-}
-</code></pre>
+}</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
@@ -339,8 +341,7 @@ export class DemoComponent implements OnInit {
 &lt;!-- &lt;mat-form-field class&#x3D;&quot;example-full-width&quot;&gt;
     &lt;input matInput [placeholder]&#x3D; &#x27;label&#x27; [disabled]&#x3D;&#x27;disabled&#x27; value&#x3D;&quot;&quot; &gt;
   &lt;/mat-form-field&gt; --&gt;
-&lt;input type&#x3D;&quot;text&quot; [placeholder]&#x3D; &#x27;label&#x27; [disabled]&#x3D;&#x27;disabled&#x27; /&gt;
-</code></pre>
+&lt;input type&#x3D;&quot;text&quot; [placeholder]&#x3D; &#x27;label&#x27; [disabled]&#x3D;&#x27;disabled&#x27; /&gt;</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
@@ -376,7 +377,7 @@ export class DemoComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><p>  Demo Component works! {{data}}</p><!-- <mat-form-field class="example-full-width">    <input matInput [placeholder]= \'label\' [disabled]=\'disabled\' value="" >  </mat-form-field> --><input type="text" [placeholder]= \'label\' [disabled]=\'disabled\' /></div>'
-    var COMPONENTS = [{'name': 'ApiComponent', 'selector': 'app-api'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CodepenComponent', 'selector': 'app-codepen'},{'name': 'ComponentsComponent', 'selector': 'app-components'},{'name': 'DemoComponent', 'selector': 'app-demo'},{'name': 'DescriptionComponent', 'selector': 'app-description'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'OverviewComponent', 'selector': 'app-overview'}];
+    var COMPONENTS = [{'name': 'ApiComponent', 'selector': 'app-api'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CodepenComponent', 'selector': 'app-codepen'},{'name': 'ComponentsComponent', 'selector': 'app-components'},{'name': 'DefualtAMButtonComponent', 'selector': 'app-defualt-ambutton'},{'name': 'DefualtAMMenuListComponent', 'selector': 'app-defualt-ammenu-list'},{'name': 'DemoComponent', 'selector': 'app-demo'},{'name': 'DescriptionComponent', 'selector': 'app-description'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'OverviewComponent', 'selector': 'app-overview'}];
     var DIRECTIVES = [{'name': 'ComponentLoaderDirective', 'selector': '[appComponentLoader]'}];
     var ACTUAL_COMPONENT = {'name': 'DemoComponent'};
 </script>

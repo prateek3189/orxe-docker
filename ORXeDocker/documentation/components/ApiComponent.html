@@ -130,9 +130,6 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#Component">Component</a>
-                            </li>
-                            <li>
                                     <span class="modifier">Public</span>
                                 <a href="#componentdata">componentdata</a>
                             </li>
@@ -164,6 +161,20 @@
                     </td>
                 </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#Component">Component</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
 
 
@@ -233,7 +244,28 @@
         </table>
 </section>
 
-
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="Component"></a>
+                        <code>Component</code>
+                    </td>
+                    <td class="col-md-10">
+                        <div><p>Get Component Name</p>
+</div>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/main/description/api/api.component.ts:16</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
 
 
 
@@ -264,7 +296,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/main/description/api/api.component.ts:37</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/main/description/api/api.component.ts:38</a></div>
                             </td>
                         </tr>
 
@@ -312,7 +344,7 @@ this.sanitizer.bypassSecurityTrustResourceUrl(this.Url);</code></pre>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/main/description/api/api.component.ts:40</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/main/description/api/api.component.ts:41</a></div>
                             </td>
                         </tr>
 
@@ -373,40 +405,6 @@ this.sanitizer.bypassSecurityTrustResourceUrl(this.Url);</code></pre>
         <h3 id="inputs">
             Properties
         </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="Component"></a>
-                        <span class="name">
-                            <b>
-                            Component
-                            </b>
-                            <a href="#Component"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>Component:     <code></code>
-</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/main/description/api/api.component.ts:16</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Get Component Name</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
@@ -497,15 +495,16 @@ export class ApiComponent implements OnInit {
   /**
   * Get Component Name
   */
-  Component;
+ @Input() Component;
   constructor(private sanitizer: DomSanitizer,public componentdata: ComponentdataService) {
     this.sanitizer &#x3D; sanitizer;
   }
 
   ngOnInit() {
+    //console.log(this.Component.componentname);
     //this.Component &#x3D; this.componentdata.selectedComponent.name;
     //console.log(this.componentdata.selectedComponent.name);
-    this.Url &#x3D; &quot;http://127.0.0.1:8080/components/&quot; + &quot;ApiComponent&quot; + &quot;.html&quot;;
+    this.Url &#x3D; &quot;http://127.0.0.1:8080/components/&quot; + this.Component.componentname + &quot;Component.html&quot;;
     //$(&#x27;#iframeID&#x27;).contents().find(&#x27;#toppanel&#x27;).hide();
 
     // this.printContents &#x3D; document.getElementById(&#x27;iframe&#x27;).content;
@@ -522,8 +521,9 @@ export class ApiComponent implements OnInit {
     return this.sanitizer.bypassSecurityTrustResourceUrl(this.Url);
   }
   ngOnChanges() {
-    console.log(this.componentdata.selectedComponent);
-    this.Url &#x3D; &quot;http://127.0.0.1:8080/components/&quot; + this.Component + &quot;.html&quot;;
+  //  console.log(this.Component);
+  //   console.log(this.Component.componentname);
+    this.Url &#x3D; &quot;http://127.0.0.1:8080/components/&quot; + this.Component.componentname + &quot;Component.html&quot;;
   }
 }
 </code></pre>
@@ -535,7 +535,11 @@ export class ApiComponent implements OnInit {
     &lt;iframe id&#x3D;&quot;iframe&quot; class&#x3D;&quot;DocumentService&quot; [src]&#x3D;&quot;DocumentURL()&quot; frameborder&#x3D;&quot;0&quot;&gt;&lt;/iframe&gt;
   &lt;/div&gt;
   &lt;div class&#x3D;&quot;steps&quot;&gt;
-    &lt;mat-card class&#x3D;&quot;example-card&quot;&gt;
+    &lt;mat-card&gt;
+                        &lt;!-- loaded from remote url --&gt;
+                        &lt;markdown [src]&#x3D;&quot;&#x27;https://raw.githubusercontent.com/prateek3189/orxe-docker/DOCK-1/README.md&#x27;&quot;&gt;&lt;/markdown&gt;
+                      &lt;/mat-card&gt;
+    &lt;!-- &lt;mat-card class&#x3D;&quot;example-card&quot;&gt;
       &lt;mat-card-content&gt;
         &lt;mat-list role&#x3D;&quot;list&quot;&gt;
           &lt;h3 mat-subheader&gt;To use this element on a web page&lt;/h3&gt;
@@ -559,7 +563,7 @@ export class ApiComponent implements OnInit {
           &lt;/mat-list-item&gt;
         &lt;/mat-list&gt;
       &lt;/mat-card-content&gt;
-    &lt;/mat-card&gt;
+    &lt;/mat-card&gt; --&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
     </div>
@@ -572,7 +576,7 @@ export class ApiComponent implements OnInit {
   margin-top: -7em !important;
   margin: 0 auto;
   width:102%;
-   height:88vh;
+   height:97vh;
    display: flex;
 }
 mat-card{
@@ -594,7 +598,6 @@ mat-card{
   float: left;
   width: 55%;
   padding: 10px;
-  height:33em;
   overflow-y:auto;
 }
 .form-full-width {
@@ -642,11 +645,14 @@ mat-card{
       height: 92vh;
     }
   } */
-/* @media only screen and  (min-width:1281px){
+  @media only screen and (max-height: 864px){
   .document{
-      height:48em;
+    width: 57%;
   }
-  } */</code></pre>
+  .steps{
+    width: 43%;
+  }
+} </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -674,8 +680,8 @@ mat-card{
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="row">  <div class="document">    <iframe id="iframe" class="DocumentService" [src]="DocumentURL()" frameborder="0"></iframe>  </div>  <div class="steps">    <mat-card class="example-card">      <mat-card-content>        <mat-list role="list">          <h3 mat-subheader>To use this element on a web page</h3>          <mat-list-item>            <mat-icon mat-list-icon>label_important</mat-icon>            <h4 mat-line>Step 1 : Get the dependencies</h4>            <p mat-line>Node (>6.0.0)</p>            <p mat-line>Npm (>3.8.6)</p>          </mat-list-item>          <mat-list-item>            <mat-icon mat-list-icon>label_important</mat-icon>            <h4 mat-line>Step 2 : Install the libraries</h4>            <p mat-line># Install compodoc with npm</p>            <p mat-line> $ npm install -g @compodoc/compodoc</p>          </mat-list-item>          <mat-list-item>            <mat-icon mat-list-icon>label_important</mat-icon>            <h4 mat-line>Step 3 : Serve It</h4>            <p mat-line># Run compodoc in your project (generated with Angular CLI for example) and serve it</p>            <p mat-line>$ compodoc -p src/tsconfig.app.json -s</p>          </mat-list-item>        </mat-list>      </mat-card-content>    </mat-card>  </div></div></div>'
-    var COMPONENTS = [{'name': 'ApiComponent', 'selector': 'app-api'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CodepenComponent', 'selector': 'app-codepen'},{'name': 'ComponentsComponent', 'selector': 'app-components'},{'name': 'DemoComponent', 'selector': 'app-demo'},{'name': 'DescriptionComponent', 'selector': 'app-description'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'OverviewComponent', 'selector': 'app-overview'}];
+        var COMPONENT_TEMPLATE = '<div><div class="row">  <div class="document">    <iframe id="iframe" class="DocumentService" [src]="DocumentURL()" frameborder="0"></iframe>  </div>  <div class="steps">    <mat-card>                        <!-- loaded from remote url -->                        <markdown [src]="\'https://raw.githubusercontent.com/prateek3189/orxe-docker/DOCK-1/README.md\'"></markdown>                      </mat-card>    <!-- <mat-card class="example-card">      <mat-card-content>        <mat-list role="list">          <h3 mat-subheader>To use this element on a web page</h3>          <mat-list-item>            <mat-icon mat-list-icon>label_important</mat-icon>            <h4 mat-line>Step 1 : Get the dependencies</h4>            <p mat-line>Node (>6.0.0)</p>            <p mat-line>Npm (>3.8.6)</p>          </mat-list-item>          <mat-list-item>            <mat-icon mat-list-icon>label_important</mat-icon>            <h4 mat-line>Step 2 : Install the libraries</h4>            <p mat-line># Install compodoc with npm</p>            <p mat-line> $ npm install -g @compodoc/compodoc</p>          </mat-list-item>          <mat-list-item>            <mat-icon mat-list-icon>label_important</mat-icon>            <h4 mat-line>Step 3 : Serve It</h4>            <p mat-line># Run compodoc in your project (generated with Angular CLI for example) and serve it</p>            <p mat-line>$ compodoc -p src/tsconfig.app.json -s</p>          </mat-list-item>        </mat-list>      </mat-card-content>    </mat-card> -->  </div></div></div>'
+    var COMPONENTS = [{'name': 'ApiComponent', 'selector': 'app-api'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CodepenComponent', 'selector': 'app-codepen'},{'name': 'ComponentsComponent', 'selector': 'app-components'},{'name': 'DefualtAMButtonComponent', 'selector': 'app-defualt-ambutton'},{'name': 'DefualtAMMenuListComponent', 'selector': 'app-defualt-ammenu-list'},{'name': 'DemoComponent', 'selector': 'app-demo'},{'name': 'DescriptionComponent', 'selector': 'app-description'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'OverviewComponent', 'selector': 'app-overview'}];
     var DIRECTIVES = [{'name': 'ComponentLoaderDirective', 'selector': '[appComponentLoader]'}];
     var ACTUAL_COMPONENT = {'name': 'ApiComponent'};
 </script>

@@ -1,6 +1,7 @@
 export const appliCationComponentList  = [
  {
      name : "In Application Componet",
+     componentname: "Demo",
      className : "DemoComponent",
      moduleDetails: {
       module: null,
@@ -14,6 +15,7 @@ export const appliCationComponentList  = [
   },
   {
     name : "Prime NG",
+    componentname: "Demo",
     className : null,
     moduleDetails: {
       module: ["ButtonModule"],
@@ -27,6 +29,7 @@ export const appliCationComponentList  = [
   },
   {
     name : "Defualt AM Button ",
+    componentname: "DefualtAMButton",
     className : null,
     moduleDetails: {
       module: ['MatButtonModule'],
@@ -41,16 +44,18 @@ export const appliCationComponentList  = [
   },
   {
     name : "Defualt AM Menu List",
+    componentname: "DefualtAMMenuList",
     className : null,
     moduleDetails: {
       module: ['MatButtonModule', 'MatIconModule', 'MatMenuModule'],
       modulePath: `angular/material`,
     },
-    template : `<button mat-button [matMenuTriggerFor]="menu">Menu</button> <mat-menu #menu="matMenu">
+    template : `<button mat-raised-button [color]='Color' [matMenuTriggerFor]="menu">Menu</button> <mat-menu #menu="matMenu">
       <button  mat-menu-item *ngFor="let item of ListItems" value="{{item.value}}">{{item.label}}</button>
     </mat-menu>`,
 
     properties:[
+      { name : 'Color', value: "", type: Array , defaultValue: 'primary', List: ['accent', 'primary', 'warn']},
       { name : 'ListItems', value: "", type: Object , defaultValue:[{label:'IN', value: 'INDIA'}, {label: 'US', value: 'UNITED STATES'} ]},
     ]
   }
