@@ -50,12 +50,11 @@ export const appliCationComponentList  = [
       module: ['MatButtonModule', 'MatIconModule', 'MatMenuModule'],
       modulePath: `angular/material`,
     },
-    template : `<button mat-raised-button [color]='Color' [matMenuTriggerFor]="menu">Menu</button> <mat-menu #menu="matMenu">
+    template : `<button mat-raised-button color="primary" [matMenuTriggerFor]="menu">Menu</button> <mat-menu #menu="matMenu">
       <button  mat-menu-item *ngFor="let item of ListItems" value="{{item.value}}">{{item.label}}</button>
     </mat-menu>`,
 
     properties:[
-      { name : 'Color', value: "", type: Array , defaultValue: 'primary', List: ['accent', 'primary', 'warn']},
       { name : 'ListItems', value: "", type: Object , defaultValue:[{label:'IN', value: 'INDIA'}, {label: 'US', value: 'UNITED STATES'} ]},
     ]
   }

@@ -77,9 +77,8 @@
               </div>
             </mat-list>
           </mat-list-item>
-          <mat-list-item role="listitem" *ngIf="isObject(prop.type)">
+          <mat-list-item role="listitem" *ngIf="isObject(prop.type)" class="ObjectList">
             <div class="objectform">
-            <div>
             <mat-form-field mat-line class="form-full-width">
               <input matInput required placeholder="Label" [(ngModel)]="MenuLabel">
             </mat-form-field>
@@ -87,7 +86,6 @@
             <mat-form-field mat-line class="form-full-width">
               <input matInput required placeholder="Value" [(ngModel)]="MenuValue">
             </mat-form-field>
-          </div>
             <div class="button-done">
             <button mat-mini-fab mat-line (click)="OnPropertySubmit(prop.name, prop.type)" class="doneButton">
               <mat-icon aria-label="Example icon-button with a heart icon">done</mat-icon>
