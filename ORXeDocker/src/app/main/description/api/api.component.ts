@@ -10,6 +10,7 @@ import { ComponentdataService } from 'src/app/componentdata.service';
 export class ApiComponent implements OnInit {
   //trustedUrl:any;
   Url: any;
+  githubMarkDown:string;
   /**
   * Get Component Name
   */
@@ -22,7 +23,9 @@ export class ApiComponent implements OnInit {
     //console.log(this.Component.componentname);
     //this.Component = this.componentdata.selectedComponent.name;
     //console.log(this.componentdata.selectedComponent.name);
-    this.Url = "http://127.0.0.1:8080/components/" + this.Component.componentname + "Component.html";
+    this.Url = "http://127.0.0.1:8080/components/" + this.Component.componentname + ".html";
+    this.githubMarkDown = this.Component.githubMarkDown;
+    //console.log(this.githubMarkDown);
     //$('#iframeID').contents().find('#toppanel').hide();
 
     // this.printContents = document.getElementById('iframe').content;
@@ -39,8 +42,14 @@ export class ApiComponent implements OnInit {
     return this.sanitizer.bypassSecurityTrustResourceUrl(this.Url);
   }
   ngOnChanges() {
+    this.githubMarkDown = this.Component.githubMarkDown;
+    //console.log(this.githubMarkDown);
   //  console.log(this.Component);
   //   console.log(this.Component.componentname);
-    this.Url = "http://127.0.0.1:8080/components/" + this.Component.componentname + "Component.html";
+    this.Url = "http://127.0.0.1:8080/components/" + this.Component.componentname + ".html";
+  }
+  githubMarkDownUrl(){
+    this.githubMarkDown = this.Component.githubMarkDown;
+    //console.log(this.githubMarkDown);
   }
 }

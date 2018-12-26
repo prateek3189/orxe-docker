@@ -4,9 +4,12 @@
   </div>
   <div class="steps">
     <mat-card>
-                        <!-- loaded from remote url -->
-                        <markdown [src]="'https://raw.githubusercontent.com/prateek3189/orxe-docker/DOCK-1/README.md'"></markdown>
-                      </mat-card>
+      <!-- loaded from remote url -->
+      <markdown [src]="githubMarkDown"></markdown>
+    </mat-card>
+    <mat-card>
+      <markdown [src]="'https://raw.githubusercontent.com/prateek3189/orxe-docker/DOCK-1/README.md'"></markdown>
+    </mat-card>
     <!-- <mat-card class="example-card">
       <mat-card-content>
         <mat-list role="list">

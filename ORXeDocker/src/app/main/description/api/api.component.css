@@ -61,7 +61,7 @@ mat-card{
         width:102%;
       }
   }
-  @media only screen and (max-width:1169px),(max-width:1024px){
+  @media only screen and (max-width:1169px),(max-width:1024px),(max-width:1554px){
     .DocumentService{
       margin-top: -9em !important;
     }

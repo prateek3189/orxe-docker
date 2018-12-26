@@ -2030,9 +2030,8 @@ loadComponent(component) {
               &lt;/div&gt;
             &lt;/mat-list&gt;
           &lt;/mat-list-item&gt;
-          &lt;mat-list-item role&#x3D;&quot;listitem&quot; *ngIf&#x3D;&quot;isObject(prop.type)&quot;&gt;
+          &lt;mat-list-item role&#x3D;&quot;listitem&quot; *ngIf&#x3D;&quot;isObject(prop.type)&quot; class&#x3D;&quot;ObjectList&quot;&gt;
             &lt;div class&#x3D;&quot;objectform&quot;&gt;
-            &lt;div&gt;
             &lt;mat-form-field mat-line class&#x3D;&quot;form-full-width&quot;&gt;
               &lt;input matInput required placeholder&#x3D;&quot;Label&quot; [(ngModel)]&#x3D;&quot;MenuLabel&quot;&gt;
             &lt;/mat-form-field&gt;
@@ -2040,7 +2039,6 @@ loadComponent(component) {
             &lt;mat-form-field mat-line class&#x3D;&quot;form-full-width&quot;&gt;
               &lt;input matInput required placeholder&#x3D;&quot;Value&quot; [(ngModel)]&#x3D;&quot;MenuValue&quot;&gt;
             &lt;/mat-form-field&gt;
-          &lt;/div&gt;
             &lt;div class&#x3D;&quot;button-done&quot;&gt;
             &lt;button mat-mini-fab mat-line (click)&#x3D;&quot;OnPropertySubmit(prop.name, prop.type)&quot; class&#x3D;&quot;doneButton&quot;&gt;
               &lt;mat-icon aria-label&#x3D;&quot;Example icon-button with a heart icon&quot;&gt;done&lt;/mat-icon&gt;
@@ -2074,7 +2072,7 @@ mat-card{
   }
 .cpen{
     margin-top: 5em !important;
-    padding: 0.39em;
+    padding: 1em;
     margin: 0 auto;
     max-width: 500px;
     background-color: whitesmoke;
@@ -2082,7 +2080,7 @@ mat-card{
 .codepen{
     float: left;
     width: 70%;
-    height: 100vh;
+    height: 88vh;
     padding: 10px;
     border-right: 4px double blue;
     overflow-y:auto;
@@ -2104,10 +2102,13 @@ mat-card{
      max-width: 500px;
      background-color: whitesmoke;
    }  */
+.objectform{
+    margin-top: 3em;
+}
+.ObjectList{
+    margin-bottom: 4em;
+}
 
-   .form-full-width {
-    width: 100%;
-  } 
   /* Clear floats after the columns */
 .row:after {
     content: &quot;&quot;;
@@ -2172,7 +2173,7 @@ mat-card{
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="row">  <div class="codepen" *ngIf="Component">    <mat-card>      <mat-chip-list>        <mat-chip> {{Component.name}}</mat-chip>      </mat-chip-list>        <mat-card-content class="cpen">          <ng-template appComponentLoader></ng-template>        </mat-card-content>      </mat-card>        <mat-card>          <mat-card-content>            <mat-list role="list">              <h3 mat-subheader>To use this element on a web page</h3>              <mat-list-item>                <mat-icon mat-list-icon>label_important</mat-icon>                <h4 mat-line>Step 1 : Get the dependencies</h4>                <p mat-line>Node (>6.0.0)</p>                <p mat-line>Npm (>3.8.6)</p>              </mat-list-item>              <mat-list-item>                <mat-icon mat-list-icon>label_important</mat-icon>                <h4 mat-line>Step 2 : Install the libraries</h4>                <p mat-line># Install compodoc with npm</p>                <p mat-line> $ npm install -g @compodoc/compodoc</p>              </mat-list-item>              <mat-list-item>                <mat-icon mat-list-icon>label_important</mat-icon>                <h4 mat-line>Step 3 : Serve It</h4>                <p mat-line># Run compodoc in your project (generated with Angular CLI for example) and serve it</p>                <p mat-line>$ compodoc -p src/tsconfig.app.json -s</p>              </mat-list-item>            </mat-list>          </mat-card-content>        </mat-card>         <!-- <h3 mat-subheader>        <mat-icon>chevron_right</mat-icon>Json Data of {{Component.name}}      </h3>      <p mat-line> {{Component.name}}</p>      <p mat-line *ngIf="Component.className"> <b>Class Name:</b> {{Component.className}}</p>      <p mat-line *ngIf="Component.moduleDetails.module"> <b>Module:</b> {{Component.moduleDetails.module}}</p>      <p mat-line *ngIf="Component.moduleDetails.modulePath"> <b>Module Path:</b>        {{Component.moduleDetails.modulePath}}</p>      <span mat-line *ngIf="Component.template"> <b>Template:</b> {{Component.template}}</span>      <span mat-line *ngIf="Component.properties"><b>Properties:</b>        <mat-list role="list" *ngFor="let prop of Component.properties">          <mat-list-item role="listitem">{{prop.name}}</mat-list-item>        </mat-list>      </span> -->    <!-- <mat-card>      <h3 mat-subheader>Json Data of {{Component.name}}</h3>  </mat-card> -->  </div>  <div class="operation">    <mat-card class="properties">      <div>      <span><b>Properties:</b></span>      <div *ngIf="propertyArray">                <mat-list *ngFor="let prop of propertyArray">                     <p>{{prop.name}}: </p>          <mat-list-item role="listitem" *ngIf="isString(prop.type)">            <mat-form-field class="example-full-width">              <input matInput required placeholder="{{prop.name}}" value="{{prop.value}}" (change)="valuechange(prop.name, $event.target.value,prop.type)">            </mat-form-field>          </mat-list-item>          <mat-list-item role="listitem" *ngIf="isBoolean(prop.type)">            <input type="checkbox" (change)="valuechange(prop.name, $event.target.value,prop.type)">{{prop.name}}          </mat-list-item>          <mat-list-item role="listitem" *ngIf="isArray(prop.type)">            <mat-list role="list">              <div *ngFor="let val of prop.List">                <input type="radio" name="{{prop.name}}" value="{{val}}" (click)="valuechange(prop.name, $event.target.value, prop.type)">{{val}}<br>              </div>            </mat-list>          </mat-list-item>          <mat-list-item role="listitem" *ngIf="isObject(prop.type)">            <div class="objectform">            <div>            <mat-form-field mat-line class="form-full-width">              <input matInput required placeholder="Label" [(ngModel)]="MenuLabel">            </mat-form-field>            <mat-form-field mat-line class="form-full-width">              <input matInput required placeholder="Value" [(ngModel)]="MenuValue">            </mat-form-field>          </div>            <div class="button-done">            <button mat-mini-fab mat-line (click)="OnPropertySubmit(prop.name, prop.type)" class="doneButton">              <mat-icon aria-label="Example icon-button with a heart icon">done</mat-icon>            </button>          </div>        </div>          </mat-list-item>        </mat-list>      </div>      <div role="list" *ngIf="!propertyArray">        <div role="listitem">          Operations Not Found Please Add in Json File.        </div>      </div>    </div>    </mat-card>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="row">  <div class="codepen" *ngIf="Component">    <mat-card>      <mat-chip-list>        <mat-chip> {{Component.name}}</mat-chip>      </mat-chip-list>        <mat-card-content class="cpen">          <ng-template appComponentLoader></ng-template>        </mat-card-content>      </mat-card>        <mat-card>          <mat-card-content>            <mat-list role="list">              <h3 mat-subheader>To use this element on a web page</h3>              <mat-list-item>                <mat-icon mat-list-icon>label_important</mat-icon>                <h4 mat-line>Step 1 : Get the dependencies</h4>                <p mat-line>Node (>6.0.0)</p>                <p mat-line>Npm (>3.8.6)</p>              </mat-list-item>              <mat-list-item>                <mat-icon mat-list-icon>label_important</mat-icon>                <h4 mat-line>Step 2 : Install the libraries</h4>                <p mat-line># Install compodoc with npm</p>                <p mat-line> $ npm install -g @compodoc/compodoc</p>              </mat-list-item>              <mat-list-item>                <mat-icon mat-list-icon>label_important</mat-icon>                <h4 mat-line>Step 3 : Serve It</h4>                <p mat-line># Run compodoc in your project (generated with Angular CLI for example) and serve it</p>                <p mat-line>$ compodoc -p src/tsconfig.app.json -s</p>              </mat-list-item>            </mat-list>          </mat-card-content>        </mat-card>         <!-- <h3 mat-subheader>        <mat-icon>chevron_right</mat-icon>Json Data of {{Component.name}}      </h3>      <p mat-line> {{Component.name}}</p>      <p mat-line *ngIf="Component.className"> <b>Class Name:</b> {{Component.className}}</p>      <p mat-line *ngIf="Component.moduleDetails.module"> <b>Module:</b> {{Component.moduleDetails.module}}</p>      <p mat-line *ngIf="Component.moduleDetails.modulePath"> <b>Module Path:</b>        {{Component.moduleDetails.modulePath}}</p>      <span mat-line *ngIf="Component.template"> <b>Template:</b> {{Component.template}}</span>      <span mat-line *ngIf="Component.properties"><b>Properties:</b>        <mat-list role="list" *ngFor="let prop of Component.properties">          <mat-list-item role="listitem">{{prop.name}}</mat-list-item>        </mat-list>      </span> -->    <!-- <mat-card>      <h3 mat-subheader>Json Data of {{Component.name}}</h3>  </mat-card> -->  </div>  <div class="operation">    <mat-card class="properties">      <div>      <span><b>Properties:</b></span>      <div *ngIf="propertyArray">                <mat-list *ngFor="let prop of propertyArray">                     <p>{{prop.name}}: </p>          <mat-list-item role="listitem" *ngIf="isString(prop.type)">            <mat-form-field class="example-full-width">              <input matInput required placeholder="{{prop.name}}" value="{{prop.value}}" (change)="valuechange(prop.name, $event.target.value,prop.type)">            </mat-form-field>          </mat-list-item>          <mat-list-item role="listitem" *ngIf="isBoolean(prop.type)">            <input type="checkbox" (change)="valuechange(prop.name, $event.target.value,prop.type)">{{prop.name}}          </mat-list-item>          <mat-list-item role="listitem" *ngIf="isArray(prop.type)">            <mat-list role="list">              <div *ngFor="let val of prop.List">                <input type="radio" name="{{prop.name}}" value="{{val}}" (click)="valuechange(prop.name, $event.target.value, prop.type)">{{val}}<br>              </div>            </mat-list>          </mat-list-item>          <mat-list-item role="listitem" *ngIf="isObject(prop.type)" class="ObjectList">            <div class="objectform">            <mat-form-field mat-line class="form-full-width">              <input matInput required placeholder="Label" [(ngModel)]="MenuLabel">            </mat-form-field>            <mat-form-field mat-line class="form-full-width">              <input matInput required placeholder="Value" [(ngModel)]="MenuValue">            </mat-form-field>            <div class="button-done">            <button mat-mini-fab mat-line (click)="OnPropertySubmit(prop.name, prop.type)" class="doneButton">              <mat-icon aria-label="Example icon-button with a heart icon">done</mat-icon>            </button>          </div>        </div>          </mat-list-item>        </mat-list>      </div>      <div role="list" *ngIf="!propertyArray">        <div role="listitem">          Operations Not Found Please Add in Json File.        </div>      </div>    </div>    </mat-card>  </div></div></div>'
     var COMPONENTS = [{'name': 'ApiComponent', 'selector': 'app-api'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CodepenComponent', 'selector': 'app-codepen'},{'name': 'ComponentsComponent', 'selector': 'app-components'},{'name': 'DefualtAMButtonComponent', 'selector': 'app-defualt-ambutton'},{'name': 'DefualtAMMenuListComponent', 'selector': 'app-defualt-ammenu-list'},{'name': 'DemoComponent', 'selector': 'app-demo'},{'name': 'DescriptionComponent', 'selector': 'app-description'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'OverviewComponent', 'selector': 'app-overview'}];
     var DIRECTIVES = [{'name': 'ComponentLoaderDirective', 'selector': '[appComponentLoader]'}];
     var ACTUAL_COMPONENT = {'name': 'OverviewComponent'};

@@ -153,12 +153,11 @@
       module: [&#x27;MatButtonModule&#x27;, &#x27;MatIconModule&#x27;, &#x27;MatMenuModule&#x27;],
       modulePath: &#x60;angular/material&#x60;,
     },
-    template : &#x60;&lt;button mat-raised-button [color]&#x3D;&#x27;Color&#x27; [matMenuTriggerFor]&#x3D;&quot;menu&quot;&gt;Menu&lt;/button&gt; &lt;mat-menu #menu&#x3D;&quot;matMenu&quot;&gt;
+    template : &#x60;&lt;button mat-raised-button color&#x3D;&quot;primary&quot; [matMenuTriggerFor]&#x3D;&quot;menu&quot;&gt;Menu&lt;/button&gt; &lt;mat-menu #menu&#x3D;&quot;matMenu&quot;&gt;
       &lt;button  mat-menu-item *ngFor&#x3D;&quot;let item of ListItems&quot; value&#x3D;&quot;{{item.value}}&quot;&gt;{{item.label}}&lt;/button&gt;
     &lt;/mat-menu&gt;&#x60;,
 
     properties:[
-      { name : &#x27;Color&#x27;, value: &quot;&quot;, type: Array , defaultValue: &#x27;primary&#x27;, List: [&#x27;accent&#x27;, &#x27;primary&#x27;, &#x27;warn&#x27;]},
       { name : &#x27;ListItems&#x27;, value: &quot;&quot;, type: Object , defaultValue:[{label:&#x27;IN&#x27;, value: &#x27;INDIA&#x27;}, {label: &#x27;US&#x27;, value: &#x27;UNITED STATES&#x27;} ]},
     ]
   }
