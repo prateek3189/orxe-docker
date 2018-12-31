@@ -7,7 +7,9 @@ import * as _ from 'underscore';
 import { MatMenuModule, MatButtonModule } from '@angular/material';
 import {ButtonModule} from 'primeng/button';
 import { DemoComponent } from 'src/app/customiseComponents/demo/demo.component';
+import { TaviscaOrxe3LibraryModule } from 'tavisca-orxe3-library';
 import { throwError } from 'rxjs';
+
 
 
 
@@ -103,10 +105,12 @@ loadComponent(component) {
     {
             
           this.componentRef = this.appComponentLoder.viewContainerRef.createComponent(factory);
+          if(this.propertyArray){
            for (let index = 0; index< this.propertyArray.length;index++) {
              let comp = this.propertyArray[index];
             this.componentRef.instance[comp.name] = comp.defaultValue
         }
+      }
 
     });    
   }
@@ -125,7 +129,7 @@ loadComponent(component) {
   
   
     //  let's create a Type for it
-    this.dynamicImports = [CommonModule, ButtonModule, MatMenuModule, MatButtonModule]
+    this.dynamicImports = [CommonModule, ButtonModule, MatMenuModule, MatButtonModule,TaviscaOrxe3LibraryModule]
     let  type = this.createNewComponent(template);
   if(modulevalue==null && classname!=null){
     this.dynamicDeclarations = [type,DemoComponent];

@@ -1,6 +1,6 @@
 export const appliCationComponentList = [
   {
-    name: "In Application Componet",
+    name: "In Application Component",
     componentname: "DemoComponent",
     className: "DemoComponent",
     moduleDetails: {
@@ -76,6 +76,42 @@ export const appliCationComponentList = [
       dependencies: ['Node (>6.0.0)', 'Npm (>3.8.6)'],
       libraries: ['npm install --save @angular/material @angular/cdk @angular/animations'],
       Serve: ['ng serves']
+    }
+  },
+  {
+    name: "Tavisca Button",
+    componentname: "TaviscaButtonComponent",
+    className: null,
+    moduleDetails: {
+      module: ['MatButtonModule'],
+      modulePath: `angular/material`,
+    },
+    template: `<enl-tavisca-button [color]='Color' [Disabled]="Disabled"></enl-tavisca-button>`,
+    githubMarkDown: "https://raw.githubusercontent.com/angular/material2/master/src/lib/button/README.md",
+    properties: [
+      { name: 'Color', value: "", type: Array, defaultValue: 'primary', List: ['accent', 'primary', 'warn'] },
+      { name: 'Disabled', value: "true", type: Boolean, defaultValue: false }
+    ],
+    commands: {
+      dependencies: ['Node (>6.0.0)', 'Npm (>3.8.6)'],
+      libraries: ['npm install --save @angular/material @angular/cdk @angular/animations','npm install "D:\Data After 1-12-2018\ORXe 3.0\Angular-Library\Tavisca-Orxe3-Library\dist\tavisca-orxe3-library\tavisca-orxe3-library-0.0.1.tgz"'],
+      Serve: ['ng serve']
+    }
+  },
+  {
+    name: "Tavisca Input",
+    componentname: "TaviscaInputComponent",
+    className: null,
+    moduleDetails: {
+      module: ['MatButtonModule'],
+      modulePath: `angular/material`,
+    },
+    template: `<enl-tavisca-input></enl-tavisca-input>`,
+    githubMarkDown: "https://raw.githubusercontent.com/angular/material2/master/src/lib/button/README.md",
+    commands: {
+      dependencies: ['Node (>6.0.0)', 'Npm (>3.8.6)'],
+      libraries: ['npm install --save @angular/material @angular/cdk @angular/animations','npm install "D:\Data After 1-12-2018\ORXe 3.0\Angular-Library\Tavisca-Orxe3-Library\dist\tavisca-orxe3-library\tavisca-orxe3-library-0.0.1.tgz"'],
+      Serve: ['ng serve']
     }
   }
 ]
