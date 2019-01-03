@@ -5,7 +5,7 @@ import { ComponentLoaderDirective } from 'src/app/component-loader.directive';
 import { CommonModule } from '@angular/common';
 import * as _ from 'underscore';
 import { MatMenuModule, MatButtonModule } from '@angular/material';
-import {ButtonModule} from 'primeng/button';
+import { ButtonModule } from 'primeng/button';
 import { DemoComponent } from 'src/app/customiseComponents/demo/demo.component';
 import { TaviscaOrxe3LibraryModule } from 'tavisca-orxe3-library';
 import { throwError } from 'rxjs';
@@ -88,31 +88,34 @@ OnPropertySubmit(propName, propType) {
   }
 }
 
-loadComponent(component) {
-  //  debugger;
+  loadComponent(component) {
+    //  debugger;
     if (this.componentRef) {
       this.componentRef.destroy();
-     } 
-    this.CurrentComponent = component
-    let modulevalue = this.CurrentComponent.moduleDetails.module;
+    }
+    this.CurrentComponent = component;
+    let modulevalue;
+    if (this.CurrentComponent.moduleDetails != null) {
+      modulevalue = this.CurrentComponent.moduleDetails.module;
+    }
+    else
+      modulevalue = null;
     let classname = this.CurrentComponent.className;
     let template = this.CurrentComponent.template;
-    
+
     this.propertyArray = this.CurrentComponent.properties;
 
-    this.createComponentFactory(template,modulevalue,classname)
-      .then((factory: ComponentFactory<IHaveDynamicData>) =>
-    {
-            
-          this.componentRef = this.appComponentLoder.viewContainerRef.createComponent(factory);
-          if(this.propertyArray){
-           for (let index = 0; index< this.propertyArray.length;index++) {
-             let comp = this.propertyArray[index];
+    this.createComponentFactory(template, modulevalue, classname)
+      .then((factory: ComponentFactory<IHaveDynamicData>) => {
+        this.componentRef = this.appComponentLoder.viewContainerRef.createComponent(factory);
+        if (this.propertyArray) {
+          for (let index = 0; index < this.propertyArray.length; index++) {
+            let comp = this.propertyArray[index];
             this.componentRef.instance[comp.name] = comp.defaultValue
+          }
         }
-      }
 
-    });    
+      });
   }
 
   createComponentFactory(template: string,modulevalue: any,classname:any): Promise<ComponentFactory<IHaveDynamicData>> {

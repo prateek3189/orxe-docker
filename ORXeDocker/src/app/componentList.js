@@ -1,11 +1,9 @@
-export const appliCationComponentList = [
+const appliCationComponentList = [
   {
     name: "In Application Component",
     componentname: "DemoComponent",
     className: "DemoComponent",
-    moduleDetails: {
-      module: null,
-    },
+    moduleDetails: null,
     template: `<app-demo [label] ='Label' [disabled] = 'disabled' [data]='Data'></app-demo>`,
     githubMarkDown: "https://raw.githubusercontent.com/angular/material2/master/src/lib/button/README.md",
     properties: [
@@ -24,7 +22,8 @@ export const appliCationComponentList = [
     className: null,
     moduleDetails: {
       module: ["ButtonModule"],
-      modulePath: `primeng/button`
+      modulePath: ['primeng','primeicons'],
+      version: ['7.0.3','1.0.0']
     },
     template: `<button pButton type="button" icon="pi pi-check" [label]='Label'></button>`,
     githubMarkDown: "https://raw.githubusercontent.com/angular/material2/master/src/lib/button/README.md",
@@ -43,7 +42,8 @@ export const appliCationComponentList = [
     className: null,
     moduleDetails: {
       module: ['MatButtonModule'],
-      modulePath: `angular/material`
+      modulePath: ['@angular/material','@angular/cdk','@angular/animations'],
+      version: ['7.0.2','7.0.4','7.0.4']
     },
     template: `<button mat-raised-button [color]='Color' [disabled]="Disabled">AM Primary</button>`,
     githubMarkDown: "https://raw.githubusercontent.com/angular/material2/master/src/lib/button/README.md",
@@ -63,7 +63,8 @@ export const appliCationComponentList = [
     className: null,
     moduleDetails: {
       module: ['MatButtonModule', 'MatIconModule', 'MatMenuModule'],
-      modulePath: `angular/material`,
+      modulePath: ['@angular/material','@angular/cdk','@angular/animations'],
+      version: ['7.0.2','7.0.4','7.0.4']
     },
     template: `<button mat-raised-button color="primary" [matMenuTriggerFor]="menu">Menu</button> <mat-menu #menu="matMenu">
        <button  mat-menu-item *ngFor="let item of ListItems" value="{{item.value}}">{{item.label}}</button>
@@ -84,7 +85,8 @@ export const appliCationComponentList = [
     className: null,
     moduleDetails: {
       module: ['MatButtonModule'],
-      modulePath: `angular/material`,
+      modulePath: ['@angular/material','@angular/cdk','@angular/animations'],
+      version: ['7.0.2','7.0.4','7.0.4']
     },
     template: `<enl-tavisca-button [color]='Color' [Disabled]="Disabled"></enl-tavisca-button>`,
     githubMarkDown: "https://raw.githubusercontent.com/angular/material2/master/src/lib/button/README.md",
@@ -104,7 +106,8 @@ export const appliCationComponentList = [
     className: null,
     moduleDetails: {
       module: ['MatButtonModule'],
-      modulePath: `angular/material`,
+      modulePath: ['@angular/material','@angular/cdk','@angular/animations'],
+      version: ['7.0.2','7.0.4','7.0.4']
     },
     template: `<enl-tavisca-input></enl-tavisca-input>`,
     githubMarkDown: "https://raw.githubusercontent.com/angular/material2/master/src/lib/button/README.md",
@@ -115,3 +118,5 @@ export const appliCationComponentList = [
     }
   }
 ]
+
+exports.compList = appliCationComponentList;

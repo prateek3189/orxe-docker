@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { appliCationComponentList } from './componentList';
+import { compList } from './componentList';
 import { Data } from './componentdata.model';
 
 @Injectable({
@@ -11,7 +11,7 @@ export class ComponentdataService {
   componentsList = [];
   selectedComponent : Data;
   constructor() {
-    this.componentsList = appliCationComponentList;
+    this.componentsList = compList;
   }
 
   getComponentData() {
