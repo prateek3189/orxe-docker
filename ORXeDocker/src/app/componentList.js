@@ -90,6 +90,7 @@ const appliCationComponentList = [
     },
     template: `<enl-tavisca-button [color]='Color' [Disabled]="Disabled"></enl-tavisca-button>`,
     githubMarkDown: "https://raw.githubusercontent.com/angular/material2/master/src/lib/button/README.md",
+    githubCode: "https://github.com/Tavisca-Saurabh/Angular-Library/tree/Develop/Tavisca-Orxe3-Library/projects/tavisca-orxe3-library/src/lib/tavisca-button",
     properties: [
       { name: 'Color', value: "", type: Array, defaultValue: 'primary', List: ['accent', 'primary', 'warn'] },
       { name: 'Disabled', value: "true", type: Boolean, defaultValue: false }
@@ -111,6 +112,7 @@ const appliCationComponentList = [
     },
     template: `<enl-tavisca-input></enl-tavisca-input>`,
     githubMarkDown: "https://raw.githubusercontent.com/angular/material2/master/src/lib/button/README.md",
+    githubCode: "https://github.com/Tavisca-Saurabh/Angular-Library/tree/Develop/Tavisca-Orxe3-Library/projects/tavisca-orxe3-library/src/lib/tavisca-input",
     commands: {
       dependencies: ['Node (>6.0.0)', 'Npm (>3.8.6)'],
       libraries: ['npm install --save @angular/material @angular/cdk @angular/animations','npm install "D:\Data After 1-12-2018\ORXe 3.0\Angular-Library\Tavisca-Orxe3-Library\dist\tavisca-orxe3-library\tavisca-orxe3-library-0.0.1.tgz"'],

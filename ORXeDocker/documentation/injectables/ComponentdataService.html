@@ -405,7 +405,7 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
-import { appliCationComponentList } from &#x27;./componentList&#x27;;
+import { compList } from &#x27;./componentList&#x27;;
 import { Data } from &#x27;./componentdata.model&#x27;;
 
 @Injectable({
@@ -417,7 +417,7 @@ export class ComponentdataService {
   componentsList &#x3D; [];
   selectedComponent : Data;
   constructor() {
-    this.componentsList &#x3D; appliCationComponentList;
+    this.componentsList &#x3D; compList;
   }
 
   getComponentData() {
