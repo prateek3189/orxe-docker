@@ -1,24 +1,31 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="!(isHandset$ | async)">
-      <mat-toolbar>
-        <mat-icon>label_important</mat-icon> Components
-      </mat-toolbar>
-    <mat-nav-list *ngFor="let data of data" class="component">
-        <a mat-raised-button color="accent" (click)="MoreInfo(data)" routerLink="/{{data.name}}" [routerLinkActive]='["link-active"]'
-        [routerLinkActiveOptions]='{ exact: true }' queryParamsHandling="preserve" class="componenet-button">{{data.name}}</a>
-    </mat-nav-list>
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)">
+    <mat-toolbar>
+      <mat-icon>label_important</mat-icon> Components
+    </mat-toolbar>
+    <mat-accordion *ngFor="let Menu of MenuList">
+      <mat-expansion-panel *ngFor="let type of Menu.List">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{type}}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list class="component">
+          <div *ngFor="let data of data">
+            <div *ngIf="data.type==type">
+              <a mat-raised-button color="accent" (click)="MoreInfo(data)" routerLink="/{{data.name}}"
+                [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }' queryParamsHandling="preserve"
+                class="componenet-button">{{data.name}}</a>
+            </div>
+          </div>
+        </mat-nav-list>
+      </mat-expansion-panel>
+    </mat-accordion>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar *ngIf="isHandset$ | async">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <i>Select Component To Get Detail</i>

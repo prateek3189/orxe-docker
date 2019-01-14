@@ -20,6 +20,7 @@ import { ComponentLoaderDirective } from './component-loader.directive';
 import { OverviewComponent } from './main/description/overview/overview.component';
 import {ButtonModule} from 'primeng/button';
 import { MarkdownModule } from 'ngx-markdown';
+import { OverlayModule} from '@angular/cdk/overlay';
 
 
 
@@ -46,6 +47,7 @@ import { MarkdownModule } from 'ngx-markdown';
     FormsModule,
     ButtonModule,
     MarkdownModule.forRoot({ loader: HttpClient }),
+    OverlayModule
   ],
   providers: [ComponentService],
   bootstrap: [AppComponent],

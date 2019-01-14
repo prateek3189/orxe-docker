@@ -1,6 +1,7 @@
 const appliCationComponentList = [
   {
-    name: "In Application Component",
+    type: "Component",
+    name: "Application Component",
     componentname: "DemoComponent",
     className: "DemoComponent",
     moduleDetails: null,
@@ -17,6 +18,7 @@ const appliCationComponentList = [
     }
   },
   {
+    type: "Button",
     name: "Prime NG",
     componentname: "DemoComponent",
     className: null,
@@ -37,6 +39,7 @@ const appliCationComponentList = [
     }
   },
   {
+    type: "Button",
     name: "Defualt AM Button ",
     componentname: "DefualtAMButtonComponent",
     className: null,
@@ -58,6 +61,7 @@ const appliCationComponentList = [
     }
   },
   {
+    type: "Button",
     name: "Defualt AM Menu List",
     componentname: "DefualtAMMenuListComponent",
     className: null,
@@ -80,6 +84,7 @@ const appliCationComponentList = [
     }
   },
   {
+    type: "Button",
     name: "Tavisca Button",
     componentname: "TaviscaButtonComponent",
     className: null,
@@ -102,6 +107,7 @@ const appliCationComponentList = [
     }
   },
   {
+    type: "Form",
     name: "Tavisca Input",
     componentname: "TaviscaInputComponent",
     className: null,
@@ -122,3 +128,11 @@ const appliCationComponentList = [
 ]
 
 exports.compList = appliCationComponentList;
+
+const MenuList = [
+  {
+      List: ['Component', 'Form','Button'],
+  }
+]
+
+exports.menuList = MenuList;

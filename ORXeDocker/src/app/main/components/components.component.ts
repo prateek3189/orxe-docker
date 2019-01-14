@@ -12,28 +12,22 @@ import { ComponentdataService } from 'src/app/componentdata.service';
 })
 export class ComponentsComponent {
   public data = [];
+  public MenuList = [];
+  public List = [];
+  Name: string;
   @Output() component: EventEmitter<string> = new EventEmitter<string>();
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches)
     );
 
-  constructor(private breakpointObserver: BreakpointObserver , private _componentdata: ComponentdataService) {}
+  constructor(private breakpointObserver: BreakpointObserver, private _componentdata: ComponentdataService) { }
 
-  // ngOnInit(){
-  //   this._componentdata.getComponentData()
-  //   .subscribe(data=>{
-  //     this.data = data;
-  //     //console.log(this.data);
-  //     this._componentdata.response = this.data;
-  //   });
-  // }
-  // MoreInfo(component: string) {
-  //   this.component.emit(component);
-  // }
-  ngOnInit(){
-    this.data= this._componentdata.getComponentData();
+  ngOnInit() {
+    this.data = this._componentdata.getComponentData();
+    this.MenuList = this._componentdata.getMenuList();
   }
+
   MoreInfo(component) {
     this.component.emit(component);
     this._componentdata.setComponent(component);
