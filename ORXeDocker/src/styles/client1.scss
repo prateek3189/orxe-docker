@@ -1,0 +1,14 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+// Medium theme
+
+$Client1-primary: mat-palette($mat-indigo);
+$Client1-accent: mat-palette($mat-pink, A200, A100, A400);
+$Client1-warn: mat-palette($mat-red);
+
+$Client1-theme: mat-light-theme($Client1-primary, $Client1-accent, $Client1-warn);
+
+.Client1-theme {
+  @include angular-material-theme($Client1-theme)
+}

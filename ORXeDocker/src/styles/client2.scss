@@ -1,0 +1,29 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+// Client2 theme
+$Client2-primary: mat-palette($mat-light-blue);
+$Client2-accent: mat-palette($mat-lime, 200);
+$Client2-warn: mat-palette($mat-deep-orange, 200);
+// $Client2-secondary: mat-palette($mat-indigo);
+// Flat and raised button standards
+
+$Client2-theme: mat-light-theme($Client2-primary, $Client2-accent, $Client2-warn);
+
+.Client2-theme {
+  @include angular-material-theme($Client2-theme);
+}
+
+@mixin mat-expansion-panel($theme) {
+
+    $primary: map-get($theme, primary);
+    $warn: map-get($theme, warn);
+    $background: map-get($theme, background);
+    $foreground: map-get($theme, foreground);
+  
+    // mat-expansion-panel{
+    //     margin: .5em;
+    //     background-color: #E6E6FA;
+    //     background-color: mat-color($background, hover);
+    //   }
+  }

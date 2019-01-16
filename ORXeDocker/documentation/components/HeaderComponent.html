@@ -133,11 +133,28 @@
                             <li>
                                 <a href="#ngOnInit">ngOnInit</a>
                             </li>
+                            <li>
+                                <a href="#onSetTheme">onSetTheme</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
 
 
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#Theme">Theme</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
 
 
@@ -156,7 +173,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/header/header.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/header/header.component.ts:9</a></div>
                             </td>
                         </tr>
 
@@ -165,7 +182,28 @@
 </section>
 
 
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="Theme"></a>
+                        <code>Theme</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code>EventEmitter&lt;string&gt;</code>
 
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/header/header.component.ts:9</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
 
 
     <section>
@@ -211,6 +249,71 @@
                 </tr>
             </tbody>
         </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onSetTheme"></a>
+                        <span class="name">
+                            <b>
+                            onSetTheme
+                            </b>
+                            <a href="#onSetTheme"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>onSetTheme(Theme)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/header/header.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>Theme</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 </section>
 
 
@@ -218,7 +321,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Output, EventEmitter } from &#x27;@angular/core&#x27;;
 
 @Component({
   selector: &#x27;app-header&#x27;,
@@ -226,24 +329,53 @@
   styleUrls: [&#x27;./header.component.css&#x27;]
 })
 export class HeaderComponent implements OnInit {
-
+  @Output() Theme: EventEmitter&lt;string&gt; &#x3D; new EventEmitter&lt;string&gt;();
   constructor() { }
 
   ngOnInit() {
   }
-
+  onSetTheme(Theme) {
+    this.Theme.emit(Theme);
+  }
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;mat-toolbar color&#x3D;&quot;primary&quot;&gt;
-  &lt;span&gt;&lt;mat-icon&gt;file_copy&lt;/mat-icon&gt;ORXe 3.0 Docker&lt;/span&gt;
+  &lt;span&gt;
+    &lt;mat-icon&gt;file_copy&lt;/mat-icon&gt;ORXe 3.0 Docker
+  &lt;/span&gt;
   &lt;span class&#x3D;&quot;spacer&quot;&gt;&lt;/span&gt;
-
+  &lt;button mat-icon-button [matMenuTriggerFor]&#x3D;&quot;menu&quot;&gt;
+    &lt;mat-icon&gt;format_color_fill&lt;/mat-icon&gt;
+  &lt;/button&gt;
+  &lt;mat-menu #menu&#x3D;&quot;matMenu&quot;&gt;
+    &lt;button mat-menu-item color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;onSetTheme(&#x27;Client1-theme&#x27;)&quot;&gt;Client1&lt;/button&gt;
+    &lt;button mat-menu-item color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;onSetTheme(&#x27;Client2-theme&#x27;)&quot;&gt;Client2&lt;/button&gt;
+    &lt;button mat-menu-item color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;onSetTheme(&#x27;default-theme&#x27;)&quot;&gt;Default&lt;/button&gt;
+    &lt;button mat-menu-item color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;onSetTheme(&#x27;dark-theme&#x27;)&quot;&gt;Dark&lt;/button&gt;
+    &lt;button mat-menu-item color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;onSetTheme(&#x27;Medium-theme&#x27;)&quot;&gt;Medium&lt;/button&gt;
+    &lt;button mat-menu-item color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;onSetTheme(&#x27;light-theme&#x27;)&quot;&gt;Light&lt;/button&gt;
+    &lt;!-- &lt;button mat-menu-item&gt;
+      &lt;mat-icon&gt;dialpad&lt;/mat-icon&gt;
+      &lt;span&gt;Default&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button mat-menu-item disabled&gt;
+      &lt;mat-icon&gt;voicemail&lt;/mat-icon&gt;
+      &lt;span&gt;Check voicemail&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button mat-menu-item&gt;
+      &lt;mat-icon&gt;notifications_off&lt;/mat-icon&gt;
+      &lt;span&gt;Disable alerts&lt;/span&gt;
+    &lt;/button&gt; --&gt;
+  &lt;/mat-menu&gt;
   &lt;mat-chip-list&gt;
-    &lt;a mat-list-item href&#x3D;&quot;https://github.com/prateek3189/orxe-docker&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;mat-chip color&#x3D;&quot;accent&quot; selected&gt;&lt;mat-icon aria-label&#x3D;&quot;Github Icon&quot;&gt;code&lt;/mat-icon&gt; Github&lt;/mat-chip&gt;
- &lt;/a&gt;&lt;/mat-chip-list&gt;
+    &lt;a mat-list-item href&#x3D;&quot;https://github.com/prateek3189/orxe-docker&quot; target&#x3D;&quot;_blank&quot;&gt;
+      &lt;mat-chip color&#x3D;&quot;accent&quot; selected&gt;
+        &lt;mat-icon aria-label&#x3D;&quot;Github Icon&quot;&gt;code&lt;/mat-icon&gt; Github
+      &lt;/mat-chip&gt;
+    &lt;/a&gt;&lt;/mat-chip-list&gt;
 &lt;/mat-toolbar&gt;</code></pre>
     </div>
 
@@ -288,9 +420,12 @@ export class HeaderComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-toolbar color="primary">  <span><mat-icon>file_copy</mat-icon>ORXe 3.0 Docker</span>  <span class="spacer"></span>  <mat-chip-list>    <a mat-list-item href="https://github.com/prateek3189/orxe-docker" target="_blank"><mat-chip color="accent" selected><mat-icon aria-label="Github Icon">code</mat-icon> Github</mat-chip> </a></mat-chip-list></mat-toolbar></div>'
-    var COMPONENTS = [{'name': 'ApiComponent', 'selector': 'app-api'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CodepenComponent', 'selector': 'app-codepen'},{'name': 'ComponentsComponent', 'selector': 'app-components'},{'name': 'DefualtAMButtonComponent', 'selector': 'app-defualt-ambutton'},{'name': 'DefualtAMMenuListComponent', 'selector': 'app-defualt-ammenu-list'},{'name': 'DemoComponent', 'selector': 'app-demo'},{'name': 'DescriptionComponent', 'selector': 'app-description'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'TaviscaButtonComponent', 'selector': 'enl-tavisca-button'},{'name': 'TaviscaInputComponent', 'selector': 'enl-tavisca-input'}];
-    var DIRECTIVES = [{'name': 'ComponentLoaderDirective', 'selector': '[appComponentLoader]'}];
+        var COMPONENT_TEMPLATE = '<div><mat-toolbar color="primary">  <span>    <mat-icon>file_copy</mat-icon>ORXe 3.0 Docker  </span>  <span class="spacer"></span>  <button mat-icon-button [matMenuTriggerFor]="menu">    <mat-icon>format_color_fill</mat-icon>  </button>  <mat-menu #menu="matMenu">    <button mat-menu-item color="primary" (click)="onSetTheme(\'Client1-theme\')">Client1</button>    <button mat-menu-item color="primary" (click)="onSetTheme(\'Client2-theme\')">Client2</button>    <button mat-menu-item color="primary" (click)="onSetTheme(\'default-theme\')">Default</button>    <button mat-menu-item color="primary" (click)="onSetTheme(\'dark-theme\')">Dark</button>    <button mat-menu-item color="primary" (click)="onSetTheme(\'Medium-theme\')">Medium</button>    <button mat-menu-item color="primary" (click)="onSetTheme(\'light-theme\')">Light</button>    <!-- <button mat-menu-item>      <mat-icon>dialpad</mat-icon>      <span>Default</span>    </button>    <button mat-menu-item disabled>      <mat-icon>voicemail</mat-icon>      <span>Check voicemail</span>    </button>    <button mat-menu-item>      <mat-icon>notifications_off</mat-icon>      <span>Disable alerts</span>    </button> -->  </mat-menu>  <mat-chip-list>    <a mat-list-item href="https://github.com/prateek3189/orxe-docker" target="_blank">      <mat-chip color="accent" selected>        <mat-icon aria-label="Github Icon">code</mat-icon> Github      </mat-chip>    </a></mat-chip-list></mat-toolbar></div>'
+    var COMPONENTS = [{'name': 'ApiComponent', 'selector': 'app-api'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CodepenComponent', 'selector': 'app-codepen'},{'name': 'ComponentsComponent', 'selector': 'app-components'},{'name': 'DefualtAMButtonComponent', 'selector': 'app-defualt-ambutton'},{'name': 'DefualtAMMenuListComponent', 'selector': 'app-defualt-ammenu-list'},{'name': 'DemoComponent', 'selector': 'app-demo'},{'name': 'DescriptionComponent', 'selector': 'app-description'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'MatAnchor', 'selector': 'a[mat-button], a[mat-raised-button], a[mat-icon-button], a[mat-fab],
+             a[mat-mini-fab], a[mat-stroked-button], a[mat-flat-button]'},{'name': 'MatButton', 'selector': 'button[mat-button], button[mat-raised-button], button[mat-icon-button],
+             button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],
+             button[mat-flat-button]'},{'name': 'MatMenu', 'selector': 'mat-menu'},{'name': 'MatMenuItem', 'selector': '[mat-menu-item]'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'TaviscaButtonComponent', 'selector': 'enl-tavisca-button'},{'name': 'TaviscaInputComponent', 'selector': 'enl-tavisca-input'},{'name': 'TryComponent', 'selector': 'app-try'}];
+    var DIRECTIVES = [{'name': 'ComponentLoaderDirective', 'selector': '[appComponentLoader]'},{'name': 'MatMenuContent', 'selector': 'ng-template[matMenuContent]'},{'name': 'MatMenuTrigger', 'selector': '[mat-menu-trigger-for], [matMenuTriggerFor]'}];
     var ACTUAL_COMPONENT = {'name': 'HeaderComponent'};
 </script>
 <script src="../js/tree.js"></script>

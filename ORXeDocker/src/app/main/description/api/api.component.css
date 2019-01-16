@@ -25,6 +25,7 @@ mat-card{
   width: 55%;
   padding: 10px;
   overflow-y:auto;
+  height: 51.3em;
 }
 .form-full-width {
   width: 100%;

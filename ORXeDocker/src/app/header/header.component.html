@@ -1,14 +1,18 @@
 <mat-toolbar color="primary">
-  <span><mat-icon>file_copy</mat-icon>ORXe 3.0 Docker</span>
+  <span>
+    <mat-icon>file_copy</mat-icon>ORXe 3.0 Docker
+  </span>
   <span class="spacer"></span>
   <button mat-icon-button [matMenuTriggerFor]="menu">
     <mat-icon>format_color_fill</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-      <button mat-menu-item color="primary" (click)="onSetTheme('default-theme')">Default</button>
-<button mat-menu-item color="primary" (click)="onSetTheme('dark-theme')">Dark</button>
-<button mat-menu-item color="primary" (click)="onSetTheme('Medium-theme')">Medium</button>
-<button mat-menu-item color="primary" (click)="onSetTheme('light-theme')">Light</button>
+    <button mat-menu-item color="primary" (click)="onSetTheme('Client1-theme')">Client1</button>
+    <button mat-menu-item color="primary" (click)="onSetTheme('Client2-theme')">Client2</button>
+    <button mat-menu-item color="primary" (click)="onSetTheme('default-theme')">Default</button>
+    <button mat-menu-item color="primary" (click)="onSetTheme('dark-theme')">Dark</button>
+    <button mat-menu-item color="primary" (click)="onSetTheme('Medium-theme')">Medium</button>
+    <button mat-menu-item color="primary" (click)="onSetTheme('light-theme')">Light</button>
     <!-- <button mat-menu-item>
       <mat-icon>dialpad</mat-icon>
       <span>Default</span>
@@ -23,6 +27,9 @@
     </button> -->
   </mat-menu>
   <mat-chip-list>
-    <a mat-list-item href="https://github.com/prateek3189/orxe-docker" target="_blank"><mat-chip color="accent" selected><mat-icon aria-label="Github Icon">code</mat-icon> Github</mat-chip>
- </a></mat-chip-list>
+    <a mat-list-item href="https://github.com/prateek3189/orxe-docker" target="_blank">
+      <mat-chip color="accent" selected>
+        <mat-icon aria-label="Github Icon">code</mat-icon> Github
+      </mat-chip>
+    </a></mat-chip-list>
 </mat-toolbar>

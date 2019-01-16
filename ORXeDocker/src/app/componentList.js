@@ -1,8 +1,8 @@
 const appliCationComponentList = [
   {
-    type: "Component",
+    type: "CustomComponent",
     name: "Application Component",
-    componentname: "DemoComponent",
+    path: "components/DemoComponent",
     className: "DemoComponent",
     moduleDetails: null,
     template: `<app-demo [label] ='Label' [disabled] = 'disabled' [data]='Data'></app-demo>`,
@@ -20,7 +20,7 @@ const appliCationComponentList = [
   {
     type: "Button",
     name: "Prime NG",
-    componentname: "DemoComponent",
+    path: "components/DemoComponent",
     className: null,
     moduleDetails: {
       module: ["ButtonModule"],
@@ -41,18 +41,22 @@ const appliCationComponentList = [
   {
     type: "Button",
     name: "Defualt AM Button ",
-    componentname: "DefualtAMButtonComponent",
+    path: "modules/MatButtonModule",
     className: null,
     moduleDetails: {
       module: ['MatButtonModule'],
       modulePath: ['@angular/material','@angular/cdk','@angular/animations'],
       version: ['7.0.2','7.0.4','7.0.4']
     },
-    template: `<button mat-raised-button [color]='Color' [disabled]="Disabled">AM Primary</button>`,
-    githubMarkDown: "https://raw.githubusercontent.com/angular/material2/master/src/lib/button/README.md",
+    template: `<button mat-raised-button [color]='Color' [disabled]="Disabled" [style.background-color]="Color" [style.width]="width" >AM Primary</button>`,
+    githubMarkDown: "https://raw.githubusercontent.com/angular/material2/master/src/lib/button/button.md",
     properties: [
       { name: 'Color', value: "", type: Array, defaultValue: 'primary', List: ['accent', 'primary', 'warn'] },
-      { name: 'Disabled', value: "true", type: Boolean, defaultValue: false },
+      { name: 'Disabled', value: "true", type: Boolean, defaultValue: false }
+    ],
+    styling: [
+      { name: 'Color', value: "", type: CSS },
+      { name: 'width', value: "", type: String, defaultValue: '10em' }
     ],
     commands: {
       dependencies: ['Node (>6.0.0)', 'Npm (>3.8.6)'],
@@ -63,7 +67,7 @@ const appliCationComponentList = [
   {
     type: "Button",
     name: "Defualt AM Menu List",
-    componentname: "DefualtAMMenuListComponent",
+    path: "modules/MatMenuModule",
     className: null,
     moduleDetails: {
       module: ['MatButtonModule', 'MatIconModule', 'MatMenuModule'],
@@ -73,7 +77,7 @@ const appliCationComponentList = [
     template: `<button mat-raised-button color="primary" [matMenuTriggerFor]="menu">Menu</button> <mat-menu #menu="matMenu">
        <button  mat-menu-item *ngFor="let item of ListItems" value="{{item.value}}">{{item.label}}</button>
      </mat-menu>`,
-    githubMarkDown: "https://raw.githubusercontent.com/angular/material2/master/src/lib/menu/README.md",
+    githubMarkDown: "https://raw.githubusercontent.com/angular/material2/master/src/lib/menu/menu.md",
     properties: [
       { name: 'ListItems', value: "", type: Object, defaultValue: [{ label: 'IN', value: 'INDIA' }, { label: 'US', value: 'UNITED STATES' }] },
     ],
@@ -86,7 +90,7 @@ const appliCationComponentList = [
   {
     type: "Button",
     name: "Tavisca Button",
-    componentname: "TaviscaButtonComponent",
+    path: "components/TaviscaButtonComponent",
     className: null,
     moduleDetails: {
       module: ['MatButtonModule'],
@@ -109,7 +113,7 @@ const appliCationComponentList = [
   {
     type: "Form",
     name: "Tavisca Input",
-    componentname: "TaviscaInputComponent",
+    path: "components/TaviscaInputComponent",
     className: null,
     moduleDetails: {
       module: ['MatButtonModule'],
@@ -124,14 +128,14 @@ const appliCationComponentList = [
       libraries: ['npm install --save @angular/material @angular/cdk @angular/animations','npm install "D:\Data After 1-12-2018\ORXe 3.0\Angular-Library\Tavisca-Orxe3-Library\dist\tavisca-orxe3-library\tavisca-orxe3-library-0.0.1.tgz"'],
       Serve: ['ng serve']
     }
-  }
+  },
 ]
 
 exports.compList = appliCationComponentList;
 
 const MenuList = [
   {
-      List: ['Component', 'Form','Button'],
+      List: ['CustomComponent', 'Form','Button'],
   }
 ]
 

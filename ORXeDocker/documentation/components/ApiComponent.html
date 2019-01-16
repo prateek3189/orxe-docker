@@ -627,7 +627,7 @@ export class ApiComponent implements OnInit {
       &lt;markdown [src]&#x3D;&quot;githubMarkDown&quot;&gt;&lt;/markdown&gt;
     &lt;/mat-card&gt;
     &lt;mat-card&gt;
-      &lt;markdown [src]&#x3D;&quot;&#x27;https://raw.githubusercontent.com/prateek3189/orxe-docker/DOCK-1/README.md&#x27;&quot;&gt;&lt;/markdown&gt;
+      &lt;markdown [src]&#x3D;&quot;&#x27;https://raw.githubusercontent.com/angular/material2/master/src/lib/button/button.md&#x27;&quot;&gt;&lt;/markdown&gt;
     &lt;/mat-card&gt;
     &lt;!-- &lt;mat-card class&#x3D;&quot;example-card&quot;&gt;
       &lt;mat-card-content&gt;
@@ -725,24 +725,30 @@ mat-card{
         width:102%;
       }
   }
-  @media only screen and (max-width:1169px),(max-width:1024px),(max-width:1554px){
+  @media only screen and (max-width:1230px),(min-width:1230px){
+    .DocumentService{
+      margin-top: -9em !important;
+      height: 101vh;
+    }
+  }
+  /* @media only screen and (max-width:1169px),(max-width:1024px),(max-width:1554px){
     .DocumentService{
       margin-top: -9em !important;
     }
-  } 
+  }  */
   /* @media only screen and (max-width:768px){
     .DocumentService{
       height: 92vh;
     }
   } */
-  @media only screen and (max-height: 864px){
+  /* @media only screen and (max-height: 864px){
   .document{
     width: 57%;
   }
   .steps{
     width: 43%;
   }
-} </code></pre>
+}  */</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -770,9 +776,12 @@ mat-card{
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="row">  <div class="document">    <iframe id="iframe" class="DocumentService" [src]="DocumentURL()" frameborder="0"></iframe>  </div>  <div class="steps">    <mat-card>      <!-- loaded from remote url -->      <markdown [src]="githubMarkDown"></markdown>    </mat-card>    <mat-card>      <markdown [src]="\'https://raw.githubusercontent.com/prateek3189/orxe-docker/DOCK-1/README.md\'"></markdown>    </mat-card>    <!-- <mat-card class="example-card">      <mat-card-content>        <mat-list role="list">          <h3 mat-subheader>To use this element on a web page</h3>          <mat-list-item>            <mat-icon mat-list-icon>label_important</mat-icon>            <h4 mat-line>Step 1 : Get the dependencies</h4>            <p mat-line>Node (>6.0.0)</p>            <p mat-line>Npm (>3.8.6)</p>          </mat-list-item>          <mat-list-item>            <mat-icon mat-list-icon>label_important</mat-icon>            <h4 mat-line>Step 2 : Install the libraries</h4>            <p mat-line># Install compodoc with npm</p>            <p mat-line> $ npm install -g @compodoc/compodoc</p>          </mat-list-item>          <mat-list-item>            <mat-icon mat-list-icon>label_important</mat-icon>            <h4 mat-line>Step 3 : Serve It</h4>            <p mat-line># Run compodoc in your project (generated with Angular CLI for example) and serve it</p>            <p mat-line>$ compodoc -p src/tsconfig.app.json -s</p>          </mat-list-item>        </mat-list>      </mat-card-content>    </mat-card> -->  </div></div></div>'
-    var COMPONENTS = [{'name': 'ApiComponent', 'selector': 'app-api'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CodepenComponent', 'selector': 'app-codepen'},{'name': 'ComponentsComponent', 'selector': 'app-components'},{'name': 'DefualtAMButtonComponent', 'selector': 'app-defualt-ambutton'},{'name': 'DefualtAMMenuListComponent', 'selector': 'app-defualt-ammenu-list'},{'name': 'DemoComponent', 'selector': 'app-demo'},{'name': 'DescriptionComponent', 'selector': 'app-description'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'TaviscaButtonComponent', 'selector': 'enl-tavisca-button'},{'name': 'TaviscaInputComponent', 'selector': 'enl-tavisca-input'}];
-    var DIRECTIVES = [{'name': 'ComponentLoaderDirective', 'selector': '[appComponentLoader]'}];
+        var COMPONENT_TEMPLATE = '<div><div class="row">  <div class="document">    <iframe id="iframe" class="DocumentService" [src]="DocumentURL()" frameborder="0"></iframe>  </div>  <div class="steps">    <mat-card>      <!-- loaded from remote url -->      <markdown [src]="githubMarkDown"></markdown>    </mat-card>    <mat-card>      <markdown [src]="\'https://raw.githubusercontent.com/angular/material2/master/src/lib/button/button.md\'"></markdown>    </mat-card>    <!-- <mat-card class="example-card">      <mat-card-content>        <mat-list role="list">          <h3 mat-subheader>To use this element on a web page</h3>          <mat-list-item>            <mat-icon mat-list-icon>label_important</mat-icon>            <h4 mat-line>Step 1 : Get the dependencies</h4>            <p mat-line>Node (>6.0.0)</p>            <p mat-line>Npm (>3.8.6)</p>          </mat-list-item>          <mat-list-item>            <mat-icon mat-list-icon>label_important</mat-icon>            <h4 mat-line>Step 2 : Install the libraries</h4>            <p mat-line># Install compodoc with npm</p>            <p mat-line> $ npm install -g @compodoc/compodoc</p>          </mat-list-item>          <mat-list-item>            <mat-icon mat-list-icon>label_important</mat-icon>            <h4 mat-line>Step 3 : Serve It</h4>            <p mat-line># Run compodoc in your project (generated with Angular CLI for example) and serve it</p>            <p mat-line>$ compodoc -p src/tsconfig.app.json -s</p>          </mat-list-item>        </mat-list>      </mat-card-content>    </mat-card> -->  </div></div></div>'
+    var COMPONENTS = [{'name': 'ApiComponent', 'selector': 'app-api'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CodepenComponent', 'selector': 'app-codepen'},{'name': 'ComponentsComponent', 'selector': 'app-components'},{'name': 'DefualtAMButtonComponent', 'selector': 'app-defualt-ambutton'},{'name': 'DefualtAMMenuListComponent', 'selector': 'app-defualt-ammenu-list'},{'name': 'DemoComponent', 'selector': 'app-demo'},{'name': 'DescriptionComponent', 'selector': 'app-description'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'MatAnchor', 'selector': 'a[mat-button], a[mat-raised-button], a[mat-icon-button], a[mat-fab],
+             a[mat-mini-fab], a[mat-stroked-button], a[mat-flat-button]'},{'name': 'MatButton', 'selector': 'button[mat-button], button[mat-raised-button], button[mat-icon-button],
+             button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],
+             button[mat-flat-button]'},{'name': 'MatMenu', 'selector': 'mat-menu'},{'name': 'MatMenuItem', 'selector': '[mat-menu-item]'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'TaviscaButtonComponent', 'selector': 'enl-tavisca-button'},{'name': 'TaviscaInputComponent', 'selector': 'enl-tavisca-input'},{'name': 'TryComponent', 'selector': 'app-try'}];
+    var DIRECTIVES = [{'name': 'ComponentLoaderDirective', 'selector': '[appComponentLoader]'},{'name': 'MatMenuContent', 'selector': 'ng-template[matMenuContent]'},{'name': 'MatMenuTrigger', 'selector': '[mat-menu-trigger-for], [matMenuTriggerFor]'}];
     var ACTUAL_COMPONENT = {'name': 'ApiComponent'};
 </script>
 <script src="../js/tree.js"></script>

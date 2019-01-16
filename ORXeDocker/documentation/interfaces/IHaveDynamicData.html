@@ -79,7 +79,7 @@ import { ComponentLoaderDirective } from &#x27;src/app/component-loader.directiv
 
 import { CommonModule } from &#x27;@angular/common&#x27;;
 import * as _ from &#x27;underscore&#x27;;
-import { MatMenuModule, MatButtonModule } from &#x27;@angular/material&#x27;;
+import { MatInputModule,MatMenuModule, MatButtonModule } from &#x27;@angular/material&#x27;;
 import { ButtonModule } from &#x27;primeng/button&#x27;;
 import { DemoComponent } from &#x27;src/app/customiseComponents/demo/demo.component&#x27;;
 import { TaviscaOrxe3LibraryModule } from &#x27;tavisca-orxe3-library&#x27;;
@@ -97,7 +97,7 @@ export interface IHaveDynamicData {}
 
 export class OverviewComponent implements OnInit {
   @Input() Component;
-  propertyArray; componentRef; componentList; CurrentComponent; ngMdlRef;
+  stylingArray; propertyArray; componentRef; componentList; CurrentComponent; ngMdlRef;
   dynamicImports &#x3D; []; modulePath; moduleName; dynamicDeclarations &#x3D; [];
   
   MenuLabel&#x3D;&quot;&quot;;
@@ -150,6 +150,12 @@ isObject(Proptype) {
   else
     return false;
 }
+isColor(Proptype) {
+  if(Proptype &#x3D;&#x3D;&#x3D; CSS )
+    return true;
+  else
+    return false;
+}
 
 OnPropertySubmit(propName, propType) {
   if (this.MenuValue !&#x3D; &quot;&quot; &amp;&amp; this.MenuLabel !&#x3D; &quot;&quot;) {
@@ -179,6 +185,7 @@ OnPropertySubmit(propName, propType) {
     let template &#x3D; this.CurrentComponent.template;
 
     this.propertyArray &#x3D; this.CurrentComponent.properties;
+    this.stylingArray &#x3D; this.CurrentComponent.styling;
 
     this.createComponentFactory(template, modulevalue, classname)
       .then((factory: ComponentFactory&lt;IHaveDynamicData&gt;) &#x3D;&gt; {
@@ -186,6 +193,12 @@ OnPropertySubmit(propName, propType) {
         if (this.propertyArray) {
           for (let index &#x3D; 0; index &lt; this.propertyArray.length; index++) {
             let comp &#x3D; this.propertyArray[index];
+            this.componentRef.instance[comp.name] &#x3D; comp.defaultValue
+          }
+        }
+        if (this.stylingArray) {
+          for (let index &#x3D; 0; index &lt; this.stylingArray.length; index++) {
+            let comp &#x3D; this.stylingArray[index];
             this.componentRef.instance[comp.name] &#x3D; comp.defaultValue
           }
         }
@@ -207,7 +220,7 @@ OnPropertySubmit(propName, propType) {
   
   
     //  let&#x27;s create a Type for it
-    this.dynamicImports &#x3D; [CommonModule, ButtonModule, MatMenuModule, MatButtonModule,TaviscaOrxe3LibraryModule]
+    this.dynamicImports &#x3D; [CommonModule, ButtonModule, MatMenuModule, MatButtonModule,MatInputModule,TaviscaOrxe3LibraryModule]
     let  type &#x3D; this.createNewComponent(template);
   if(modulevalue&#x3D;&#x3D;null &amp;&amp; classname!&#x3D;null){
     this.dynamicDeclarations &#x3D; [type,DemoComponent];

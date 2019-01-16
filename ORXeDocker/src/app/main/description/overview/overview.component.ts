@@ -4,7 +4,7 @@ import { ComponentLoaderDirective } from 'src/app/component-loader.directive';
 
 import { CommonModule } from '@angular/common';
 import * as _ from 'underscore';
-import { MatMenuModule, MatButtonModule } from '@angular/material';
+import { MatInputModule,MatMenuModule, MatButtonModule } from '@angular/material';
 import { ButtonModule } from 'primeng/button';
 import { DemoComponent } from 'src/app/customiseComponents/demo/demo.component';
 import { TaviscaOrxe3LibraryModule } from 'tavisca-orxe3-library';
@@ -22,7 +22,7 @@ export interface IHaveDynamicData {}
 
 export class OverviewComponent implements OnInit {
   @Input() Component;
-  propertyArray; componentRef; componentList; CurrentComponent; ngMdlRef;
+  stylingArray; propertyArray; componentRef; componentList; CurrentComponent; ngMdlRef;
   dynamicImports = []; modulePath; moduleName; dynamicDeclarations = [];
   
   MenuLabel="";
@@ -75,6 +75,12 @@ isObject(Proptype) {
   else
     return false;
 }
+isColor(Proptype) {
+  if(Proptype === CSS )
+    return true;
+  else
+    return false;
+}
 
 OnPropertySubmit(propName, propType) {
   if (this.MenuValue != "" && this.MenuLabel != "") {
@@ -104,6 +110,7 @@ OnPropertySubmit(propName, propType) {
     let template = this.CurrentComponent.template;
 
     this.propertyArray = this.CurrentComponent.properties;
+    this.stylingArray = this.CurrentComponent.styling;
 
     this.createComponentFactory(template, modulevalue, classname)
       .then((factory: ComponentFactory<IHaveDynamicData>) => {
@@ -111,6 +118,12 @@ OnPropertySubmit(propName, propType) {
         if (this.propertyArray) {
           for (let index = 0; index < this.propertyArray.length; index++) {
             let comp = this.propertyArray[index];
+            this.componentRef.instance[comp.name] = comp.defaultValue
+          }
+        }
+        if (this.stylingArray) {
+          for (let index = 0; index < this.stylingArray.length; index++) {
+            let comp = this.stylingArray[index];
             this.componentRef.instance[comp.name] = comp.defaultValue
           }
         }
@@ -132,7 +145,7 @@ OnPropertySubmit(propName, propType) {
   
   
     //  let's create a Type for it
-    this.dynamicImports = [CommonModule, ButtonModule, MatMenuModule, MatButtonModule,TaviscaOrxe3LibraryModule]
+    this.dynamicImports = [CommonModule, ButtonModule, MatMenuModule, MatButtonModule,MatInputModule,TaviscaOrxe3LibraryModule]
     let  type = this.createNewComponent(template);
   if(modulevalue==null && classname!=null){
     this.dynamicDeclarations = [type,DemoComponent];
