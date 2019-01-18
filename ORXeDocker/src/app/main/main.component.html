@@ -15,6 +15,14 @@
       </ng-template>
       <app-api [Component]="Component"></app-api>
     </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon class="example-tab-icon">description</mat-icon>
+        Testing
+      </ng-template>
+      <app-testing [Component]="Component"></app-testing>
+    </mat-tab>
   </mat-tab-group>
   <div *ngIf="!Component">
     <mat-card>

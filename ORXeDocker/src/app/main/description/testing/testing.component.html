@@ -1,0 +1,5 @@
+
+<button (click)="ShowingTestResults()">Run Test</button>
+<div class="test-frame-window"> 
+<iframe *ngIf="showTestResult" src="http://localhost:9876" class="test-frame"></iframe>
+</div>

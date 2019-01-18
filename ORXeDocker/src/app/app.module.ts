@@ -19,6 +19,7 @@ import { OverviewComponent } from './main/description/overview/overview.componen
 import {ButtonModule} from 'primeng/button';
 import { MarkdownModule } from 'ngx-markdown';
 import { OverlayModule} from '@angular/cdk/overlay';
+import { TestingComponent } from './main/description/testing/testing.component';
 
 
 
@@ -32,6 +33,7 @@ import { OverlayModule} from '@angular/cdk/overlay';
     ApiComponent,
     ComponentLoaderDirective,
     OverviewComponent,
+    TestingComponent,
   ],
   imports: [
     BrowserModule,

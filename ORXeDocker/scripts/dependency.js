@@ -1,5 +1,3 @@
-
-
 const comp = require('../src/app/componentList');
 
 function execute() {
@@ -13,7 +11,7 @@ function execute() {
         if (component.moduleDetails != null) {
             for (var loopvariable2 = 0; loopvariable2 < component.moduleDetails.modulePath.length; loopvariable2++) {
                 var json = require('../package.json');
-                if (json.dependencies[component.moduleDetails.modulePath[loopvariable2]] == null) {
+                if (json.dependencies[component.moduleDetails.modulePath[loopvariable2]] == null || json.dependencies[component.moduleDetails.modulePath[loopvariable2]].substring(1) != component.moduleDetails.version[loopvariable2]) {
                     var commandtoRun = "npm install " + component.moduleDetails.modulePath[loopvariable2] + "@" + component.moduleDetails.version[loopvariable2];
                     terminalCommandRunner(commandtoRun);
                 }
@@ -22,14 +20,16 @@ function execute() {
         githublink = component.githubCode;
         if (githublink != null) {
             componentName = githublink.substring(githublink.lastIndexOf('/') + 1, githublink.length);
-            startIndex = githublink.indexOf('tree');
-            firsthalf = githublink.substring(0, startIndex);
-            lastIndex = githublink.substring(startIndex + 5).indexOf('/');
-            secondehalf = githublink.substring(startIndex + 4 + lastIndex + 1, githublink.length);
-            githublink = firsthalf + 'trunk' + secondehalf;
-            finalTerminalCommand = "cd " + customComponentsPath + " && " + 'if exist ' + componentName + ' (echo yes) else (svn export ' + githublink + ')';
-            console.log(finalTerminalCommand);
+            githublink = githublink.replace("tree","branches");
+            githublink = githublink.replace("master","Develop");
+            // startIndex = githublink.indexOf('tree');
+            // firsthalf = githublink.substring(0, startIndex);
+            // lastIndex = githublink.substring(startIndex + 5).indexOf('/');
+            // secondehalf = githublink.substring(startIndex + 4 + lastIndex + 1, githublink.length);
+            // githublink = firsthalf + 'trunk' + secondehalf;
+            finalTerminalCommand = "cd " + customComponentsPath + " && " + 'if exist ' + componentName + ' ( rmdir /Q /S '+componentName+' && svn export ' + githublink + ') else ( svn export ' + githublink+')';
             terminalCommandRunner(finalTerminalCommand);
+            
         }
     }
 }
@@ -38,11 +38,10 @@ function execute() {
 execute();
 
 function terminalCommandRunner(commandtoRun) {
-    console.log("hello");
     const exec = require('child_process').execSync
 
                 exec(commandtoRun, (err, stdout, stderr) => {
-                    console.log("hiiiiii",stdout);
+                    console.log("hiiiiii",stderr);
                     process.stdout.write(stderr)
                 })
     return 1;

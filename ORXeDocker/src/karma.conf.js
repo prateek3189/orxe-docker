@@ -1,7 +1,14 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
+// var grep = require('karma-webpack-grep');
+// var webpackConfig = require('./webpack.test.ts');
 
 module.exports = function (config) {
+//    webpackConfig.plugins = (webpackConfig.plugins || []).concat(grep({
+//     grep: config.grep,
+//     basePath: '.',
+//     testContext: '../src/'
+// }));
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DefualtAMMenuListComponent } from './defualt-ammenu-list.component';
+import { MatMenuModule} from '@angular/material/menu';
 
 describe('DefualtAMMenuListComponent', () => {
   let component: DefualtAMMenuListComponent;
@@ -8,7 +9,10 @@ describe('DefualtAMMenuListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DefualtAMMenuListComponent ]
+      declarations: [ DefualtAMMenuListComponent ],
+      imports: [
+        MatMenuModule
+      ]
     })
     .compileComponents();
   }));
