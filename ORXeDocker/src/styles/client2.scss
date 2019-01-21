@@ -10,10 +10,6 @@ $Client2-warn: mat-palette($mat-deep-orange, 200);
 
 $Client2-theme: mat-light-theme($Client2-primary, $Client2-accent, $Client2-warn);
 
-.Client2-theme {
-  @include angular-material-theme($Client2-theme);
-}
-
 @mixin mat-expansion-panel($theme) {
 
     $primary: map-get($theme, primary);

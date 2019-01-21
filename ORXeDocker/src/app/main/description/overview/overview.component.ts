@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewContainerRef, Compiler, ComponentFactory, ViewChild, CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { Component, OnInit, Input, ViewContainerRef, Compiler, ComponentFactory, ViewChild, CUSTOM_ELEMENTS_SCHEMA, NgModule, HostBinding } from '@angular/core';
 import { ComponentdataService } from 'src/app/componentdata.service';
 import { ComponentLoaderDirective } from 'src/app/component-loader.directive';
 
@@ -9,6 +9,7 @@ import { ButtonModule } from 'primeng/button';
 import { DemoComponent } from 'src/app/customiseComponents/demo/demo.component';
 import { TaviscaOrxe3LibraryModule } from 'tavisca-orxe3-library';
 import { throwError } from 'rxjs';
+import { OverlayContainer } from '@angular/cdk/overlay';
 
 
 
@@ -17,23 +18,25 @@ export interface IHaveDynamicData {}
 @Component({
   selector: 'app-overview',
   templateUrl: './overview.component.html',
-  styleUrls: ['./overview.component.css']
+  styleUrls: ['./overview.component.scss']
 })
 
 export class OverviewComponent implements OnInit {
   @Input() Component;
   stylingArray; propertyArray; componentRef; componentList; CurrentComponent; ngMdlRef;
   dynamicImports = []; modulePath; moduleName; dynamicDeclarations = [];
-  
   MenuLabel="";
   MenuValue="";
 
   @ViewChild(ComponentLoaderDirective) appComponentLoder: ComponentLoaderDirective;
 
 
-  constructor(private compiler: Compiler, private vcRef: ViewContainerRef,public componentdata: ComponentdataService) { }
+  constructor(private compiler: Compiler, private vcRef: ViewContainerRef,public componentdata: ComponentdataService, public overlayContainer: OverlayContainer) { }
   private _cacheOfFactories: {[templateKey: string]: ComponentFactory<IHaveDynamicData>} = {};
 
+  checkStyle() {
+    return false;
+  }
 
 ngOnInit() {
   // this.Component = this.componentdata.getComponent();
@@ -177,7 +180,8 @@ OnPropertySubmit(propName, propType) {
       //debugger;
       @Component({
           selector: 'dynamic-component-renderer',
-          template: tmpl
+          template: tmpl,
+          styleUrls: ['./overview.component.scss']
       })
       class CustomDynamicComponent {
         
@@ -209,8 +213,11 @@ OnPropertySubmit(propName, propType) {
   
       }
     }
-  
+    private themeWrapper = document.querySelector('body');
+    @HostBinding('class') componentCssClass;
     valuechange(propName, value, type){
+      var element = document.getElementById("myDIV");
+      element.classList.remove("DynamicStyling");
       if(type== Boolean){
         if(this.componentRef.instance[propName] =="true"){
           this.componentRef.instance[propName] ="false";
@@ -228,6 +235,14 @@ OnPropertySubmit(propName, propType) {
       else{
         this.componentRef.instance[propName] = value;
       }
+    }
+
+    stylechange(propName, value, type){
+      debugger;
+      var element = document.getElementById("myDIV");
+      element.classList.add("DynamicStyling");
+          this.themeWrapper.style.setProperty(propName, value);
+      
     }
   
     getModule(){

@@ -10,15 +10,22 @@
 ```
 $ npm install
 ```
-## Run Angular Server
 
+## Test Server
 ```
-$ ng serve
+$ ng test
+$ nodemon scripts/TestServer.js
 ```
 
 ## Run Documentation Server
 ### Run compodoc in your project (generated with Angular CLI) and serve it
 
 ```
-$ compodoc -p src/tsconfig.app.json -s
+$ compodoc -s //For Serve Only
+$ compodoc -p src/tsconfig.app.json -s //For Creating New Document & Serve
+```
+## Run Angular Server
+
+```
+$ ng serve
 ```

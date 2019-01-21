@@ -15,7 +15,7 @@ getTestBed().initTestEnvironment(
   platformBrowserDynamicTesting()
 );
 // Then we find all the tests.
-const context = require.context('./', true, /demo.component.spec.ts$/);
+const context = require.context('./', true, /defualt-ammenu-list.component.spec.ts$/);
 
 // And load the modules.
 context.keys().map(context);

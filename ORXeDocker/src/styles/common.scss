@@ -1,0 +1,42 @@
+@import '~@angular/material/theming';
+
+// always include only once per project
+@include mat-core();
+
+// import our custom themes
+@import 'client1.scss';
+@import 'client2.scss';
+@import 'custom.scss';
+@import 'theme.scss';
+
+// @mixin my-custom-components($theme) {
+//     @include amte-parent-theme($theme);
+//     /* ... */
+//   }
+.Client1-theme {
+    @include angular-material-theme($Client1-theme);
+
+  }
+  
+.Client2-theme {
+    @include angular-material-theme($Client2-theme);
+    //@include angular-material-theme($custom-theme);
+  }
+  .dark-theme {
+    @include angular-material-theme($dark-theme);
+    //@include my-custom-components($dark-theme);
+  }
+
+  .Medium-theme {
+    @include angular-material-theme($Medium-theme);
+  }
+
+  
+.light-theme {
+    @include angular-material-theme($light-theme);
+  }
+  .dynamic{
+    @include mat-button-theme($dark-theme);
+  }
+  
+

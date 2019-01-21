@@ -29,8 +29,7 @@
             "styles": [
               "src/styles.css",
               "src/styles/theme.scss",
-              "src/styles/client1.scss",
-              "src/styles/client2.scss"
+              "src/styles/common.scss"
             ],
             "scripts": []
           },

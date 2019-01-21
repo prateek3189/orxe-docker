@@ -1,3 +1,25 @@
+@import '../../../../styles/client1.scss';
+@import '../../../../styles/function.scss';
+
+.DynamicStyling{
+    background-color: var(--navBackground);
+    color: var(--navColor);
+    text-align: $default-font;
+    font-size: $default-font;
+    margin-top: $default-font;
+    height: $default-font;
+    font-family: $default-font;
+    padding: $default-font;
+    margin: $default-font;
+    margin-bottom: $default-font;
+    width: var(--ButtonWidth); 
+    p {
+      margin: 0;
+    }
+}
+
+
+
 
 * {
     box-sizing: border-box;

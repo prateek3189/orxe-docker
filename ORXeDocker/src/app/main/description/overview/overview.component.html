@@ -114,20 +114,20 @@
 
             <p>{{prop.name}}: </p>
             <mat-list-item role="listitem" *ngIf="isColor(prop.type)">
-              <input type="color" (change)="valuechange(prop.name, $event.target.value,prop.type)">
+              <input type="color" name="globalDynamic" (change)="stylechange(prop.property,$event.target.value,prop.type)">
             </mat-list-item>
             <mat-list-item role="listitem" *ngIf="isString(prop.type)">
               <mat-form-field class="example-full-width">
-                <input matInput required placeholder="{{prop.name}}" value="{{prop.value}}" (change)="valuechange(prop.name, $event.target.value,prop.type)">
+                <input matInput required placeholder="{{prop.name}}" value="{{prop.value}}" (change)="stylechange(prop.property, $event.target.value,prop.type)">
               </mat-form-field>
             </mat-list-item>
             <mat-list-item role="listitem" *ngIf="isBoolean(prop.type)">
-              <input type="checkbox" (change)="valuechange(prop.name, $event.target.value,prop.type)">{{prop.name}}
+              <input type="checkbox" (change)="stylechange(prop.property, $event.target.value,prop.type)">{{prop.name}}
             </mat-list-item>
             <mat-list-item role="listitem" *ngIf="isArray(prop.type)">
               <mat-list role="list">
                 <div *ngFor="let val of prop.List">
-                  <input type="radio" name="{{prop.name}}" value="{{val}}" (click)="valuechange(prop.name, $event.target.value, prop.type)">{{val}}<br>
+                  <input type="radio" name="{{prop.name}}" value="{{val}}" (click)="stylechange(prop.property, $event.target.value, prop.type)">{{val}}<br>
                 </div>
               </mat-list>
             </mat-list-item>

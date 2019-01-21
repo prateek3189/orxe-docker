@@ -40,33 +40,34 @@ const appliCationComponentList = [
       Serve: ['ng serve']
     }
   },
-  {
-    type: "Button",
-    name: "Defualt AM Button ",
-    testFileName: "defualt-ambutton",
-    path: "modules/MatButtonModule",
-    className: null,
-    moduleDetails: {
-      module: ['MatButtonModule'],
-      modulePath: ['@angular/material','@angular/cdk','@angular/animations'],
-      version: ['7.0.2','7.0.4','7.0.4']
+    {
+      type: "Button",
+      name: "Defualt AM Button ",
+      testFileName: "defualt-ambutton",
+      path: "modules/MatButtonModule",
+      className: null,
+      moduleDetails: {
+        module: ['MatButtonModule'],
+        modulePath: ['@angular/material','@angular/cdk','@angular/animations'],
+        version: ['7.0.2','7.0.4','7.0.4']
+      },
+      template: `<button mat-raised-button id="myDIV" [color]='Color' [disabled]="Disabled" >AM Primary</button>`,
+      githubMarkDown: "https://raw.githubusercontent.com/angular/material2/master/src/lib/button/button.md",
+      properties: [
+        { name: 'Color', value: "", type: Array, defaultValue: 'primary', List: ['accent', 'primary', 'warn'] },
+        { name: 'Disabled', value: "true", type: Boolean, defaultValue: false }
+      ],
+      styling: [
+        { name: 'Background Color', value: "", type: CSS , property:'--navBackground'},
+        { name: 'Text Color', value: "", type: CSS , property:'--navColor'},
+        { name: 'width', value: "", type: String, defaultValue: '10em',property:'--ButtonWidth' }
+      ],
+      commands: {
+        dependencies: ['Node (>6.0.0)', 'Npm (>3.8.6)'],
+        libraries: ['npm install --save @angular/material @angular/cdk @angular/animations'],
+        Serve: ['ng serve']
+      }
     },
-    template: `<button mat-raised-button [color]='Color' [disabled]="Disabled" [style.background-color]="Color" [style.width]="width" >AM Primary</button>`,
-    githubMarkDown: "https://raw.githubusercontent.com/angular/material2/master/src/lib/button/button.md",
-    properties: [
-      { name: 'Color', value: "", type: Array, defaultValue: 'primary', List: ['accent', 'primary', 'warn'] },
-      { name: 'Disabled', value: "true", type: Boolean, defaultValue: false }
-    ],
-    styling: [
-      { name: 'Color', value: "", type: CSS },
-      { name: 'width', value: "", type: String, defaultValue: '10em' }
-    ],
-    commands: {
-      dependencies: ['Node (>6.0.0)', 'Npm (>3.8.6)'],
-      libraries: ['npm install --save @angular/material @angular/cdk @angular/animations'],
-      Serve: ['ng serve']
-    }
-  },
   {
     type: "Button",
     name: "Defualt AM Menu List",
