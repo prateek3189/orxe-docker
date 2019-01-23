@@ -17,7 +17,7 @@ export class ComponentsComponent {
   public List = [];
   Name: string;
   public previousComponent: any;
-  @Output() component: EventEmitter<string> = new EventEmitter<string>();
+  //@Output() component: EventEmitter<string> = new EventEmitter<string>();
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches)
@@ -49,7 +49,7 @@ export class ComponentsComponent {
   }
 
   MoreInfo(component) {
-    this.component.emit(component);
+    //this.component.emit(component);
     this._componentdata.setComponent(component);
   }
 

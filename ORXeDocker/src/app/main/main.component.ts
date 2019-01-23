@@ -13,12 +13,14 @@ constructor(public componentdata: ComponentdataService) { }
 
 ngOnInit() {
   //this.Component = this.componentdata.getComponent();
+  this.componentdata.getComponent().subscribe(data => {
+    this.Component = data;
+    //this.loader = this.searchService.loader;
+    // console.log("Loader: " + this.loader);
+     //console.log("Response: " + this.Component);
+  })
 }
 ngOnChanges(){
  // this.Component = this.componentdata.getComponent();
 }
-  MoreInfo(Component) {
-    this.Component = Component;
-  }
-
 }
