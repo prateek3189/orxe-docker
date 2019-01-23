@@ -19,7 +19,7 @@ export class TestingComponent implements OnInit {
   }
 
   ShowingTestResults() {
-    console.log(this.Component.fileName);
+    //console.log(this.Component.fileName);
     this.testName = {
       "compName": this.Component.testFileName
     };
@@ -29,7 +29,7 @@ export class TestingComponent implements OnInit {
     this.showTestResult = true;
   }
   ngOnChanges() {
-    console.log(this.Component);
+    //console.log(this.Component);
     this.showTestResult = false;
   }
 }

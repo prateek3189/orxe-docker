@@ -1,4 +1,4 @@
-<app-components (component)="MoreInfo($event)">
+<app-components>
   <mat-tab-group *ngIf="Component">
     <mat-tab>
       <ng-template mat-tab-label>
@@ -18,8 +18,8 @@
 
     <mat-tab>
       <ng-template mat-tab-label>
-        <mat-icon class="example-tab-icon">description</mat-icon>
-        Testing
+        <mat-icon class="example-tab-icon">hourglass_empty</mat-icon>
+         Testing
       </ng-template>
       <app-testing [Component]="Component"></app-testing>
     </mat-tab>
