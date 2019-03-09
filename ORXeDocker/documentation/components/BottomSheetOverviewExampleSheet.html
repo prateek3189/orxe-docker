@@ -1,0 +1,923 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>orxe-docker documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">orxe-docker documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>BottomSheetOverviewExampleSheet</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/main/description/overview/overview.component.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>bottom-sheet-overview-example-sheet</code></td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">styles</td>
+                <td class="col-md-9"><code>
+  .jsonInput { height: 65vh; 
+    } 
+
+  .example-full-width {
+    width: 100%;
+  }</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">template</td>
+                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">&lt;form class&#x3D;&quot;example-form&quot;&gt;
+&lt;mat-form-field class&#x3D;&quot;example-full-width&quot;&gt;
+&lt;textarea matInput class &#x3D; &quot;jsonInput&quot; placeholder&#x3D;&quot;JSON DATA&quot; value&#x3D;&quot;{{ data.Object | json }}&quot; (input)&#x3D;&quot;valuechange($event.target.value)&quot;&gt;&lt;/textarea&gt;
+&lt;/mat-form-field&gt;&lt;/form&gt;
+&lt;button mat-raised-button color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;UpdateJson()&quot;&gt;Primary&lt;/button&gt;</code></pre></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#data">data</a>
+                            </li>
+                            <li>
+                                <a href="#UpdateJsonData">UpdateJsonData</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#openLink">openLink</a>
+                            </li>
+                            <li>
+                                <a href="#UpdateJson">UpdateJson</a>
+                            </li>
+                            <li>
+                                <a href="#valuechange">valuechange</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(data: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, bottomSheetRef: <a href="../components/BottomSheetOverviewExampleSheet.html">MatBottomSheetRef<BottomSheetOverviewExampleSheet></a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="313" class="link-to-prism">src/app/main/description/overview/overview.component.ts:313</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>data</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>bottomSheetRef</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../components/BottomSheetOverviewExampleSheet.html" target="_self" >MatBottomSheetRef&lt;BottomSheetOverviewExampleSheet&gt;</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openLink"></a>
+                    <span class="name">
+                        <b>
+                            openLink
+                        </b>
+                        <a href="#openLink"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openLink(event: MouseEvent)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="316"
+                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:316</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                            <code>MouseEvent</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="UpdateJson"></a>
+                    <span class="name">
+                        <b>
+                            UpdateJson
+                        </b>
+                        <a href="#UpdateJson"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>UpdateJson()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="324"
+                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:324</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="valuechange"></a>
+                    <span class="name">
+                        <b>
+                            valuechange
+                        </b>
+                        <a href="#valuechange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>valuechange(UpdateValue)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="320"
+                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:320</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>UpdateValue</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="data"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            data</b>
+                            <a href="#data"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @Inject(MAT_BOTTOM_SHEET_DATA)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="314" class="link-to-prism">src/app/main/description/overview/overview.component.ts:314</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="UpdateJsonData"></a>
+                        <span class="name">
+                            <b>
+                            UpdateJsonData</b>
+                            <a href="#UpdateJsonData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="313" class="link-to-prism">src/app/main/description/overview/overview.component.ts:313</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input, ViewContainerRef, Compiler, ComponentFactory, ViewChild, CUSTOM_ELEMENTS_SCHEMA, NgModule, HostBinding, Inject } from &#x27;@angular/core&#x27;;
+import { ComponentdataService } from &#x27;src/app/componentdata.service&#x27;;
+import { ComponentLoaderDirective } from &#x27;src/app/component-loader.directive&#x27;;
+
+import { CommonModule } from &#x27;@angular/common&#x27;;
+import * as _ from &#x27;underscore&#x27;;
+import { MatInputModule,MatMenuModule, MatButtonModule } from &#x27;@angular/material&#x27;;
+import { ButtonModule } from &#x27;primeng/button&#x27;;
+import { DemoComponent } from &#x27;src/app/customiseComponents/demo/demo.component&#x27;;
+import { TaviscaOrxe3LibraryModule } from &#x27;tavisca-orxe3-library&#x27;;
+import { throwError } from &#x27;rxjs&#x27;;
+import { OverlayContainer } from &#x27;@angular/cdk/overlay&#x27;;
+import {MatBottomSheet, MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA} from &#x27;@angular/material&#x27;;
+
+
+
+
+export interface IHaveDynamicData {}
+@Component({
+  selector: &#x27;app-overview&#x27;,
+  templateUrl: &#x27;./overview.component.html&#x27;,
+  styleUrls: [&#x27;./overview.component.scss&#x27;]
+})
+
+export class OverviewComponent implements OnInit {
+  @Input() Component;
+  stylingArray; propertyArray; componentRef; componentList; CurrentComponent; ngMdlRef;
+  dynamicImports &#x3D; []; modulePath; moduleName; dynamicDeclarations &#x3D; [];
+  MenuLabel&#x3D;&quot;&quot;;
+  MenuValue&#x3D;&quot;&quot;;
+  JsonData;
+
+  @ViewChild(ComponentLoaderDirective) appComponentLoder: ComponentLoaderDirective;
+
+
+  constructor(private bottomSheet: MatBottomSheet,private compiler: Compiler, private vcRef: ViewContainerRef,public componentdata: ComponentdataService, public overlayContainer: OverlayContainer) { }
+  private _cacheOfFactories: {[templateKey: string]: ComponentFactory&lt;IHaveDynamicData&gt;} &#x3D; {};
+
+  checkStyle() {
+    return false;
+  }
+
+ngOnInit() {
+  // this.Component &#x3D; this.componentdata.getComponent();
+  //console.log(this.Component);
+  this.componentList &#x3D; this.Component;
+}
+
+ngOnChanges(){
+  //console.log(this.Component.name);
+  if(this.Component){
+  this.loadComponent(this.Component);
+  }
+}
+
+isString(Proptype) {
+  if(Proptype &#x3D;&#x3D;&#x3D; String) 
+    return true;
+  else
+    return false;
+}
+
+isJson(Proptype) {
+  if(Proptype &#x3D;&#x3D;&#x3D; JSON) 
+    return true;
+  else
+    return false;
+}
+
+isBoolean(Proptype) {
+  if(Proptype &#x3D;&#x3D;&#x3D; Boolean) 
+    return true;
+  else
+    return false;
+}
+
+isArray(Proptype) {
+  if(Proptype &#x3D;&#x3D;&#x3D; Array )
+    return true;
+  else
+    return false;
+} 
+
+isObject(Proptype) {
+  if(Proptype &#x3D;&#x3D;&#x3D; Object )
+    return true;
+  else
+    return false;
+}
+isColor(Proptype) {
+  if(Proptype &#x3D;&#x3D;&#x3D; CSS )
+    return true;
+  else
+    return false;
+}
+
+OnPropertySubmit(propName, propType) {
+  if (this.MenuValue !&#x3D; &quot;&quot; &amp;&amp; this.MenuLabel !&#x3D; &quot;&quot;) {
+    let MenuObject &#x3D; {
+      label: this.MenuLabel,
+      value: this.MenuValue
+    };
+    this.MenuLabel &#x3D; &quot;&quot;;
+    this.MenuValue &#x3D; &quot;&quot;;
+    this.valuechange(propName, MenuObject, propType);
+  }
+}
+
+  loadComponent(component) {
+    //  debugger;
+    if (this.componentRef) {
+      this.componentRef.destroy();
+    }
+    this.CurrentComponent &#x3D; component;
+    let modulevalue;
+    if (this.CurrentComponent.moduleDetails !&#x3D; null) {
+      modulevalue &#x3D; this.CurrentComponent.moduleDetails.module;
+    }
+    else
+      modulevalue &#x3D; null;
+    let classname &#x3D; this.CurrentComponent.className;
+    let template &#x3D; this.CurrentComponent.template;
+
+    this.propertyArray &#x3D; this.CurrentComponent.properties;
+    this.stylingArray &#x3D; this.CurrentComponent.styling;
+
+    this.createComponentFactory(template, modulevalue, classname)
+      .then((factory: ComponentFactory&lt;IHaveDynamicData&gt;) &#x3D;&gt; {
+        this.componentRef &#x3D; this.appComponentLoder.viewContainerRef.createComponent(factory);
+        if (this.propertyArray) {
+          for (let index &#x3D; 0; index &lt; this.propertyArray.length; index++) {
+            let comp &#x3D; this.propertyArray[index];
+            this.componentRef.instance[comp.name] &#x3D; comp.defaultValue
+          }
+        }
+        if (this.stylingArray) {
+          for (let index &#x3D; 0; index &lt; this.stylingArray.length; index++) {
+            let comp &#x3D; this.stylingArray[index];
+            this.componentRef.instance[comp.name] &#x3D; comp.defaultValue
+          }
+        }
+
+      });
+  }
+
+  createComponentFactory(template: string,modulevalue: any,classname:any): Promise&lt;ComponentFactory&lt;IHaveDynamicData&gt;&gt; {
+    //  debugger;
+    let factory &#x3D; this._cacheOfFactories[template];
+  
+    if (factory) {
+        console.log(&quot;Module and Type are returned from cache&quot;)
+       
+        return new Promise((resolve) &#x3D;&gt; {
+            resolve(factory);
+        });
+    }
+  
+  
+    //  let&#x27;s create a Type for it
+    this.dynamicImports &#x3D; [CommonModule, ButtonModule, MatMenuModule, MatButtonModule,MatInputModule,TaviscaOrxe3LibraryModule]
+    let  type &#x3D; this.createNewComponent(template);
+  if(modulevalue&#x3D;&#x3D;null &amp;&amp; classname!&#x3D;null){
+    this.dynamicDeclarations &#x3D; [type,DemoComponent];
+  }
+  else{
+    this.dynamicDeclarations &#x3D; [type];
+    modulevalue&#x3D;null;
+  }
+    
+    let module &#x3D; this.createComponentModule(this.dynamicImports, this.dynamicDeclarations);
+    
+    return new Promise((resolve) &#x3D;&gt; {
+        this.compiler
+            .compileModuleAndAllComponentsAsync(module)
+            .then((moduleWithFactories) &#x3D;&gt;
+            {
+                factory &#x3D; _.find(moduleWithFactories.componentFactories, { componentType: type });
+  
+                this._cacheOfFactories[template] &#x3D; factory;
+  
+                resolve(factory);
+                
+            });
+    });
+  
+    }
+    
+    createNewComponent (tmpl:string) {
+      //debugger;
+      @Component({
+          selector: &#x27;dynamic-component-renderer&#x27;,
+          template: tmpl,
+          styleUrls: [&#x27;./overview.component.scss&#x27;]
+      })
+      class CustomDynamicComponent {
+        
+      };
+      // a component for this particular template
+      return CustomDynamicComponent;
+    }
+  
+  
+    createComponentModule (dynamicImports: any, dynamicDeclarations: any) {
+      //debugger;
+      @NgModule({
+        imports: dynamicImports,
+        declarations: dynamicDeclarations,
+        schemas: [ CUSTOM_ELEMENTS_SCHEMA ]      
+      })
+      class RuntimeComponentModule
+      {
+      }
+     
+      return RuntimeComponentModule;    
+    }
+    ngOnDestroy(){
+     // debugger;
+      if (this.componentRef) {     
+        
+          this.componentRef.destroy();
+          this.componentRef &#x3D; null;
+  
+      }
+    }
+    private themeWrapper &#x3D; document.querySelector(&#x27;body&#x27;);
+    @HostBinding(&#x27;class&#x27;) componentCssClass;
+    valuechange(propName, value, type){
+      var element &#x3D; document.getElementById(&quot;myDIV&quot;);
+      element.classList.remove(&quot;DynamicStyling&quot;);
+      if(type&#x3D;&#x3D; Boolean){
+        if(this.componentRef.instance[propName] &#x3D;&#x3D;&quot;true&quot;){
+          this.componentRef.instance[propName] &#x3D;&quot;false&quot;;
+        }
+        else if(this.componentRef.instance[propName] &#x3D;&#x3D;&quot;false&quot;){
+          this.componentRef.instance[propName] &#x3D;&quot;true&quot;;
+        }
+        else{
+          this.componentRef.instance[propName] &#x3D;&quot;true&quot;;
+        }
+      }
+      else if(type &#x3D;&#x3D;  JSON &amp;&amp; typeof this.componentRef.instance[propName] &#x3D;&#x3D; &quot;object&quot; ){
+        this.componentRef.instance[propName] &#x3D; JSON.parse(value);
+        this.JsonData &#x3D; JSON.parse(value);
+      }
+      else if(typeof this.componentRef.instance[propName] &#x3D;&#x3D; &quot;object&quot; ){
+        this.componentRef.instance[propName].push(value);
+      }
+      else{
+        this.componentRef.instance[propName] &#x3D; value;
+      }
+    }
+
+    stylechange(propName, value, type){
+      debugger;
+      var element &#x3D; document.getElementById(&quot;myDIV&quot;);
+      element.classList.add(&quot;DynamicStyling&quot;);
+          this.themeWrapper.style.setProperty(propName, value);
+      
+    }
+  
+    getModule(){
+      debugger;   
+      (async () &#x3D;&gt; {
+        let moduleSpecifier &#x3D; &#x27;@angular/material&#x27;
+        const module &#x3D; await import( &#x27;@angular/material&#x27;)
+        module.MatIconModule;
+        // → logs &#x27;Hi from the default export!&#x27;
+        // → logs &#x27;Doing stuff…&#x27;
+      })();
+      //this.dynamicImports.push(moduleSpecifier.ButtonModule); 
+      
+      // import(&#x27;primeng/button&#x27;)
+      // .then((module) &#x3D;&gt; {
+      //   this.dynamicImports.push(module.ButtonModule);
+      //   // → logs &#x27;Doing stuff…&#x27;
+      // });
+      
+  
+    }
+    openBottomSheet(prop): void {
+         const bottomSheetRef &#x3D; this.bottomSheet.open(BottomSheetOverviewExampleSheet, {
+        data: { Object: this.JsonData },
+      });
+    bottomSheetRef.afterDismissed().subscribe((data) &#x3D;&gt;{
+      //console.log(data);
+      if(data){
+        this.JsonData &#x3D; JSON.parse(data);
+      (&lt;HTMLInputElement&gt;document.getElementById(&quot;json&quot;)).value &#x3D; data;
+      this.componentRef.instance[prop.name] &#x3D; JSON.parse(data);
+      }
+      //this.CurrentComponent.UpdateJson &#x3D; data;
+    })
+
+    }
+    }
+@Component({
+  selector: &#x27;bottom-sheet-overview-example-sheet&#x27;,
+  template: &#x60;
+  &lt;form class&#x3D;&quot;example-form&quot;&gt;
+  &lt;mat-form-field class&#x3D;&quot;example-full-width&quot;&gt;
+  &lt;textarea matInput class &#x3D; &quot;jsonInput&quot; placeholder&#x3D;&quot;JSON DATA&quot; value&#x3D;&quot;{{ data.Object | json }}&quot; (input)&#x3D;&quot;valuechange($event.target.value)&quot;&gt;&lt;/textarea&gt;
+  &lt;/mat-form-field&gt;&lt;/form&gt;
+  &lt;button mat-raised-button color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;UpdateJson()&quot;&gt;Primary&lt;/button&gt;&#x60;,
+  styles: [&#x60;
+  .jsonInput { height: 65vh; 
+    } 
+
+  .example-full-width {
+    width: 100%;
+  }&#x60;]
+})
+export class BottomSheetOverviewExampleSheet {
+  UpdateJsonData;
+  constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public data: any,private bottomSheetRef: MatBottomSheetRef&lt;BottomSheetOverviewExampleSheet&gt;) {}
+
+  openLink(event: MouseEvent): void {
+    this.bottomSheetRef.dismiss();
+    event.preventDefault();
+  }
+  valuechange(UpdateValue){
+     //console.log(UpdateValue);
+     this.UpdateJsonData &#x3D; UpdateValue;
+  }
+  UpdateJson(){
+    //console.log(this.UpdateJsonData);
+    this.bottomSheetRef.dismiss(this.UpdateJsonData);
+  }
+}</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-styleData">
+            <pre class="line-numbers"><code class="language-scss">
+  .jsonInput { height: 65vh; 
+    } 
+
+  .example-full-width {
+    width: 100%;
+  }
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><form class="example-form"><mat-form-field class="example-full-width"><textarea matInput class = "jsonInput" placeholder="JSON DATA" value="{{ data.Object | json }}" (input)="valuechange($event.target.value)"></textarea></mat-form-field></form><button mat-raised-button color="primary" (click)="UpdateJson()">Primary</button></div>'
+    var COMPONENTS = [{'name': 'ApiComponent', 'selector': 'app-api'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BottomSheetOverviewExampleSheet', 'selector': 'bottom-sheet-overview-example-sheet'},{'name': 'ComponentsComponent', 'selector': 'app-components'},{'name': 'DefualtAMButtonComponent', 'selector': 'app-defualt-ambutton'},{'name': 'DefualtAMMenuListComponent', 'selector': 'app-defualt-ammenu-list'},{'name': 'DemoComponent', 'selector': 'app-demo'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HotelItemComponent', 'selector': 'enl-hotel-item'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'TaviscaButtonComponent', 'selector': 'enl-tavisca-button'},{'name': 'TaviscaInputComponent', 'selector': 'enl-tavisca-input'},{'name': 'TestingComponent', 'selector': 'app-testing'}];
+    var DIRECTIVES = [{'name': 'ComponentLoaderDirective', 'selector': '[appComponentLoader]'}];
+    var ACTUAL_COMPONENT = {'name': 'BottomSheetOverviewExampleSheet'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'BottomSheetOverviewExampleSheet.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

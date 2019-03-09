@@ -15,7 +15,7 @@ import { ComponentService } from './component.service';
 import { FormsModule } from '@angular/forms';
 import { ApiComponent } from './main/description/api/api.component';
 import { ComponentLoaderDirective } from './component-loader.directive';
-import { OverviewComponent } from './main/description/overview/overview.component';
+import { OverviewComponent, BottomSheetOverviewExampleSheet } from './main/description/overview/overview.component';
 import {ButtonModule} from 'primeng/button';
 import { MarkdownModule } from 'ngx-markdown';
 import { OverlayModule} from '@angular/cdk/overlay';
@@ -34,6 +34,7 @@ import { TestingComponent } from './main/description/testing/testing.component';
     ComponentLoaderDirective,
     OverviewComponent,
     TestingComponent,
+    BottomSheetOverviewExampleSheet
   ],
   imports: [
     BrowserModule,
@@ -46,6 +47,9 @@ import { TestingComponent } from './main/description/testing/testing.component';
     ButtonModule,
     MarkdownModule.forRoot({ loader: HttpClient }),
     OverlayModule
+  ],
+  entryComponents: [
+    BottomSheetOverviewExampleSheet
   ],
   providers: [ComponentService],
   bootstrap: [AppComponent],

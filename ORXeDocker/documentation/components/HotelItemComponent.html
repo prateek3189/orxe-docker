@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>DemoComponent</li>
+  <li>HotelItemComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,7 +61,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/customiseComponents/demo/demo.component.ts</code>
+    <code>src/app/customiseComponents/hotel-item/hotel-item.component.ts</code>
 </p>
 
 
@@ -91,19 +91,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-demo</code></td>
+                <td class="col-md-9"><code>enl-hotel-item</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./demo.component.css</code></td>
+                <td class="col-md-9"><code>./hotel-item.component.css</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./demo.component.html</code></td>
+                <td class="col-md-9"><code>./hotel-item.component.html</code></td>
             </tr>
 
 
@@ -146,13 +146,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#data">data</a>
-                            </li>
-                            <li>
-                                <a href="#disabled">disabled</a>
-                            </li>
-                            <li>
-                                <a href="#label">label</a>
+                                <a href="#hotelDetails">hotelDetails</a>
                             </li>
                         </ul>
                     </td>
@@ -176,7 +170,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/customiseComponents/demo/demo.component.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/customiseComponents/hotel-item/hotel-item.component.ts:9</a></div>
                             </td>
                         </tr>
 
@@ -190,71 +184,13 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="data"></a>
-                        <b>data</b>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
+                        <a name="hotelDetails"></a>
+                        <b>hotelDetails</b>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/customiseComponents/demo/demo.component.ts:13</a></div>
-                            </td>
-                        </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="disabled"></a>
-                        <b>disabled</b>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>false</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/customiseComponents/demo/demo.component.ts:15</a></div>
-                            </td>
-                        </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="label"></a>
-                        <b>label</b>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>&quot;&quot;</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/customiseComponents/demo/demo.component.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/customiseComponents/hotel-item/hotel-item.component.ts:9</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -290,8 +226,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="20"
-                            class="link-to-prism">src/app/customiseComponents/demo/demo.component.ts:20</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="13"
+                            class="link-to-prism">src/app/customiseComponents/hotel-item/hotel-item.component.ts:13</a></div>
                 </td>
             </tr>
 
@@ -316,41 +252,75 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input } from &#x27;@angular/core&#x27;;
 
 @Component({
-  selector: &#x27;app-demo&#x27;,
-  templateUrl: &#x27;./demo.component.html&#x27;,
-  styleUrls: [&#x27;./demo.component.css&#x27;]
+  selector: &#x27;enl-hotel-item&#x27;,
+  templateUrl: &#x27;./hotel-item.component.html&#x27;,
+  styleUrls: [&#x27;./hotel-item.component.css&#x27;]
 })
-export class DemoComponent implements OnInit {
-  /**
-  * @example
-  * Declares a data-bound input property, which Angular automatically updates during change detection.
-  */
-  @Input() data : any ;
-  @Input() label: string &#x3D; &quot;&quot;;
-  @Input() disabled: boolean &#x3D; false;
-
+export class HotelItemComponent implements OnInit {
+  @Input() hotelDetails;
   constructor() {
-    this.data &#x3D; &quot;Angular is good&quot;;
    }
+
   ngOnInit() {
-      
   }
-}</code></pre>
+
+}
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;p&gt;
-  Demo Component works! {{data}}
-&lt;/p&gt;
-&lt;!-- &lt;mat-form-field class&#x3D;&quot;example-full-width&quot;&gt;
-    &lt;input matInput [placeholder]&#x3D; &#x27;label&#x27; [disabled]&#x3D;&#x27;disabled&#x27; value&#x3D;&quot;&quot; &gt;
-  &lt;/mat-form-field&gt; --&gt;
-&lt;input type&#x3D;&quot;text&quot; [placeholder]&#x3D; &#x27;label&#x27; [disabled]&#x3D;&#x27;disabled&#x27; /&gt;</code></pre>
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;grid&quot;&gt;
+  &lt;div class&#x3D;&quot;grid grid__col-md-9 grid__col-xs-12 grid--align-start hotel-results-detail-section&quot;&gt;
+    &lt;div class&#x3D;&quot;grid__col-xs-3 padding-top-0 padding-left-0 &quot;&gt;
+      &lt;div class&#x3D;&quot;display-inline-block show-hotellist-gallery&quot;&gt;
+        &lt;div class&#x3D;&quot;hotel-image-container js-lang js-sas&quot;&gt;
+          &lt;img class&#x3D;&quot;result-list-image js-hotellazyload js-show-hotellist-gallery&quot;
+            src&#x3D;&quot;https://d3mj096p5q0e20.cloudfront.net/fi/HCM/1128519/460434_73_z.jpg&quot; alt&#x3D;&quot;hotelDetails.name&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;grid__col-xs-9 padding-top-0&quot;&gt;
+      &lt;div class&#x3D;&quot;block padding-bottom-0 padding-right-0 hotel-info-col&quot;&gt;
+        &lt;dl class&#x3D;&quot;hotel-results-hotel-info&quot;&gt;
+          &lt;dd&gt;
+            &lt;a href&#x3D;&quot;#Detail/{{hotelDetails.id}}&quot;
+              class&#x3D;&quot;hotel-name js-sas hotel-name-link&quot;&gt;{{hotelDetails.name}}&lt;/a&gt;
+          &lt;/dd&gt;
+          &lt;dd&gt;{{hotelDetails.content.rating}} Rating&lt;/dd&gt;
+        &lt;/dl&gt;
+
+        &lt;div class&#x3D;&quot;hotel-result-distance-address-info &quot;&gt;
+          &lt;dl class&#x3D;&quot;show-flex-more-than-md grid grid--align-center&quot;&gt;
+            &lt;dd class&#x3D;&quot;address-line&quot;&gt;{{hotelDetails.content.contact.address.line1}} , &lt;/dd&gt;
+            &lt;dd class&#x3D;&quot;address-line&quot;&gt;{{hotelDetails.content.contact.address.city.name}}&lt;/dd&gt;
+          &lt;/dl&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div
+    class&#x3D;&quot;grid grid--align-center grid__col-md-3 grid__col-xs-12 hotel-result-pricing-section-container taf-breakout&quot;&gt;
+    &lt;div class&#x3D;&quot;hotel-result-pricing-section&quot;&gt;&lt;/div&gt;
+    &lt;dl&gt;
+      &lt;dd class&#x3D;&quot;unit-price&quot;&gt;
+        &lt;span class&#x3D;&quot;payment-results-unit&quot;&gt;
+          &lt;span class&#x3D;&quot;unit-label&quot;&gt;from&lt;/span&gt;
+
+          &lt;span class&#x3D;&quot;unit-cash&quot;&gt;
+            &lt;span class&#x3D;&quot;cash-value&quot;&gt;${{hotelDetails.displayFare.totalFare/2}}&lt;/span&gt;
+            &lt;span class&#x3D;&quot;cash-label&quot;&gt;/night&lt;/span&gt;
+          &lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/dd&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./demo.component.css</code>
+                    <code>./hotel-item.component.css</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss"></code></pre>
     </div>
@@ -380,10 +350,10 @@ export class DemoComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p>  Demo Component works! {{data}}</p><!-- <mat-form-field class="example-full-width">    <input matInput [placeholder]= \'label\' [disabled]=\'disabled\' value="" >  </mat-form-field> --><input type="text" [placeholder]= \'label\' [disabled]=\'disabled\' /></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="grid">  <div class="grid grid__col-md-9 grid__col-xs-12 grid--align-start hotel-results-detail-section">    <div class="grid__col-xs-3 padding-top-0 padding-left-0 ">      <div class="display-inline-block show-hotellist-gallery">        <div class="hotel-image-container js-lang js-sas">          <img class="result-list-image js-hotellazyload js-show-hotellist-gallery"            src="https://d3mj096p5q0e20.cloudfront.net/fi/HCM/1128519/460434_73_z.jpg" alt="hotelDetails.name">        </div>      </div>    </div>    <div class="grid__col-xs-9 padding-top-0">      <div class="block padding-bottom-0 padding-right-0 hotel-info-col">        <dl class="hotel-results-hotel-info">          <dd>            <a href="#Detail/{{hotelDetails.id}}"              class="hotel-name js-sas hotel-name-link">{{hotelDetails.name}}</a>          </dd>          <dd>{{hotelDetails.content.rating}} Rating</dd>        </dl>        <div class="hotel-result-distance-address-info ">          <dl class="show-flex-more-than-md grid grid--align-center">            <dd class="address-line">{{hotelDetails.content.contact.address.line1}} , </dd>            <dd class="address-line">{{hotelDetails.content.contact.address.city.name}}</dd>          </dl>        </div>      </div>    </div>  </div>  <div    class="grid grid--align-center grid__col-md-3 grid__col-xs-12 hotel-result-pricing-section-container taf-breakout">    <div class="hotel-result-pricing-section"></div>    <dl>      <dd class="unit-price">        <span class="payment-results-unit">          <span class="unit-label">from</span>          <span class="unit-cash">            <span class="cash-value">${{hotelDetails.displayFare.totalFare/2}}</span>            <span class="cash-label">/night</span>          </span>        </span>      </dd>    </dl>  </div></div></div>'
     var COMPONENTS = [{'name': 'ApiComponent', 'selector': 'app-api'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BottomSheetOverviewExampleSheet', 'selector': 'bottom-sheet-overview-example-sheet'},{'name': 'ComponentsComponent', 'selector': 'app-components'},{'name': 'DefualtAMButtonComponent', 'selector': 'app-defualt-ambutton'},{'name': 'DefualtAMMenuListComponent', 'selector': 'app-defualt-ammenu-list'},{'name': 'DemoComponent', 'selector': 'app-demo'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HotelItemComponent', 'selector': 'enl-hotel-item'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'TaviscaButtonComponent', 'selector': 'enl-tavisca-button'},{'name': 'TaviscaInputComponent', 'selector': 'enl-tavisca-input'},{'name': 'TestingComponent', 'selector': 'app-testing'}];
     var DIRECTIVES = [{'name': 'ComponentLoaderDirective', 'selector': '[appComponentLoader]'}];
-    var ACTUAL_COMPONENT = {'name': 'DemoComponent'};
+    var ACTUAL_COMPONENT = {'name': 'HotelItemComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -417,7 +387,7 @@ export class DemoComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'DemoComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'HotelItemComponent.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

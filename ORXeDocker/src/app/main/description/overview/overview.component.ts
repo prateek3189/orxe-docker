@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewContainerRef, Compiler, ComponentFactory, ViewChild, CUSTOM_ELEMENTS_SCHEMA, NgModule, HostBinding } from '@angular/core';
+import { Component, OnInit, Input, ViewContainerRef, Compiler, ComponentFactory, ViewChild, CUSTOM_ELEMENTS_SCHEMA, NgModule, HostBinding, Inject } from '@angular/core';
 import { ComponentdataService } from 'src/app/componentdata.service';
 import { ComponentLoaderDirective } from 'src/app/component-loader.directive';
 
@@ -10,6 +10,7 @@ import { DemoComponent } from 'src/app/customiseComponents/demo/demo.component';
 import { TaviscaOrxe3LibraryModule } from 'tavisca-orxe3-library';
 import { throwError } from 'rxjs';
 import { OverlayContainer } from '@angular/cdk/overlay';
+import {MatBottomSheet, MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA} from '@angular/material';
 
 
 
@@ -27,11 +28,12 @@ export class OverviewComponent implements OnInit {
   dynamicImports = []; modulePath; moduleName; dynamicDeclarations = [];
   MenuLabel="";
   MenuValue="";
+  JsonData;
 
   @ViewChild(ComponentLoaderDirective) appComponentLoder: ComponentLoaderDirective;
 
 
-  constructor(private compiler: Compiler, private vcRef: ViewContainerRef,public componentdata: ComponentdataService, public overlayContainer: OverlayContainer) { }
+  constructor(private bottomSheet: MatBottomSheet,private compiler: Compiler, private vcRef: ViewContainerRef,public componentdata: ComponentdataService, public overlayContainer: OverlayContainer) { }
   private _cacheOfFactories: {[templateKey: string]: ComponentFactory<IHaveDynamicData>} = {};
 
   checkStyle() {
@@ -58,6 +60,13 @@ isString(Proptype) {
     return false;
 }
 
+isJson(Proptype) {
+  if(Proptype === JSON) 
+    return true;
+  else
+    return false;
+}
+
 isBoolean(Proptype) {
   if(Proptype === Boolean) 
     return true;
@@ -79,7 +88,7 @@ isObject(Proptype) {
     return false;
 }
 isColor(Proptype) {
-  if(Proptype === CSS )
+  if(Proptype === "CSS" )
     return true;
   else
     return false;
@@ -229,6 +238,10 @@ OnPropertySubmit(propName, propType) {
           this.componentRef.instance[propName] ="true";
         }
       }
+      else if(type ==  JSON && typeof this.componentRef.instance[propName] == "object" ){
+        this.componentRef.instance[propName] = JSON.parse(value);
+        this.JsonData = JSON.parse(value);
+      }
       else if(typeof this.componentRef.instance[propName] == "object" ){
         this.componentRef.instance[propName].push(value);
       }
@@ -264,5 +277,52 @@ OnPropertySubmit(propName, propType) {
       
   
     }
+    openBottomSheet(prop): void {
+         const bottomSheetRef = this.bottomSheet.open(BottomSheetOverviewExampleSheet, {
+        data: { Object: this.JsonData },
+      });
+    bottomSheetRef.afterDismissed().subscribe((data) =>{
+      //console.log(data);
+      if(data){
+        this.JsonData = JSON.parse(data);
+      (<HTMLInputElement>document.getElementById("json")).value = data;
+      this.componentRef.instance[prop.name] = JSON.parse(data);
+      }
+      //this.CurrentComponent.UpdateJson = data;
+    })
 
+    }
+    }
+@Component({
+  selector: 'bottom-sheet-overview-example-sheet',
+  template: `
+  <form class="example-form">
+  <mat-form-field class="example-full-width">
+  <textarea matInput class = "jsonInput" placeholder="JSON DATA" value="{{ data.Object | json }}" (input)="valuechange($event.target.value)"></textarea>
+  </mat-form-field></form>
+  <button mat-raised-button color="primary" (click)="UpdateJson()">Update</button>`,
+  styles: [`
+  .jsonInput { height: 65vh; 
+    } 
+
+  .example-full-width {
+    width: 100%;
+  }`]
+})
+export class BottomSheetOverviewExampleSheet {
+  UpdateJsonData;
+  constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public data: any,private bottomSheetRef: MatBottomSheetRef<BottomSheetOverviewExampleSheet>) {}
+
+  openLink(event: MouseEvent): void {
+    this.bottomSheetRef.dismiss();
+    event.preventDefault();
+  }
+  valuechange(UpdateValue){
+     //console.log(UpdateValue);
+     this.UpdateJsonData = UpdateValue;
+  }
+  UpdateJson(){
+    //console.log(this.UpdateJsonData);
+    this.bottomSheetRef.dismiss(this.UpdateJsonData);
+  }
 }

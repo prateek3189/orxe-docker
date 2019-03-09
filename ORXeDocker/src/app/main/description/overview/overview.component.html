@@ -70,6 +70,15 @@
                 <input matInput required placeholder="{{prop.name}}" value="{{prop.value}}" (change)="valuechange(prop.name, $event.target.value,prop.type)">
               </mat-form-field>
             </mat-list-item>
+            <mat-list-item role="listitem" *ngIf="isJson(prop.type)">
+              <mat-form-field class="example-full-width">
+                <input id="json" matInput required placeholder="{{prop.name}}" value="{{prop.value}}" (change)="valuechange(prop.name, $event.target.value,prop.type)">
+              </mat-form-field>
+              <button mat-icon-button>
+                <mat-icon aria-label="icon-button with a zoom_in" (click)="openBottomSheet(prop)">zoom_in</mat-icon>
+              </button>
+            </mat-list-item>
+            <!-- <pre>{{JsonData | json}}</pre> -->
             <mat-list-item role="listitem" *ngIf="isBoolean(prop.type)">
               <input type="checkbox" (change)="valuechange(prop.name, $event.target.value,prop.type)">{{prop.name}}
             </mat-list-item>

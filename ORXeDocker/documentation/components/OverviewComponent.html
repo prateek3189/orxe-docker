@@ -70,7 +70,7 @@
         <h3>Implements</h3>
     </p>
     <p class="comment">
-                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
     </p>
 
 
@@ -96,7 +96,7 @@
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./overview.component.css</code></td>
+                <td class="col-md-9"><code>./overview.component.scss</code></td>
             </tr>
 
 
@@ -156,6 +156,9 @@
                                 <a href="#dynamicImports">dynamicImports</a>
                             </li>
                             <li>
+                                <a href="#JsonData">JsonData</a>
+                            </li>
+                            <li>
                                 <a href="#MenuLabel">MenuLabel</a>
                             </li>
                             <li>
@@ -171,10 +174,18 @@
                                 <a href="#ngMdlRef">ngMdlRef</a>
                             </li>
                             <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#overlayContainer">overlayContainer</a>
+                            </li>
+                            <li>
                                 <a href="#propertyArray">propertyArray</a>
                             </li>
                             <li>
                                 <a href="#stylingArray">stylingArray</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#themeWrapper">themeWrapper</a>
                             </li>
                         </ul>
                     </td>
@@ -188,6 +199,9 @@
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
+                            <li>
+                                <a href="#checkStyle">checkStyle</a>
+                            </li>
                             <li>
                                 <a href="#createComponentFactory">createComponentFactory</a>
                             </li>
@@ -210,6 +224,9 @@
                                 <a href="#isColor">isColor</a>
                             </li>
                             <li>
+                                <a href="#isJson">isJson</a>
+                            </li>
+                            <li>
                                 <a href="#isObject">isObject</a>
                             </li>
                             <li>
@@ -229,6 +246,12 @@
                             </li>
                             <li>
                                 <a href="#OnPropertySubmit">OnPropertySubmit</a>
+                            </li>
+                            <li>
+                                <a href="#openBottomSheet">openBottomSheet</a>
+                            </li>
+                            <li>
+                                <a href="#stylechange">stylechange</a>
                             </li>
                             <li>
                                 <a href="#valuechange">valuechange</a>
@@ -253,6 +276,20 @@
                 </tr>
 
 
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>HostBindings</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#class">class</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
 
         </tbody>
@@ -265,12 +302,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(compiler: <a href="https://angular.io/api/core/Compiler" target="_blank">Compiler</a>, vcRef: <a href="https://angular.io/api/core/ViewContainerRef" target="_blank">ViewContainerRef</a>, componentdata: <a href="../injectables/ComponentdataService.html">ComponentdataService</a>)</code>
+<code>constructor(bottomSheet: MatBottomSheet, compiler: <a href="https://angular.io/api/core/Compiler" target="_blank">Compiler</a>, vcRef: <a href="https://angular.io/api/core/ViewContainerRef" target="_blank">ViewContainerRef</a>, componentdata: <a href="../injectables/ComponentdataService.html">ComponentdataService</a>, overlayContainer: OverlayContainer)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/main/description/overview/overview.component.ts:31</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/main/description/overview/overview.component.ts:33</a></div>
                             </td>
                         </tr>
 
@@ -288,10 +325,22 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
+                                                        <td>bottomSheet</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatBottomSheet</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
                                                         <td>compiler</td>
                                                   
                                                         <td>
-                                                                    <code><a href="https://angular.io/api/core/Compiler" target="_blank" >Compiler</a></code>
+                                                                        <code><a href="https://angular.io/api/core/Compiler" target="_blank" >Compiler</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -303,7 +352,7 @@
                                                         <td>vcRef</td>
                                                   
                                                         <td>
-                                                                    <code><a href="https://angular.io/api/core/ViewContainerRef" target="_blank" >ViewContainerRef</a></code>
+                                                                        <code><a href="https://angular.io/api/core/ViewContainerRef" target="_blank" >ViewContainerRef</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -315,7 +364,19 @@
                                                         <td>componentdata</td>
                                                   
                                                         <td>
-                                                                    <code><a href="../injectables/ComponentdataService.html" target="_self" >ComponentdataService</a></code>
+                                                                        <code><a href="../injectables/ComponentdataService.html" target="_self" >ComponentdataService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>overlayContainer</td>
+                                                  
+                                                        <td>
+                                                                    <code>OverlayContainer</code>
                                                         </td>
                                                   
                                                     <td>
@@ -337,973 +398,1263 @@
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
-                    <td class="col-md-2">
+                    <td class="col-md-4">
                         <a name="Component"></a>
-                        <code>Component</code>
-                    </td>
-                    <td class="col-md-10">
+                        <b>Component</b>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/main/description/overview/overview.component.ts:24</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/main/description/overview/overview.component.ts:26</a></div>
                             </td>
                         </tr>
             </tbody>
         </table>
 </section>
 
+    <section>
+    <h3>HostBindings</h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="class"></a>
+                        <span class="name">
+                            <b>
+                            class</b>
+                            <a href="#class"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="226" class="link-to-prism">src/app/main/description/overview/overview.component.ts:226</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
 
 
     <section>
     
-        <h3 id="methods">
-            Methods
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="createComponentFactory"></a>
-                        <span class="name">
-                            <b>
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkStyle"></a>
+                    <span class="name">
+                        <b>
+                            checkStyle
+                        </b>
+                        <a href="#checkStyle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>checkStyle()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:39</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createComponentFactory"></a>
+                    <span class="name">
+                        <b>
                             createComponentFactory
-                            </b>
-                            <a href="#createComponentFactory"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
+                        </b>
+                        <a href="#createComponentFactory"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
 <code>createComponentFactory(template: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, modulevalue: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, classname: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
-                    </td>
-                </tr>
+                </td>
+            </tr>
 
 
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="134" class="link-to-prism">src/app/main/description/overview/overview.component.ts:134</a></div>
-                            </td>
-                        </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="146"
+                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:146</a></div>
+                </td>
+            </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
+            <tr>
+                <td class="col-md-4">
 
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>template</td>
-                                                        <td>
-                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>template</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
 
-                                                </tr>
-                                                <tr>
-                                                        <td>modulevalue</td>
-                                                        <td>
-                                                                    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
+                                    <td>
+                                        No
+                                    </td>
 
-                                                </tr>
-                                                <tr>
-                                                        <td>classname</td>
-                                                        <td>
-                                                                    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
 
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="../interfaces/IHaveDynamicData.html" target="_self" >Promise&lt;ComponentFactory&lt;IHaveDynamicData&gt;&gt;</a></code>
+                                </tr>
+                                <tr>
+                                    <td>modulevalue</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
 
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="createComponentModule"></a>
-                        <span class="name">
-                            <b>
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>classname</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/IHaveDynamicData.html" target="_self" >Promise&lt;ComponentFactory&lt;IHaveDynamicData&gt;&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createComponentModule"></a>
+                    <span class="name">
+                        <b>
                             createComponentModule
-                            </b>
-                            <a href="#createComponentModule"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
+                        </b>
+                        <a href="#createComponentModule"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
 <code>createComponentModule(dynamicImports: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, dynamicDeclarations: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
-                    </td>
-                </tr>
+                </td>
+            </tr>
 
 
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="190" class="link-to-prism">src/app/main/description/overview/overview.component.ts:190</a></div>
-                            </td>
-                        </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="203"
+                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:203</a></div>
+                </td>
+            </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
+            <tr>
+                <td class="col-md-4">
 
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>dynamicImports</td>
-                                                        <td>
-                                                                    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>dynamicImports</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
 
-                                                </tr>
-                                                <tr>
-                                                        <td>dynamicDeclarations</td>
-                                                        <td>
-                                                                    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
+                                    <td>
+                                        No
+                                    </td>
 
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code>typeof RuntimeComponentModule</code>
 
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="createNewComponent"></a>
-                        <span class="name">
-                            <b>
+                                </tr>
+                                <tr>
+                                    <td>dynamicDeclarations</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>typeof RuntimeComponentModule</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createNewComponent"></a>
+                    <span class="name">
+                        <b>
                             createNewComponent
-                            </b>
-                            <a href="#createNewComponent"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
+                        </b>
+                        <a href="#createNewComponent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
 <code>createNewComponent(tmpl: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
-                    </td>
-                </tr>
+                </td>
+            </tr>
 
 
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="176" class="link-to-prism">src/app/main/description/overview/overview.component.ts:176</a></div>
-                            </td>
-                        </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="188"
+                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:188</a></div>
+                </td>
+            </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
+            <tr>
+                <td class="col-md-4">
 
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>tmpl</td>
-                                                        <td>
-                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>tmpl</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
 
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code>typeof CustomDynamicComponent</code>
+                                    <td>
+                                        No
+                                    </td>
 
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="getModule"></a>
-                        <span class="name">
-                            <b>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>typeof CustomDynamicComponent</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getModule"></a>
+                    <span class="name">
+                        <b>
                             getModule
-                            </b>
-                            <a href="#getModule"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
+                        </b>
+                        <a href="#getModule"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
 <code>getModule()</code>
-                    </td>
-                </tr>
+                </td>
+            </tr>
 
 
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="233" class="link-to-prism">src/app/main/description/overview/overview.component.ts:233</a></div>
-                            </td>
-                        </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="261"
+                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:261</a></div>
+                </td>
+            </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
+            <tr>
+                <td class="col-md-4">
 
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="isArray"></a>
-                        <span class="name">
-                            <b>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isArray"></a>
+                    <span class="name">
+                        <b>
                             isArray
-                            </b>
-                            <a href="#isArray"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
+                        </b>
+                        <a href="#isArray"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
 <code>isArray(Proptype)</code>
-                    </td>
-                </tr>
+                </td>
+            </tr>
 
 
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/app/main/description/overview/overview.component.ts:65</a></div>
-                            </td>
-                        </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="77"
+                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:77</a></div>
+                </td>
+            </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
+            <tr>
+                <td class="col-md-4">
 
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>Proptype</td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Proptype</td>
 
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    <td>
+                                        No
+                                    </td>
 
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="isBoolean"></a>
-                        <span class="name">
-                            <b>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isBoolean"></a>
+                    <span class="name">
+                        <b>
                             isBoolean
-                            </b>
-                            <a href="#isBoolean"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
+                        </b>
+                        <a href="#isBoolean"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
 <code>isBoolean(Proptype)</code>
-                    </td>
-                </tr>
+                </td>
+            </tr>
 
 
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/main/description/overview/overview.component.ts:58</a></div>
-                            </td>
-                        </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:70</a></div>
+                </td>
+            </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
+            <tr>
+                <td class="col-md-4">
 
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>Proptype</td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Proptype</td>
 
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    <td>
+                                        No
+                                    </td>
 
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="isColor"></a>
-                        <span class="name">
-                            <b>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isColor"></a>
+                    <span class="name">
+                        <b>
                             isColor
-                            </b>
-                            <a href="#isColor"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
+                        </b>
+                        <a href="#isColor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
 <code>isColor(Proptype)</code>
-                    </td>
-                </tr>
+                </td>
+            </tr>
 
 
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">src/app/main/description/overview/overview.component.ts:78</a></div>
-                            </td>
-                        </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="90"
+                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:90</a></div>
+                </td>
+            </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
+            <tr>
+                <td class="col-md-4">
 
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>Proptype</td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Proptype</td>
 
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    <td>
+                                        No
+                                    </td>
 
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="isObject"></a>
-                        <span class="name">
-                            <b>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isJson"></a>
+                    <span class="name">
+                        <b>
+                            isJson
+                        </b>
+                        <a href="#isJson"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isJson(Proptype)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:63</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Proptype</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isObject"></a>
+                    <span class="name">
+                        <b>
                             isObject
-                            </b>
-                            <a href="#isObject"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
+                        </b>
+                        <a href="#isObject"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
 <code>isObject(Proptype)</code>
-                    </td>
-                </tr>
+                </td>
+            </tr>
 
 
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">src/app/main/description/overview/overview.component.ts:72</a></div>
-                            </td>
-                        </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="84"
+                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:84</a></div>
+                </td>
+            </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
+            <tr>
+                <td class="col-md-4">
 
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>Proptype</td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Proptype</td>
 
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    <td>
+                                        No
+                                    </td>
 
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="isString"></a>
-                        <span class="name">
-                            <b>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isString"></a>
+                    <span class="name">
+                        <b>
                             isString
-                            </b>
-                            <a href="#isString"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
+                        </b>
+                        <a href="#isString"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
 <code>isString(Proptype)</code>
-                    </td>
-                </tr>
+                </td>
+            </tr>
 
 
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/main/description/overview/overview.component.ts:51</a></div>
-                            </td>
-                        </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:56</a></div>
+                </td>
+            </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
+            <tr>
+                <td class="col-md-4">
 
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>Proptype</td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Proptype</td>
 
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    <td>
+                                        No
+                                    </td>
 
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="loadComponent"></a>
-                        <span class="name">
-                            <b>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadComponent"></a>
+                    <span class="name">
+                        <b>
                             loadComponent
-                            </b>
-                            <a href="#loadComponent"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
+                        </b>
+                        <a href="#loadComponent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
 <code>loadComponent(component)</code>
-                    </td>
-                </tr>
+                </td>
+            </tr>
 
 
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="97" class="link-to-prism">src/app/main/description/overview/overview.component.ts:97</a></div>
-                            </td>
-                        </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="109"
+                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:109</a></div>
+                </td>
+            </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
+            <tr>
+                <td class="col-md-4">
 
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>component</td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>component</td>
 
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                                    <td>
+                                        No
+                                    </td>
 
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="ngOnChanges"></a>
-                        <span class="name">
-                            <b>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnChanges"></a>
+                    <span class="name">
+                        <b>
                             ngOnChanges
-                            </b>
-                            <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
+                        </b>
+                        <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
 <code>ngOnChanges()</code>
-                    </td>
-                </tr>
+                </td>
+            </tr>
 
 
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/main/description/overview/overview.component.ts:44</a></div>
-                            </td>
-                        </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="49"
+                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:49</a></div>
+                </td>
+            </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
+            <tr>
+                <td class="col-md-4">
 
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="ngOnDestroy"></a>
-                        <span class="name">
-                            <b>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <b>
                             ngOnDestroy
-                            </b>
-                            <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
+                        </b>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
 <code>ngOnDestroy()</code>
-                    </td>
-                </tr>
+                </td>
+            </tr>
 
 
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="203" class="link-to-prism">src/app/main/description/overview/overview.component.ts:203</a></div>
-                            </td>
-                        </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="216"
+                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:216</a></div>
+                </td>
+            </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
+            <tr>
+                <td class="col-md-4">
 
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="ngOnInit"></a>
-                        <span class="name">
-                            <b>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
                             ngOnInit
-                            </b>
-                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
 <code>ngOnInit()</code>
-                    </td>
-                </tr>
+                </td>
+            </tr>
 
 
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/main/description/overview/overview.component.ts:38</a></div>
-                            </td>
-                        </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:43</a></div>
+                </td>
+            </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
+            <tr>
+                <td class="col-md-4">
 
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="OnPropertySubmit"></a>
-                        <span class="name">
-                            <b>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="OnPropertySubmit"></a>
+                    <span class="name">
+                        <b>
                             OnPropertySubmit
-                            </b>
-                            <a href="#OnPropertySubmit"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
+                        </b>
+                        <a href="#OnPropertySubmit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
 <code>OnPropertySubmit(propName, propType)</code>
-                    </td>
-                </tr>
+                </td>
+            </tr>
 
 
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="85" class="link-to-prism">src/app/main/description/overview/overview.component.ts:85</a></div>
-                            </td>
-                        </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="97"
+                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:97</a></div>
+                </td>
+            </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
+            <tr>
+                <td class="col-md-4">
 
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>propName</td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>propName</td>
 
-                                                </tr>
-                                                <tr>
-                                                        <td>propType</td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
+                                    <td>
+                                        No
+                                    </td>
 
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="valuechange"></a>
-                        <span class="name">
-                            <b>
+                                </tr>
+                                <tr>
+                                    <td>propType</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openBottomSheet"></a>
+                    <span class="name">
+                        <b>
+                            openBottomSheet
+                        </b>
+                        <a href="#openBottomSheet"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openBottomSheet(prop)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="280"
+                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:280</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>prop</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="stylechange"></a>
+                    <span class="name">
+                        <b>
+                            stylechange
+                        </b>
+                        <a href="#stylechange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>stylechange(propName, value, type)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="253"
+                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:253</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>propName</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>value</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>type</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="valuechange"></a>
+                    <span class="name">
+                        <b>
                             valuechange
-                            </b>
-                            <a href="#valuechange"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
+                        </b>
+                        <a href="#valuechange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
 <code>valuechange(propName, value, type)</code>
-                    </td>
-                </tr>
+                </td>
+            </tr>
 
 
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="213" class="link-to-prism">src/app/main/description/overview/overview.component.ts:213</a></div>
-                            </td>
-                        </tr>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="227"
+                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:227</a></div>
+                </td>
+            </tr>
 
 
-                <tr>
-                    <td class="col-md-4">
+            <tr>
+                <td class="col-md-4">
 
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>propName</td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>propName</td>
 
-                                                </tr>
-                                                <tr>
-                                                        <td>value</td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
+                                    <td>
+                                        No
+                                    </td>
 
-                                                </tr>
-                                                <tr>
-                                                        <td>type</td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
 
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                                </tr>
+                                <tr>
+                                    <td>value</td>
 
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>type</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </section>
-
     <section>
     
         <h3 id="inputs">
@@ -1317,16 +1668,9 @@
                         <span class="name">
                             <b>
                                 <span class="modifier">Private</span>
-                            _cacheOfFactories
-                            </b>
+                            _cacheOfFactories</b>
                             <a href="#_cacheOfFactories"><span class="icon ion-ios-link"></span></a>
                         </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>_cacheOfFactories:     <code>literal type</code>
-</code>
                     </td>
                 </tr>
                     <tr>
@@ -1342,7 +1686,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/main/description/overview/overview.component.ts:35</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/main/description/overview/overview.component.ts:37</a></div>
                             </td>
                         </tr>
 
@@ -1356,16 +1700,9 @@
                         <a name="appComponentLoder"></a>
                         <span class="name">
                             <b>
-                            appComponentLoder
-                            </b>
+                            appComponentLoder</b>
                             <a href="#appComponentLoder"><span class="icon ion-ios-link"></span></a>
                         </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>appComponentLoder:     <code>ComponentLoaderDirective</code>
-</code>
                     </td>
                 </tr>
                     <tr>
@@ -1385,7 +1722,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/main/description/overview/overview.component.ts:31</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/main/description/overview/overview.component.ts:33</a></div>
                             </td>
                         </tr>
 
@@ -1400,27 +1737,20 @@
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            componentdata
-                            </b>
+                            componentdata</b>
                             <a href="#componentdata"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>componentdata:     <code><a href="../injectables/ComponentdataService.html" target="_self" >ComponentdataService</a></code>
-</code>
-                    </td>
-                </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="../injectables/ComponentdataService.html" target="_self" >ComponentdataService</a></code>
+                            <i>Type : </i>        <code><a href="../injectables/ComponentdataService.html" target="_self" >ComponentdataService</a></code>
 
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/main/description/overview/overview.component.ts:34</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/main/description/overview/overview.component.ts:36</a></div>
                             </td>
                         </tr>
 
@@ -1434,21 +1764,14 @@
                         <a name="componentList"></a>
                         <span class="name">
                             <b>
-                            componentList
-                            </b>
+                            componentList</b>
                             <a href="#componentList"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>componentList:     <code></code>
-</code>
-                    </td>
-                </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/main/description/overview/overview.component.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/main/description/overview/overview.component.ts:27</a></div>
                             </td>
                         </tr>
 
@@ -1462,21 +1785,14 @@
                         <a name="componentRef"></a>
                         <span class="name">
                             <b>
-                            componentRef
-                            </b>
+                            componentRef</b>
                             <a href="#componentRef"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>componentRef:     <code></code>
-</code>
-                    </td>
-                </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/main/description/overview/overview.component.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/main/description/overview/overview.component.ts:27</a></div>
                             </td>
                         </tr>
 
@@ -1490,21 +1806,14 @@
                         <a name="CurrentComponent"></a>
                         <span class="name">
                             <b>
-                            CurrentComponent
-                            </b>
+                            CurrentComponent</b>
                             <a href="#CurrentComponent"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>CurrentComponent:     <code></code>
-</code>
-                    </td>
-                </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/main/description/overview/overview.component.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/main/description/overview/overview.component.ts:27</a></div>
                             </td>
                         </tr>
 
@@ -1518,18 +1827,11 @@
                         <a name="dynamicDeclarations"></a>
                         <span class="name">
                             <b>
-                            dynamicDeclarations
-                            </b>
+                            dynamicDeclarations</b>
                             <a href="#dynamicDeclarations"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>dynamicDeclarations:     <code>[]</code>
-</code>
-                    </td>
-                </tr>
                     <tr>
                         <td class="col-md-4">
                             <i>Type : </i>    <code>[]</code>
@@ -1539,84 +1841,6 @@
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>[]</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/main/description/overview/overview.component.ts:26</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="dynamicImports"></a>
-                        <span class="name">
-                            <b>
-                            dynamicImports
-                            </b>
-                            <a href="#dynamicImports"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>dynamicImports:     <code>[]</code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code>[]</code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>[]</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/main/description/overview/overview.component.ts:26</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="MenuLabel"></a>
-                        <span class="name">
-                            <b>
-                            MenuLabel
-                            </b>
-                            <a href="#MenuLabel"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>MenuLabel:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>&quot;&quot;</code>
                         </td>
                     </tr>
                         <tr>
@@ -1632,24 +1856,70 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="MenuValue"></a>
+                        <a name="dynamicImports"></a>
                         <span class="name">
                             <b>
-                            MenuValue
-                            </b>
-                            <a href="#MenuValue"><span class="icon ion-ios-link"></span></a>
+                            dynamicImports</b>
+                            <a href="#dynamicImports"><span class="icon ion-ios-link"></span></a>
                         </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>MenuValue:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/main/description/overview/overview.component.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="JsonData"></a>
+                        <span class="name">
+                            <b>
+                            JsonData</b>
+                            <a href="#JsonData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/main/description/overview/overview.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="MenuLabel"></a>
+                        <span class="name">
+                            <b>
+                            MenuLabel</b>
+                            <a href="#MenuLabel"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                         </td>
                     </tr>
@@ -1671,24 +1941,49 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="MenuValue"></a>
+                        <span class="name">
+                            <b>
+                            MenuValue</b>
+                            <a href="#MenuValue"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;&quot;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/main/description/overview/overview.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="moduleName"></a>
                         <span class="name">
                             <b>
-                            moduleName
-                            </b>
+                            moduleName</b>
                             <a href="#moduleName"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>moduleName:     <code></code>
-</code>
-                    </td>
-                </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/main/description/overview/overview.component.ts:26</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/main/description/overview/overview.component.ts:28</a></div>
                             </td>
                         </tr>
 
@@ -1702,21 +1997,14 @@
                         <a name="modulePath"></a>
                         <span class="name">
                             <b>
-                            modulePath
-                            </b>
+                            modulePath</b>
                             <a href="#modulePath"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>modulePath:     <code></code>
-</code>
-                    </td>
-                </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/main/description/overview/overview.component.ts:26</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/main/description/overview/overview.component.ts:28</a></div>
                             </td>
                         </tr>
 
@@ -1730,21 +2018,42 @@
                         <a name="ngMdlRef"></a>
                         <span class="name">
                             <b>
-                            ngMdlRef
-                            </b>
+                            ngMdlRef</b>
                             <a href="#ngMdlRef"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>ngMdlRef:     <code></code>
-</code>
-                    </td>
-                </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/main/description/overview/overview.component.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/main/description/overview/overview.component.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="overlayContainer"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            overlayContainer</b>
+                            <a href="#overlayContainer"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>OverlayContainer</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/main/description/overview/overview.component.ts:36</a></div>
                             </td>
                         </tr>
 
@@ -1758,21 +2067,14 @@
                         <a name="propertyArray"></a>
                         <span class="name">
                             <b>
-                            propertyArray
-                            </b>
+                            propertyArray</b>
                             <a href="#propertyArray"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>propertyArray:     <code></code>
-</code>
-                    </td>
-                </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/main/description/overview/overview.component.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/main/description/overview/overview.component.ts:27</a></div>
                             </td>
                         </tr>
 
@@ -1786,21 +2088,41 @@
                         <a name="stylingArray"></a>
                         <span class="name">
                             <b>
-                            stylingArray
-                            </b>
+                            stylingArray</b>
                             <a href="#stylingArray"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>stylingArray:     <code></code>
-</code>
-                    </td>
-                </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/main/description/overview/overview.component.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/main/description/overview/overview.component.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="themeWrapper"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            themeWrapper</b>
+                            <a href="#themeWrapper"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>document.querySelector(&#x27;body&#x27;)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="225" class="link-to-prism">src/app/main/description/overview/overview.component.ts:225</a></div>
                             </td>
                         </tr>
 
@@ -1813,7 +2135,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input, ViewContainerRef, Compiler, ComponentFactory, ViewChild, CUSTOM_ELEMENTS_SCHEMA, NgModule } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input, ViewContainerRef, Compiler, ComponentFactory, ViewChild, CUSTOM_ELEMENTS_SCHEMA, NgModule, HostBinding, Inject } from &#x27;@angular/core&#x27;;
 import { ComponentdataService } from &#x27;src/app/componentdata.service&#x27;;
 import { ComponentLoaderDirective } from &#x27;src/app/component-loader.directive&#x27;;
 
@@ -1824,6 +2146,8 @@ import { ButtonModule } from &#x27;primeng/button&#x27;;
 import { DemoComponent } from &#x27;src/app/customiseComponents/demo/demo.component&#x27;;
 import { TaviscaOrxe3LibraryModule } from &#x27;tavisca-orxe3-library&#x27;;
 import { throwError } from &#x27;rxjs&#x27;;
+import { OverlayContainer } from &#x27;@angular/cdk/overlay&#x27;;
+import {MatBottomSheet, MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA} from &#x27;@angular/material&#x27;;
 
 
 
@@ -1832,23 +2156,26 @@ export interface IHaveDynamicData {}
 @Component({
   selector: &#x27;app-overview&#x27;,
   templateUrl: &#x27;./overview.component.html&#x27;,
-  styleUrls: [&#x27;./overview.component.css&#x27;]
+  styleUrls: [&#x27;./overview.component.scss&#x27;]
 })
 
 export class OverviewComponent implements OnInit {
   @Input() Component;
   stylingArray; propertyArray; componentRef; componentList; CurrentComponent; ngMdlRef;
   dynamicImports &#x3D; []; modulePath; moduleName; dynamicDeclarations &#x3D; [];
-  
   MenuLabel&#x3D;&quot;&quot;;
   MenuValue&#x3D;&quot;&quot;;
+  JsonData;
 
   @ViewChild(ComponentLoaderDirective) appComponentLoder: ComponentLoaderDirective;
 
 
-  constructor(private compiler: Compiler, private vcRef: ViewContainerRef,public componentdata: ComponentdataService) { }
+  constructor(private bottomSheet: MatBottomSheet,private compiler: Compiler, private vcRef: ViewContainerRef,public componentdata: ComponentdataService, public overlayContainer: OverlayContainer) { }
   private _cacheOfFactories: {[templateKey: string]: ComponentFactory&lt;IHaveDynamicData&gt;} &#x3D; {};
 
+  checkStyle() {
+    return false;
+  }
 
 ngOnInit() {
   // this.Component &#x3D; this.componentdata.getComponent();
@@ -1865,6 +2192,13 @@ ngOnChanges(){
 
 isString(Proptype) {
   if(Proptype &#x3D;&#x3D;&#x3D; String) 
+    return true;
+  else
+    return false;
+}
+
+isJson(Proptype) {
+  if(Proptype &#x3D;&#x3D;&#x3D; JSON) 
     return true;
   else
     return false;
@@ -1992,7 +2326,8 @@ OnPropertySubmit(propName, propType) {
       //debugger;
       @Component({
           selector: &#x27;dynamic-component-renderer&#x27;,
-          template: tmpl
+          template: tmpl,
+          styleUrls: [&#x27;./overview.component.scss&#x27;]
       })
       class CustomDynamicComponent {
         
@@ -2024,8 +2359,11 @@ OnPropertySubmit(propName, propType) {
   
       }
     }
-  
+    private themeWrapper &#x3D; document.querySelector(&#x27;body&#x27;);
+    @HostBinding(&#x27;class&#x27;) componentCssClass;
     valuechange(propName, value, type){
+      var element &#x3D; document.getElementById(&quot;myDIV&quot;);
+      element.classList.remove(&quot;DynamicStyling&quot;);
       if(type&#x3D;&#x3D; Boolean){
         if(this.componentRef.instance[propName] &#x3D;&#x3D;&quot;true&quot;){
           this.componentRef.instance[propName] &#x3D;&quot;false&quot;;
@@ -2037,12 +2375,24 @@ OnPropertySubmit(propName, propType) {
           this.componentRef.instance[propName] &#x3D;&quot;true&quot;;
         }
       }
+      else if(type &#x3D;&#x3D;  JSON &amp;&amp; typeof this.componentRef.instance[propName] &#x3D;&#x3D; &quot;object&quot; ){
+        this.componentRef.instance[propName] &#x3D; JSON.parse(value);
+        this.JsonData &#x3D; JSON.parse(value);
+      }
       else if(typeof this.componentRef.instance[propName] &#x3D;&#x3D; &quot;object&quot; ){
         this.componentRef.instance[propName].push(value);
       }
       else{
         this.componentRef.instance[propName] &#x3D; value;
       }
+    }
+
+    stylechange(propName, value, type){
+      debugger;
+      var element &#x3D; document.getElementById(&quot;myDIV&quot;);
+      element.classList.add(&quot;DynamicStyling&quot;);
+          this.themeWrapper.style.setProperty(propName, value);
+      
     }
   
     getModule(){
@@ -2064,9 +2414,55 @@ OnPropertySubmit(propName, propType) {
       
   
     }
+    openBottomSheet(prop): void {
+         const bottomSheetRef &#x3D; this.bottomSheet.open(BottomSheetOverviewExampleSheet, {
+        data: { Object: this.JsonData },
+      });
+    bottomSheetRef.afterDismissed().subscribe((data) &#x3D;&gt;{
+      //console.log(data);
+      if(data){
+        this.JsonData &#x3D; JSON.parse(data);
+      (&lt;HTMLInputElement&gt;document.getElementById(&quot;json&quot;)).value &#x3D; data;
+      this.componentRef.instance[prop.name] &#x3D; JSON.parse(data);
+      }
+      //this.CurrentComponent.UpdateJson &#x3D; data;
+    })
 
-}
-</code></pre>
+    }
+    }
+@Component({
+  selector: &#x27;bottom-sheet-overview-example-sheet&#x27;,
+  template: &#x60;
+  &lt;form class&#x3D;&quot;example-form&quot;&gt;
+  &lt;mat-form-field class&#x3D;&quot;example-full-width&quot;&gt;
+  &lt;textarea matInput class &#x3D; &quot;jsonInput&quot; placeholder&#x3D;&quot;JSON DATA&quot; value&#x3D;&quot;{{ data.Object | json }}&quot; (input)&#x3D;&quot;valuechange($event.target.value)&quot;&gt;&lt;/textarea&gt;
+  &lt;/mat-form-field&gt;&lt;/form&gt;
+  &lt;button mat-raised-button color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;UpdateJson()&quot;&gt;Primary&lt;/button&gt;&#x60;,
+  styles: [&#x60;
+  .jsonInput { height: 65vh; 
+    } 
+
+  .example-full-width {
+    width: 100%;
+  }&#x60;]
+})
+export class BottomSheetOverviewExampleSheet {
+  UpdateJsonData;
+  constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public data: any,private bottomSheetRef: MatBottomSheetRef&lt;BottomSheetOverviewExampleSheet&gt;) {}
+
+  openLink(event: MouseEvent): void {
+    this.bottomSheetRef.dismiss();
+    event.preventDefault();
+  }
+  valuechange(UpdateValue){
+     //console.log(UpdateValue);
+     this.UpdateJsonData &#x3D; UpdateValue;
+  }
+  UpdateJson(){
+    //console.log(this.UpdateJsonData);
+    this.bottomSheetRef.dismiss(this.UpdateJsonData);
+  }
+}</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
@@ -2142,6 +2538,15 @@ OnPropertySubmit(propName, propType) {
                 &lt;input matInput required placeholder&#x3D;&quot;{{prop.name}}&quot; value&#x3D;&quot;{{prop.value}}&quot; (change)&#x3D;&quot;valuechange(prop.name, $event.target.value,prop.type)&quot;&gt;
               &lt;/mat-form-field&gt;
             &lt;/mat-list-item&gt;
+            &lt;mat-list-item role&#x3D;&quot;listitem&quot; *ngIf&#x3D;&quot;isJson(prop.type)&quot;&gt;
+              &lt;mat-form-field class&#x3D;&quot;example-full-width&quot;&gt;
+                &lt;input id&#x3D;&quot;json&quot; matInput required placeholder&#x3D;&quot;{{prop.name}}&quot; value&#x3D;&quot;{{prop.value}}&quot; (change)&#x3D;&quot;valuechange(prop.name, $event.target.value,prop.type)&quot;&gt;
+              &lt;/mat-form-field&gt;
+              &lt;button mat-icon-button&gt;
+                &lt;mat-icon aria-label&#x3D;&quot;icon-button with a zoom_in&quot; (click)&#x3D;&quot;openBottomSheet(prop)&quot;&gt;zoom_in&lt;/mat-icon&gt;
+              &lt;/button&gt;
+            &lt;/mat-list-item&gt;
+            &lt;!-- &lt;pre&gt;{{JsonData | json}}&lt;/pre&gt; --&gt;
             &lt;mat-list-item role&#x3D;&quot;listitem&quot; *ngIf&#x3D;&quot;isBoolean(prop.type)&quot;&gt;
               &lt;input type&#x3D;&quot;checkbox&quot; (change)&#x3D;&quot;valuechange(prop.name, $event.target.value,prop.type)&quot;&gt;{{prop.name}}
             &lt;/mat-list-item&gt;
@@ -2186,20 +2591,20 @@ OnPropertySubmit(propName, propType) {
 
             &lt;p&gt;{{prop.name}}: &lt;/p&gt;
             &lt;mat-list-item role&#x3D;&quot;listitem&quot; *ngIf&#x3D;&quot;isColor(prop.type)&quot;&gt;
-              &lt;input type&#x3D;&quot;color&quot; (change)&#x3D;&quot;valuechange(prop.name, $event.target.value,prop.type)&quot;&gt;
+              &lt;input type&#x3D;&quot;color&quot; name&#x3D;&quot;globalDynamic&quot; (change)&#x3D;&quot;stylechange(prop.property,$event.target.value,prop.type)&quot;&gt;
             &lt;/mat-list-item&gt;
             &lt;mat-list-item role&#x3D;&quot;listitem&quot; *ngIf&#x3D;&quot;isString(prop.type)&quot;&gt;
               &lt;mat-form-field class&#x3D;&quot;example-full-width&quot;&gt;
-                &lt;input matInput required placeholder&#x3D;&quot;{{prop.name}}&quot; value&#x3D;&quot;{{prop.value}}&quot; (change)&#x3D;&quot;valuechange(prop.name, $event.target.value,prop.type)&quot;&gt;
+                &lt;input matInput required placeholder&#x3D;&quot;{{prop.name}}&quot; value&#x3D;&quot;{{prop.value}}&quot; (change)&#x3D;&quot;stylechange(prop.property, $event.target.value,prop.type)&quot;&gt;
               &lt;/mat-form-field&gt;
             &lt;/mat-list-item&gt;
             &lt;mat-list-item role&#x3D;&quot;listitem&quot; *ngIf&#x3D;&quot;isBoolean(prop.type)&quot;&gt;
-              &lt;input type&#x3D;&quot;checkbox&quot; (change)&#x3D;&quot;valuechange(prop.name, $event.target.value,prop.type)&quot;&gt;{{prop.name}}
+              &lt;input type&#x3D;&quot;checkbox&quot; (change)&#x3D;&quot;stylechange(prop.property, $event.target.value,prop.type)&quot;&gt;{{prop.name}}
             &lt;/mat-list-item&gt;
             &lt;mat-list-item role&#x3D;&quot;listitem&quot; *ngIf&#x3D;&quot;isArray(prop.type)&quot;&gt;
               &lt;mat-list role&#x3D;&quot;list&quot;&gt;
                 &lt;div *ngFor&#x3D;&quot;let val of prop.List&quot;&gt;
-                  &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;{{prop.name}}&quot; value&#x3D;&quot;{{val}}&quot; (click)&#x3D;&quot;valuechange(prop.name, $event.target.value, prop.type)&quot;&gt;{{val}}&lt;br&gt;
+                  &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;{{prop.name}}&quot; value&#x3D;&quot;{{val}}&quot; (click)&#x3D;&quot;stylechange(prop.property, $event.target.value, prop.type)&quot;&gt;{{val}}&lt;br&gt;
                 &lt;/div&gt;
               &lt;/mat-list&gt;
             &lt;/mat-list-item&gt;
@@ -2234,9 +2639,31 @@ OnPropertySubmit(propName, propType) {
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./overview.component.css</code>
+                    <code>./overview.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">
+                <pre class="line-numbers"><code class="language-scss">@import &#x27;../../../../styles/client1.scss&#x27;;
+@import &#x27;../../../../styles/function.scss&#x27;;
+
+.DynamicStyling{
+    background-color: var(--navBackground);
+    color: var(--navColor);
+    text-align: $default-font;
+    font-size: $default-font;
+    margin-top: $default-font;
+    height: $default-font;
+    font-family: $default-font;
+    padding: $default-font;
+    margin: $default-font;
+    margin-bottom: $default-font;
+    width: var(--ButtonWidth); 
+    p {
+      margin: 0;
+    }
+}
+
+
+
+
 * {
     box-sizing: border-box;
 }
@@ -2318,7 +2745,8 @@ mat-card{
         .codepen{
             height: 84.4vh;
         } 
-    }</code></pre>
+    }
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -2346,12 +2774,9 @@ mat-card{
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="row">  <div class="codepen" *ngIf="Component">    <mat-card>      <mat-chip-list>        <mat-chip> {{Component.name}}</mat-chip>      </mat-chip-list>      <mat-card-content class="cpen">        <ng-template appComponentLoader></ng-template>      </mat-card-content>    </mat-card>    <mat-card>      <mat-card-content>        <mat-list role="list">          <h3 mat-subheader>To use this element on a web page</h3>          <mat-list-item>            <mat-icon mat-list-icon>label_important</mat-icon>            <h4 mat-line>Step 1 : Get the dependencies</h4>            <p mat-line>{{Component.commands.dependencies}}</p>            <!-- <p mat-line>{{Node (>6.0.0)}}</p>                  <p mat-line>Npm (>3.8.6)</p> -->          </mat-list-item>          <mat-list-item>            <mat-icon mat-list-icon>label_important</mat-icon>            <h4 mat-line>Step 2 : Install the libraries</h4>            <p mat-line>{{Component.commands.libraries}}</p>            <!-- <p mat-line># Install compodoc with npm</p>                  <p mat-line> $ npm install -g @compodoc/compodoc</p> -->          </mat-list-item>          <mat-list-item>            <mat-icon mat-list-icon>label_important</mat-icon>            <h4 mat-line>Step 3 : Serve It</h4>            <p mat-line>{{Component.commands.Serve}}</p>            <!-- <p mat-line># Run compodoc in your project (generated with Angular CLI for example) and serve it</p>                  <p mat-line>$ compodoc -p src/tsconfig.app.json -s</p> -->          </mat-list-item>        </mat-list>      </mat-card-content>    </mat-card>    <!-- <h3 mat-subheader>          <mat-icon>chevron_right</mat-icon>Json Data of {{Component.name}}        </h3>        <p mat-line> {{Component.name}}</p>        <p mat-line *ngIf="Component.className"> <b>Class Name:</b> {{Component.className}}</p>        <p mat-line *ngIf="Component.moduleDetails.module"> <b>Module:</b> {{Component.moduleDetails.module}}</p>        <p mat-line *ngIf="Component.moduleDetails.modulePath"> <b>Module Path:</b>          {{Component.moduleDetails.modulePath}}</p>        <span mat-line *ngIf="Component.template"> <b>Template:</b> {{Component.template}}</span>        <span mat-line *ngIf="Component.properties"><b>Properties:</b>          <mat-list role="list" *ngFor="let prop of Component.properties">            <mat-list-item role="listitem">{{prop.name}}</mat-list-item>          </mat-list>        </span> -->    <!-- <mat-card>        <h3 mat-subheader>Json Data of {{Component.name}}</h3>    </mat-card> -->  </div>  <div class="operation">    <mat-card class="properties">      <div>        <span><b>Properties:</b></span>        <div *ngIf="propertyArray">          <mat-list *ngFor="let prop of propertyArray">            <p>{{prop.name}}: </p>            <mat-list-item role="listitem" *ngIf="isString(prop.type)">              <mat-form-field class="example-full-width">                <input matInput required placeholder="{{prop.name}}" value="{{prop.value}}" (change)="valuechange(prop.name, $event.target.value,prop.type)">              </mat-form-field>            </mat-list-item>            <mat-list-item role="listitem" *ngIf="isBoolean(prop.type)">              <input type="checkbox" (change)="valuechange(prop.name, $event.target.value,prop.type)">{{prop.name}}            </mat-list-item>            <mat-list-item role="listitem" *ngIf="isArray(prop.type)">              <mat-list role="list">                <div *ngFor="let val of prop.List">                  <input type="radio" name="{{prop.name}}" value="{{val}}" (click)="valuechange(prop.name, $event.target.value, prop.type)">{{val}}<br>                </div>              </mat-list>            </mat-list-item>            <mat-list-item role="listitem" *ngIf="isObject(prop.type)" class="ObjectList">              <div class="objectform">                <mat-form-field mat-line class="form-full-width">                  <input matInput required placeholder="Label" [(ngModel)]="MenuLabel">                </mat-form-field>                <mat-form-field mat-line class="form-full-width">                  <input matInput required placeholder="Value" [(ngModel)]="MenuValue">                </mat-form-field>                <div class="button-done">                  <button mat-mini-fab mat-line (click)="OnPropertySubmit(prop.name, prop.type)" class="doneButton">                    <mat-icon aria-label="Example icon-button with a heart icon">done</mat-icon>                  </button>                </div>              </div>            </mat-list-item>          </mat-list>        </div>        <div role="list" *ngIf="!propertyArray">          <div role="listitem">            Operations Not Found Please Add in Json File.          </div>        </div>      </div>    </mat-card>    <mat-card class="properties">      <div>        <span><b>Styling:</b></span>        <div *ngIf="stylingArray">          <mat-list *ngFor="let prop of stylingArray">            <p>{{prop.name}}: </p>            <mat-list-item role="listitem" *ngIf="isColor(prop.type)">              <input type="color" (change)="valuechange(prop.name, $event.target.value,prop.type)">            </mat-list-item>            <mat-list-item role="listitem" *ngIf="isString(prop.type)">              <mat-form-field class="example-full-width">                <input matInput required placeholder="{{prop.name}}" value="{{prop.value}}" (change)="valuechange(prop.name, $event.target.value,prop.type)">              </mat-form-field>            </mat-list-item>            <mat-list-item role="listitem" *ngIf="isBoolean(prop.type)">              <input type="checkbox" (change)="valuechange(prop.name, $event.target.value,prop.type)">{{prop.name}}            </mat-list-item>            <mat-list-item role="listitem" *ngIf="isArray(prop.type)">              <mat-list role="list">                <div *ngFor="let val of prop.List">                  <input type="radio" name="{{prop.name}}" value="{{val}}" (click)="valuechange(prop.name, $event.target.value, prop.type)">{{val}}<br>                </div>              </mat-list>            </mat-list-item>            <mat-list-item role="listitem" *ngIf="isObject(prop.type)" class="ObjectList">              <div class="objectform">                <mat-form-field mat-line class="form-full-width">                  <input matInput required placeholder="Label" [(ngModel)]="MenuLabel">                </mat-form-field>                <mat-form-field mat-line class="form-full-width">                  <input matInput required placeholder="Value" [(ngModel)]="MenuValue">                </mat-form-field>                <div class="button-done">                  <button mat-mini-fab mat-line (click)="OnPropertySubmit(prop.name, prop.type)" class="doneButton">                    <mat-icon aria-label="Example icon-button with a heart icon">done</mat-icon>                  </button>                </div>              </div>            </mat-list-item>          </mat-list>        </div>        <div role="list" *ngIf="!stylingArray">          <div role="listitem">            Operations Not Found Please Add in Json File.          </div>        </div>      </div>    </mat-card>  </div></div></div>'
-    var COMPONENTS = [{'name': 'ApiComponent', 'selector': 'app-api'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CodepenComponent', 'selector': 'app-codepen'},{'name': 'ComponentsComponent', 'selector': 'app-components'},{'name': 'DefualtAMButtonComponent', 'selector': 'app-defualt-ambutton'},{'name': 'DefualtAMMenuListComponent', 'selector': 'app-defualt-ammenu-list'},{'name': 'DemoComponent', 'selector': 'app-demo'},{'name': 'DescriptionComponent', 'selector': 'app-description'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'MatAnchor', 'selector': 'a[mat-button], a[mat-raised-button], a[mat-icon-button], a[mat-fab],
-             a[mat-mini-fab], a[mat-stroked-button], a[mat-flat-button]'},{'name': 'MatButton', 'selector': 'button[mat-button], button[mat-raised-button], button[mat-icon-button],
-             button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],
-             button[mat-flat-button]'},{'name': 'MatMenu', 'selector': 'mat-menu'},{'name': 'MatMenuItem', 'selector': '[mat-menu-item]'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'TaviscaButtonComponent', 'selector': 'enl-tavisca-button'},{'name': 'TaviscaInputComponent', 'selector': 'enl-tavisca-input'},{'name': 'TryComponent', 'selector': 'app-try'}];
-    var DIRECTIVES = [{'name': 'ComponentLoaderDirective', 'selector': '[appComponentLoader]'},{'name': 'MatMenuContent', 'selector': 'ng-template[matMenuContent]'},{'name': 'MatMenuTrigger', 'selector': '[mat-menu-trigger-for], [matMenuTriggerFor]'}];
+        var COMPONENT_TEMPLATE = '<div><div class="row">  <div class="codepen" *ngIf="Component">    <mat-card>      <mat-chip-list>        <mat-chip> {{Component.name}}</mat-chip>      </mat-chip-list>      <mat-card-content class="cpen">        <ng-template appComponentLoader></ng-template>      </mat-card-content>    </mat-card>    <mat-card>      <mat-card-content>        <mat-list role="list">          <h3 mat-subheader>To use this element on a web page</h3>          <mat-list-item>            <mat-icon mat-list-icon>label_important</mat-icon>            <h4 mat-line>Step 1 : Get the dependencies</h4>            <p mat-line>{{Component.commands.dependencies}}</p>            <!-- <p mat-line>{{Node (>6.0.0)}}</p>                  <p mat-line>Npm (>3.8.6)</p> -->          </mat-list-item>          <mat-list-item>            <mat-icon mat-list-icon>label_important</mat-icon>            <h4 mat-line>Step 2 : Install the libraries</h4>            <p mat-line>{{Component.commands.libraries}}</p>            <!-- <p mat-line># Install compodoc with npm</p>                  <p mat-line> $ npm install -g @compodoc/compodoc</p> -->          </mat-list-item>          <mat-list-item>            <mat-icon mat-list-icon>label_important</mat-icon>            <h4 mat-line>Step 3 : Serve It</h4>            <p mat-line>{{Component.commands.Serve}}</p>            <!-- <p mat-line># Run compodoc in your project (generated with Angular CLI for example) and serve it</p>                  <p mat-line>$ compodoc -p src/tsconfig.app.json -s</p> -->          </mat-list-item>        </mat-list>      </mat-card-content>    </mat-card>    <!-- <h3 mat-subheader>          <mat-icon>chevron_right</mat-icon>Json Data of {{Component.name}}        </h3>        <p mat-line> {{Component.name}}</p>        <p mat-line *ngIf="Component.className"> <b>Class Name:</b> {{Component.className}}</p>        <p mat-line *ngIf="Component.moduleDetails.module"> <b>Module:</b> {{Component.moduleDetails.module}}</p>        <p mat-line *ngIf="Component.moduleDetails.modulePath"> <b>Module Path:</b>          {{Component.moduleDetails.modulePath}}</p>        <span mat-line *ngIf="Component.template"> <b>Template:</b> {{Component.template}}</span>        <span mat-line *ngIf="Component.properties"><b>Properties:</b>          <mat-list role="list" *ngFor="let prop of Component.properties">            <mat-list-item role="listitem">{{prop.name}}</mat-list-item>          </mat-list>        </span> -->    <!-- <mat-card>        <h3 mat-subheader>Json Data of {{Component.name}}</h3>    </mat-card> -->  </div>  <div class="operation">    <mat-card class="properties">      <div>        <span><b>Properties:</b></span>        <div *ngIf="propertyArray">          <mat-list *ngFor="let prop of propertyArray">            <p>{{prop.name}}: </p>            <mat-list-item role="listitem" *ngIf="isString(prop.type)">              <mat-form-field class="example-full-width">                <input matInput required placeholder="{{prop.name}}" value="{{prop.value}}" (change)="valuechange(prop.name, $event.target.value,prop.type)">              </mat-form-field>            </mat-list-item>            <mat-list-item role="listitem" *ngIf="isJson(prop.type)">              <mat-form-field class="example-full-width">                <input id="json" matInput required placeholder="{{prop.name}}" value="{{prop.value}}" (change)="valuechange(prop.name, $event.target.value,prop.type)">              </mat-form-field>              <button mat-icon-button>                <mat-icon aria-label="icon-button with a zoom_in" (click)="openBottomSheet(prop)">zoom_in</mat-icon>              </button>            </mat-list-item>            <!-- <pre>{{JsonData | json}}</pre> -->            <mat-list-item role="listitem" *ngIf="isBoolean(prop.type)">              <input type="checkbox" (change)="valuechange(prop.name, $event.target.value,prop.type)">{{prop.name}}            </mat-list-item>            <mat-list-item role="listitem" *ngIf="isArray(prop.type)">              <mat-list role="list">                <div *ngFor="let val of prop.List">                  <input type="radio" name="{{prop.name}}" value="{{val}}" (click)="valuechange(prop.name, $event.target.value, prop.type)">{{val}}<br>                </div>              </mat-list>            </mat-list-item>            <mat-list-item role="listitem" *ngIf="isObject(prop.type)" class="ObjectList">              <div class="objectform">                <mat-form-field mat-line class="form-full-width">                  <input matInput required placeholder="Label" [(ngModel)]="MenuLabel">                </mat-form-field>                <mat-form-field mat-line class="form-full-width">                  <input matInput required placeholder="Value" [(ngModel)]="MenuValue">                </mat-form-field>                <div class="button-done">                  <button mat-mini-fab mat-line (click)="OnPropertySubmit(prop.name, prop.type)" class="doneButton">                    <mat-icon aria-label="Example icon-button with a heart icon">done</mat-icon>                  </button>                </div>              </div>            </mat-list-item>          </mat-list>        </div>        <div role="list" *ngIf="!propertyArray">          <div role="listitem">            Operations Not Found Please Add in Json File.          </div>        </div>      </div>    </mat-card>    <mat-card class="properties">      <div>        <span><b>Styling:</b></span>        <div *ngIf="stylingArray">          <mat-list *ngFor="let prop of stylingArray">            <p>{{prop.name}}: </p>            <mat-list-item role="listitem" *ngIf="isColor(prop.type)">              <input type="color" name="globalDynamic" (change)="stylechange(prop.property,$event.target.value,prop.type)">            </mat-list-item>            <mat-list-item role="listitem" *ngIf="isString(prop.type)">              <mat-form-field class="example-full-width">                <input matInput required placeholder="{{prop.name}}" value="{{prop.value}}" (change)="stylechange(prop.property, $event.target.value,prop.type)">              </mat-form-field>            </mat-list-item>            <mat-list-item role="listitem" *ngIf="isBoolean(prop.type)">              <input type="checkbox" (change)="stylechange(prop.property, $event.target.value,prop.type)">{{prop.name}}            </mat-list-item>            <mat-list-item role="listitem" *ngIf="isArray(prop.type)">              <mat-list role="list">                <div *ngFor="let val of prop.List">                  <input type="radio" name="{{prop.name}}" value="{{val}}" (click)="stylechange(prop.property, $event.target.value, prop.type)">{{val}}<br>                </div>              </mat-list>            </mat-list-item>            <mat-list-item role="listitem" *ngIf="isObject(prop.type)" class="ObjectList">              <div class="objectform">                <mat-form-field mat-line class="form-full-width">                  <input matInput required placeholder="Label" [(ngModel)]="MenuLabel">                </mat-form-field>                <mat-form-field mat-line class="form-full-width">                  <input matInput required placeholder="Value" [(ngModel)]="MenuValue">                </mat-form-field>                <div class="button-done">                  <button mat-mini-fab mat-line (click)="OnPropertySubmit(prop.name, prop.type)" class="doneButton">                    <mat-icon aria-label="Example icon-button with a heart icon">done</mat-icon>                  </button>                </div>              </div>            </mat-list-item>          </mat-list>        </div>        <div role="list" *ngIf="!stylingArray">          <div role="listitem">            Operations Not Found Please Add in Json File.          </div>        </div>      </div>    </mat-card>  </div></div></div>'
+    var COMPONENTS = [{'name': 'ApiComponent', 'selector': 'app-api'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BottomSheetOverviewExampleSheet', 'selector': 'bottom-sheet-overview-example-sheet'},{'name': 'ComponentsComponent', 'selector': 'app-components'},{'name': 'DefualtAMButtonComponent', 'selector': 'app-defualt-ambutton'},{'name': 'DefualtAMMenuListComponent', 'selector': 'app-defualt-ammenu-list'},{'name': 'DemoComponent', 'selector': 'app-demo'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HotelItemComponent', 'selector': 'enl-hotel-item'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'TaviscaButtonComponent', 'selector': 'enl-tavisca-button'},{'name': 'TaviscaInputComponent', 'selector': 'enl-tavisca-input'},{'name': 'TestingComponent', 'selector': 'app-testing'}];
+    var DIRECTIVES = [{'name': 'ComponentLoaderDirective', 'selector': '[appComponentLoader]'}];
     var ACTUAL_COMPONENT = {'name': 'OverviewComponent'};
 </script>
 <script src="../js/tree.js"></script>

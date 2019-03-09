@@ -58,8 +58,8 @@ const appliCationComponentList = [
         { name: 'Disabled', value: "true", type: Boolean, defaultValue: false }
       ],
       styling: [
-        { name: 'Background Color', value: "", type: CSS , property:'--navBackground'},
-        { name: 'Text Color', value: "", type: CSS , property:'--navColor'},
+        { name: 'Background Color', value: "", type: "CSS" , property:'--navBackground'},
+        { name: 'Text Color', value: "", type: "CSS" , property:'--navColor'},
         { name: 'width', value: "", type: String, defaultValue: '10em',property:'--ButtonWidth' }
       ],
       commands: {
@@ -79,7 +79,7 @@ const appliCationComponentList = [
       modulePath: ['@angular/material','@angular/cdk','@angular/animations'],
       version: ['7.0.2','7.0.4','7.0.4']
     },
-    template: `<button mat-raised-button color="primary" [matMenuTriggerFor]="menu">Menu</button> <mat-menu #menu="matMenu">
+    template: `<button id="myDIV" mat-raised-button color="primary" [matMenuTriggerFor]="menu">Menu</button> <mat-menu #menu="matMenu">
        <button  mat-menu-item *ngFor="let item of ListItems" value="{{item.value}}">{{item.label}}</button>
      </mat-menu>`,
     githubMarkDown: "https://raw.githubusercontent.com/angular/material2/master/src/lib/menu/menu.md",
@@ -103,7 +103,7 @@ const appliCationComponentList = [
       modulePath: ['@angular/material','@angular/cdk','@angular/animations'],
       version: ['7.0.2','7.0.4','7.0.4']
     },
-    template: `<enl-tavisca-button [color]='Color' [Disabled]="Disabled"></enl-tavisca-button>`,
+    template: `<enl-tavisca-button id="myDIV" [color]='Color' [Disabled]="Disabled"></enl-tavisca-button>`,
     githubMarkDown: "https://raw.githubusercontent.com/angular/material2/master/src/lib/button/README.md",
     githubCode: "https://github.com/Tavisca-Saurabh/Angular-Library/tree/master/Tavisca-Orxe3-Library/projects/tavisca-orxe3-library/src/lib/tavisca-button",
     properties: [
@@ -136,6 +136,25 @@ const appliCationComponentList = [
       Serve: ['ng serve']
     }
   },
+  {
+    type: "CustomComponent",
+    name: "Hotel item",
+    testFileName: "hotel-item",
+    path: "components/HotelItemComponent",
+    className: null,
+    moduleDetails: null,
+    template: `<enl-hotel-item id="myDIV" [hotelDetails] = 'hotelDetails' ></enl-hotel-item>`,
+    properties: [
+    { name: 'hotelDetails', value: "", type: JSON, defaultValue: {"supportsPrepaidRates":true,"supportsPostpaidRates":false,"roomOccupancies":[],"rooms":[],"rates":{"perRoomRates":[],"perBookingRates":[]},"fare":{"baseFare":15.51,"discounts":[],"taxes":[{"amount":1.95,"desc":"TaxAndServiceFee"}],"fees":[],"totalFare":17.46},"id":"731007","contentSupplierFamily":"*","name":"Las Vegas Hostel","geocode":{"lat":36.16491,"long":-115.131},"contact":{"address":{"line1":"1322 Fremont Street","line2":"","city":{"name":"Las Vegas"},"state":{"code":"NV","name":""},"countryCode":"US","postalCode":"89101"},"phones":[],"email":[]},"descriptions":[],"hotelCurrencyCode":"USD","rating":1.0,"activities":[],"areaAttractions":[],"policies":[],"amenities":[],"checkinCheckoutPolicy":[],"hotelChain":{"name":"Independent"},"thumbnails":[],"images":[],"source":{"selectedSupplier":"1h8ra7gxtkw","suppliers":["1h8ra7gxtkw"]}} },
+    ],
+    githubMarkDown: "https://raw.githubusercontent.com/angular/material2/master/src/lib/button/README.md",
+    githubCode: "https://github.com/Tavisca-Saurabh/Angular-Library/tree/master/Tavisca-Orxe3-Library/projects/tavisca-orxe3-library/src/lib/hotel-item",
+    commands: {
+    dependencies: ['Node (>6.0.0)', 'Npm (>3.8.6)'],
+    libraries: ['npm install --save @angular/material @angular/cdk @angular/animations', 'npm install "D:\Data After 1-12-2018\ORXe 3.0\Angular-Library\Tavisca-Orxe3-Library\dist\tavisca-orxe3-library\tavisca-orxe3-library-0.0.1.tgz"'],
+    Serve: ['ng serve']
+    }
+    }
 ]
 
 exports.compList = appliCationComponentList;

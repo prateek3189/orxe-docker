@@ -21,7 +21,7 @@ function execute() {
         if (githublink != null) {
             componentName = githublink.substring(githublink.lastIndexOf('/') + 1, githublink.length);
             githublink = githublink.replace("tree","branches");
-            githublink = githublink.replace("master","Develop");
+            githublink = githublink.replace("master","Shreea");
             // startIndex = githublink.indexOf('tree');
             // firsthalf = githublink.substring(0, startIndex);
             // lastIndex = githublink.substring(startIndex + 5).indexOf('/');

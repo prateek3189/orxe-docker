@@ -30,3 +30,28 @@ body{
 ::-webkit-scrollbar-thumb:hover {
     background: #555; 
 }*/
+
+/* For ORXe2.0 Hotel Item Component #Delete this Once Library is Updated*/
+.grid {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    margin: auto;
+}
+.hotel-results-detail-section.grid {
+    padding: 20px;
+}
+.grid .grid__col-xs-3 {
+    width: 25%;
+} 
+.result-list-image {
+    overflow: hidden;
+    width: 100%;
+    max-height: 200px;
+}
+/* End For ORXe2.0 Hotel Item Component #Delete this Once Library is Updated*/
+.mat-bottom-sheet-container{
+    height: 80vh;
+    min-width: 100vw;
+}
