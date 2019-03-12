@@ -44,7 +44,13 @@ body{
 }
 .grid .grid__col-xs-3 {
     width: 25%;
+    flex: 1;
 } 
+
+.grid .grid__col-xs-9 {
+    flex: 2;
+    text-align: left;
+}
 .result-list-image {
     overflow: hidden;
     width: 100%;
@@ -54,4 +60,8 @@ body{
 .mat-bottom-sheet-container{
     height: 80vh;
     min-width: 100vw;
+}
+
+.unit-label {
+    font-weight: bold;
 }

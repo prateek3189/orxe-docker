@@ -163,7 +163,7 @@ isObject(Proptype) {
     return false;
 }
 isColor(Proptype) {
-  if(Proptype &#x3D;&#x3D;&#x3D; CSS )
+  if(Proptype &#x3D;&#x3D;&#x3D; &quot;CSS&quot; )
     return true;
   else
     return false;
@@ -375,7 +375,7 @@ OnPropertySubmit(propName, propType) {
   &lt;mat-form-field class&#x3D;&quot;example-full-width&quot;&gt;
   &lt;textarea matInput class &#x3D; &quot;jsonInput&quot; placeholder&#x3D;&quot;JSON DATA&quot; value&#x3D;&quot;{{ data.Object | json }}&quot; (input)&#x3D;&quot;valuechange($event.target.value)&quot;&gt;&lt;/textarea&gt;
   &lt;/mat-form-field&gt;&lt;/form&gt;
-  &lt;button mat-raised-button color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;UpdateJson()&quot;&gt;Primary&lt;/button&gt;&#x60;,
+  &lt;button mat-raised-button color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;UpdateJson()&quot;&gt;Update&lt;/button&gt;&#x60;,
   styles: [&#x60;
   .jsonInput { height: 65vh; 
     } 
