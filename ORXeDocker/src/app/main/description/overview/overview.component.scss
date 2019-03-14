@@ -37,7 +37,7 @@ mat-card{
 .codepen{
     float: left;
     width: 70%;
-    height: 88vh;
+    // height: 88vh;
     padding: 10px;
     border-right: 4px double blue;
     overflow-y:auto;
@@ -46,6 +46,8 @@ mat-card{
     float: left;
     width: 30%;
     padding: 10px;
+    overflow-y: auto;
+    // height: 80vh;
 }
 .github{
     display: inline-block;
@@ -100,6 +102,6 @@ mat-card{
     }
     @media only screen and (max-height: 864px){
         .codepen{
-            height: 84.4vh;
-        } 
+            height: 80vh;
+        }
     }

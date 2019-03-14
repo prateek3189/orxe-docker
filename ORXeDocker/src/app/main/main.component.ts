@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ComponentdataService } from '../componentdata.service';
 
 @Component({
@@ -20,7 +20,7 @@ ngOnInit() {
      //console.log("Response: " + this.Component);
   })
 }
-ngOnChanges(){
+ngAfterViewInit (){
  // this.Component = this.componentdata.getComponent();
 }
 }

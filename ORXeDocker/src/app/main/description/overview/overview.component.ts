@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewContainerRef, Compiler, ComponentFactory, ViewChild, CUSTOM_ELEMENTS_SCHEMA, NgModule, HostBinding, Inject } from '@angular/core';
+import { Component, OnInit, Input, ViewContainerRef, Compiler, ComponentFactory, ViewChild, CUSTOM_ELEMENTS_SCHEMA, NgModule, HostBinding, Inject, HostListener } from '@angular/core';
 import { ComponentdataService } from 'src/app/componentdata.service';
 import { ComponentLoaderDirective } from 'src/app/component-loader.directive';
 
@@ -29,11 +29,18 @@ export class OverviewComponent implements OnInit {
   MenuLabel="";
   MenuValue="";
   JsonData;
+  screenHeight:number;
 
   @ViewChild(ComponentLoaderDirective) appComponentLoder: ComponentLoaderDirective;
+  @HostListener('window:resize', ['$event'])
+  getScreenSize() {
+        this.screenHeight = window.innerHeight - 130;
+  }
 
 
-  constructor(private bottomSheet: MatBottomSheet,private compiler: Compiler, private vcRef: ViewContainerRef,public componentdata: ComponentdataService, public overlayContainer: OverlayContainer) { }
+  constructor(private bottomSheet: MatBottomSheet,private compiler: Compiler, private vcRef: ViewContainerRef,public componentdata: ComponentdataService, public overlayContainer: OverlayContainer) { 
+    this.getScreenSize();
+  }
   private _cacheOfFactories: {[templateKey: string]: ComponentFactory<IHaveDynamicData>} = {};
 
   checkStyle() {

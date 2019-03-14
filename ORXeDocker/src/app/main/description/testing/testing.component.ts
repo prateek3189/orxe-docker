@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostListener } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -8,8 +8,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TestingComponent implements OnInit {
   @Input() Component = null;
+  @HostListener('window:resize', ['$event'])
+  getScreenSize() {
+        this.screenHeight = window.innerHeight - 138;
+  }
   showTestResult:boolean = false;
-  constructor(private http: HttpClient) { }
+  screenHeight:number;
+  constructor(private http: HttpClient) { 
+    this.getScreenSize();
+  }
   testUrl = "http://localhost:3000/posts/check";
   testName = {
     "compName": ""

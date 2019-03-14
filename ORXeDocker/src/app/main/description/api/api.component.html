@@ -1,9 +1,9 @@
 <div class="row">
   <div class="document">
-    <iframe id="iframe" class="DocumentService" [src]="DocumentURL()" frameborder="0"></iframe>
+    <iframe id="iframe" class="DocumentService" [src]="DocumentURL()" frameborder="0" [style.height]="IframeHeight + 'px'"></iframe>
   </div>
   <div class="steps">
-      <div class="ReadMe" >
+      <div class="ReadMe" [style.height]="screenHeight + 'px'">
       <!-- loaded from remote url -->
       <markdown [src]="githubMarkDown"></markdown>
     </div>

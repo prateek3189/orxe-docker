@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostListener } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ComponentdataService } from 'src/app/componentdata.service';
 
@@ -11,14 +11,24 @@ export class ApiComponent implements OnInit {
   //trustedUrl:any;
   Url: any;
   githubMarkDown: string;
+  screenHeight:any;
+  IframeHeight:any;
+
   /**
   * Get Component Name
   */
   @Input() Component;
   constructor(private sanitizer: DomSanitizer, public componentdata: ComponentdataService) {
     this.sanitizer = sanitizer;
+    this.getScreenSize();
   }
-
+  @HostListener('window:resize', ['$event'])
+  getScreenSize() {
+        this.screenHeight = window.innerHeight - 164;
+        this.IframeHeight = window.innerHeight - 74 ;
+        //this.screenWidth = window.innerWidth;
+        console.log(this.screenHeight);
+  }
   ngOnInit() {
     //console.log(this.Component.componentname);
     //this.Component = this.componentdata.selectedComponent.name;

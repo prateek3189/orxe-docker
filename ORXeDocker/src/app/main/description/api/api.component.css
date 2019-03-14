@@ -2,12 +2,11 @@
   margin-top: -7em !important;
   margin: 0 auto;
   width:102%;
-   height:97vh;
    display: flex;
 }
-.ReadMe{
-  height: 76vh;
-}
+/* .ReadMe{
+  height: 73vh;
+} */
 * {
   box-sizing: border-box;
 }
@@ -64,8 +63,8 @@
   }
   @media only screen and (max-width:1230px),(min-width:1230px){
     .DocumentService{
-      margin-top: -9em !important;
-      height: 101vh;
+      margin-top: -4em !important;
+      height: 87vh;
     }
   }
   /* @media only screen and (max-width:1169px),(max-width:1024px),(max-width:1554px){
