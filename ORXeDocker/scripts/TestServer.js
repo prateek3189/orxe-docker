@@ -10,7 +10,7 @@ app.options('*', cors());
 app.post('/posts/check', (req,res) => {
     console.log("hi");
     //var file_path = 'D:\\ORXe 3.0 Docker\\v10\\orxe-docker\\ORXeDocker\\src\\test.ts';
-    var file_path = 'src\\test.ts';
+    var file_path = 'src/test.ts';
     fs.readFile(file_path, function(err, data) {
         if(err) {
             console.log(err);

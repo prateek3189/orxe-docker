@@ -36,7 +36,7 @@
     "primeicons": "^1.0.0",
     "primeng": "^7.0.3",
     "rxjs": "~6.3.3",
-    "tavisca-orxe3-library": "file:../tavisca-orxe3-library-0.0.1.tgz",
+    "tavisca-orxe3-library": "file:./tavisca-orxe3-library-0.0.1.tgz",
     "underscore": "^1.9.1",
     "zone.js": "~0.8.26"
   },

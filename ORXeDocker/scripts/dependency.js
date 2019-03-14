@@ -3,7 +3,7 @@ const comp = require('../src/app/componentList');
 function execute() {
     console.log("working");
     var component;
-    var customComponentsPath = "src\\app\\customiseComponents ";
+    var customComponentsPath = "src/app/customiseComponents ";
     var finalTerminalCommand, githublink, firsthalf, secondehalf, componentName;
     var startIndex, lastIndex;
     for (var loopvariable1 = 0; loopvariable1 < comp.compList.length; loopvariable1++) {
@@ -27,7 +27,8 @@ function execute() {
             // lastIndex = githublink.substring(startIndex + 5).indexOf('/');
             // secondehalf = githublink.substring(startIndex + 4 + lastIndex + 1, githublink.length);
             // githublink = firsthalf + 'trunk' + secondehalf;
-            finalTerminalCommand = "cd " + customComponentsPath + " && " + 'if exist ' + componentName + ' ( rmdir /Q /S '+componentName+' && svn export ' + githublink + ') else ( svn export ' + githublink+')';
+            // finalTerminalCommand = "cd " + customComponentsPath + " && " + 'if exist ' + componentName + ' ( rmdir /Q /S '+componentName+' && svn export ' + githublink + ') else ( svn export ' + githublink+')';
+            finalTerminalCommand = "cd " + customComponentsPath + " && " + 'if [ -d ' + componentName + ' ]; then rm -r '+componentName+' && svn export ' + githublink + '; else  svn export ' + githublink + '; fi';
             terminalCommandRunner(finalTerminalCommand);
             
         }
