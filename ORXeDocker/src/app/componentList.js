@@ -60,7 +60,7 @@ const appliCationComponentList = [
       styling: [
         { name: 'Background Color', value: "", type: "CSS" , property:'--navBackground'},
         { name: 'Text Color', value: "", type: "CSS" , property:'--navColor'},
-        { name: 'width', value: "", type: String, defaultValue: '10em',property:'--ButtonWidth' }
+        // { name: 'width', value: "", type: String, defaultValue: '10em',property:'--ButtonWidth' }
       ],
       commands: {
         dependencies: ['Node (>6.0.0)', 'Npm (>3.8.6)'],
