@@ -149,7 +149,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#ngOnChanges">ngOnChanges</a>
+                                <a href="#ngAfterViewInit">ngAfterViewInit</a>
                             </li>
                             <li>
                                 <a href="#ngOnInit">ngOnInit</a>
@@ -228,18 +228,18 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="ngOnChanges"></a>
+                    <a name="ngAfterViewInit"></a>
                     <span class="name">
                         <b>
-                            ngOnChanges
+                            ngAfterViewInit
                         </b>
-                        <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>ngOnChanges()</code>
+<code>ngAfterViewInit()</code>
                 </td>
             </tr>
 
@@ -374,7 +374,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, ViewChild, ElementRef } from &#x27;@angular/core&#x27;;
 import { ComponentdataService } from &#x27;../componentdata.service&#x27;;
 
 @Component({
@@ -396,7 +396,7 @@ ngOnInit() {
      //console.log(&quot;Response: &quot; + this.Component);
   })
 }
-ngOnChanges(){
+ngAfterViewInit (){
  // this.Component &#x3D; this.componentdata.getComponent();
 }
 }
@@ -405,7 +405,7 @@ ngOnChanges(){
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;app-components&gt;
-  &lt;mat-tab-group *ngIf&#x3D;&quot;Component&quot;&gt;
+  &lt;mat-tab-group *ngIf&#x3D;&quot;Component&quot; #tabs&gt;
     &lt;mat-tab&gt;
       &lt;ng-template mat-tab-label&gt;
         &lt;mat-icon class&#x3D;&quot;example-tab-icon&quot;&gt;remove_red_eye&lt;/mat-icon&gt;
@@ -463,14 +463,14 @@ ngOnChanges(){
                 <p class="comment">
                     <code>./main.component.css</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">/* mat-card{
+                <pre class="line-numbers"><code class="language-scss">mat-card{
     height: 90vh;
 }
 @media only screen and (max-height: 864px){
     mat-card{
         height: 86vh;
     }
-} */
+}
 </code></pre>
     </div>
 
@@ -499,7 +499,7 @@ ngOnChanges(){
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><app-components>  <mat-tab-group *ngIf="Component">    <mat-tab>      <ng-template mat-tab-label>        <mat-icon class="example-tab-icon">remove_red_eye</mat-icon>        Overview      </ng-template>      <app-overview [Component]="Component"></app-overview>    </mat-tab>    <mat-tab>      <ng-template mat-tab-label>        <mat-icon class="example-tab-icon">description</mat-icon>        <!--API-->Documentation      </ng-template>      <app-api [Component]="Component"></app-api>    </mat-tab>    <mat-tab>      <ng-template mat-tab-label>        <mat-icon class="example-tab-icon">hourglass_empty</mat-icon>         Testing      </ng-template>      <app-testing [Component]="Component"></app-testing>    </mat-tab>  </mat-tab-group>  <div *ngIf="!Component">    <mat-card>      Web Components are a set of standards that allow for the creation of custom HTML elements. With this, people can      easily create elements which      <br>      <ul>        <li> encapsulate functionality & style</li>        <li>aid reusability</li>        <li> provide semantic structure to their code</li>        <li>can update automatically across pages</li>        <li>and run wherever HTML does - with any framework, language or platform of choice</li>      </ul>      Developers are thus able to create unique building blocks suited to their needs and extend the vocabulary of the      web.<br>      Both UI and Non-UI (API only) elements can be created. These elements can not only be shared across a single web      application but can also be distributed on the web for use by others.<br><br>      This site enables you to explore these elements. When viewing elements, you can change their properties from the      panel on the right, see the code for each element below it. You can also see how the element would look or behave      on mobile devices. Developer documentation and design documentation for every element is available, though some      are a work in progress.      The ability to style these elements centrally using an interface is being worked upon & is coming soon.    </mat-card>  </div></app-components></div>'
+        var COMPONENT_TEMPLATE = '<div><app-components>  <mat-tab-group *ngIf="Component" #tabs>    <mat-tab>      <ng-template mat-tab-label>        <mat-icon class="example-tab-icon">remove_red_eye</mat-icon>        Overview      </ng-template>      <app-overview [Component]="Component"></app-overview>    </mat-tab>    <mat-tab>      <ng-template mat-tab-label>        <mat-icon class="example-tab-icon">description</mat-icon>        <!--API-->Documentation      </ng-template>      <app-api [Component]="Component"></app-api>    </mat-tab>    <mat-tab>      <ng-template mat-tab-label>        <mat-icon class="example-tab-icon">hourglass_empty</mat-icon>         Testing      </ng-template>      <app-testing [Component]="Component"></app-testing>    </mat-tab>  </mat-tab-group>  <div *ngIf="!Component">    <mat-card>      Web Components are a set of standards that allow for the creation of custom HTML elements. With this, people can      easily create elements which      <br>      <ul>        <li> encapsulate functionality & style</li>        <li>aid reusability</li>        <li> provide semantic structure to their code</li>        <li>can update automatically across pages</li>        <li>and run wherever HTML does - with any framework, language or platform of choice</li>      </ul>      Developers are thus able to create unique building blocks suited to their needs and extend the vocabulary of the      web.<br>      Both UI and Non-UI (API only) elements can be created. These elements can not only be shared across a single web      application but can also be distributed on the web for use by others.<br><br>      This site enables you to explore these elements. When viewing elements, you can change their properties from the      panel on the right, see the code for each element below it. You can also see how the element would look or behave      on mobile devices. Developer documentation and design documentation for every element is available, though some      are a work in progress.      The ability to style these elements centrally using an interface is being worked upon & is coming soon.    </mat-card>  </div></app-components></div>'
     var COMPONENTS = [{'name': 'ApiComponent', 'selector': 'app-api'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BottomSheetOverviewExampleSheet', 'selector': 'bottom-sheet-overview-example-sheet'},{'name': 'ComponentsComponent', 'selector': 'app-components'},{'name': 'DefualtAMButtonComponent', 'selector': 'app-defualt-ambutton'},{'name': 'DefualtAMMenuListComponent', 'selector': 'app-defualt-ammenu-list'},{'name': 'DemoComponent', 'selector': 'app-demo'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HotelItemComponent', 'selector': 'enl-hotel-item'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'TaviscaButtonComponent', 'selector': 'enl-tavisca-button'},{'name': 'TaviscaInputComponent', 'selector': 'enl-tavisca-input'},{'name': 'TestingComponent', 'selector': 'app-testing'}];
     var DIRECTIVES = [{'name': 'ComponentLoaderDirective', 'selector': '[appComponentLoader]'}];
     var ACTUAL_COMPONENT = {'name': 'MainComponent'};

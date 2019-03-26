@@ -7,7 +7,7 @@ RUN npm install -g @angular/cli
 RUN npm install
 RUN npm rebuild
 RUN npm install -g @compodoc/compodoc
-RUN npm install nodemon
+RUN npm install -g nodemon
  # Install svn
 RUN apk update
 RUN apk upgrade

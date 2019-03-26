@@ -181,7 +181,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="313" class="link-to-prism">src/app/main/description/overview/overview.component.ts:313</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="320" class="link-to-prism">src/app/main/description/overview/overview.component.ts:320</a></div>
                             </td>
                         </tr>
 
@@ -262,8 +262,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="316"
-                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:316</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="323"
+                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:323</a></div>
                 </td>
             </tr>
 
@@ -332,8 +332,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="324"
-                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:324</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="331"
+                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:331</a></div>
                 </td>
             </tr>
 
@@ -371,8 +371,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="320"
-                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:320</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="327"
+                            class="link-to-prism">src/app/main/description/overview/overview.component.ts:327</a></div>
                 </td>
             </tr>
 
@@ -451,7 +451,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="314" class="link-to-prism">src/app/main/description/overview/overview.component.ts:314</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="321" class="link-to-prism">src/app/main/description/overview/overview.component.ts:321</a></div>
                             </td>
                         </tr>
 
@@ -472,7 +472,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="313" class="link-to-prism">src/app/main/description/overview/overview.component.ts:313</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="320" class="link-to-prism">src/app/main/description/overview/overview.component.ts:320</a></div>
                             </td>
                         </tr>
 
@@ -485,7 +485,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input, ViewContainerRef, Compiler, ComponentFactory, ViewChild, CUSTOM_ELEMENTS_SCHEMA, NgModule, HostBinding, Inject } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input, ViewContainerRef, Compiler, ComponentFactory, ViewChild, CUSTOM_ELEMENTS_SCHEMA, NgModule, HostBinding, Inject, HostListener } from &#x27;@angular/core&#x27;;
 import { ComponentdataService } from &#x27;src/app/componentdata.service&#x27;;
 import { ComponentLoaderDirective } from &#x27;src/app/component-loader.directive&#x27;;
 
@@ -516,11 +516,18 @@ export class OverviewComponent implements OnInit {
   MenuLabel&#x3D;&quot;&quot;;
   MenuValue&#x3D;&quot;&quot;;
   JsonData;
+  screenHeight:number;
 
   @ViewChild(ComponentLoaderDirective) appComponentLoder: ComponentLoaderDirective;
+  @HostListener(&#x27;window:resize&#x27;, [&#x27;$event&#x27;])
+  getScreenSize() {
+        this.screenHeight &#x3D; window.innerHeight - 130;
+  }
 
 
-  constructor(private bottomSheet: MatBottomSheet,private compiler: Compiler, private vcRef: ViewContainerRef,public componentdata: ComponentdataService, public overlayContainer: OverlayContainer) { }
+  constructor(private bottomSheet: MatBottomSheet,private compiler: Compiler, private vcRef: ViewContainerRef,public componentdata: ComponentdataService, public overlayContainer: OverlayContainer) { 
+    this.getScreenSize();
+  }
   private _cacheOfFactories: {[templateKey: string]: ComponentFactory&lt;IHaveDynamicData&gt;} &#x3D; {};
 
   checkStyle() {

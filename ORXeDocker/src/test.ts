@@ -15,7 +15,7 @@ getTestBed().initTestEnvironment(
   platformBrowserDynamicTesting()
 );
 // Then we find all the tests.
-const context = require.context('./', true, /defualt-ambutton.component.spec.ts$/);
+const context = require.context('./', true, /hotel-item.component.spec.ts$/);
 
 // And load the modules.
 context.keys().map(context);
