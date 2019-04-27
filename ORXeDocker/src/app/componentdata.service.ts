@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { compList,menuList } from './componentList';
+import { compList, menuList } from './componentList';
 import { Data } from './componentdata.model';
 import { Subject } from 'rxjs';
 
@@ -11,7 +11,8 @@ export class ComponentdataService {
 
   componentsList = [];
   menuList = [];
-  selectedComponent : Data;
+  selectedComponent: Data;
+  TestCaseRun = false;
 
   private selectedComponent$ = new Subject();
 
@@ -19,9 +20,9 @@ export class ComponentdataService {
     this.componentsList = compList;
     this.menuList = menuList;
   }
-getMenuList(){
-  return this.menuList
-}
+  getMenuList() {
+    return this.menuList
+  }
   getComponentData() {
     return this.componentsList;
   }
@@ -34,7 +35,7 @@ getMenuList(){
   getComponent() {
     return this.selectedComponent$;
   }
-  ngOnChanges(){
+  ngOnChanges() {
     console.log("abc");
     console.log(this.selectedComponent);
   }

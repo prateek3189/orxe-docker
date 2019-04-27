@@ -1,8 +1,8 @@
 #!/bin/bash
-npm run build &
-sleep 10
-ng test &
-sleep 10
+npm run build
+npm run add-dependency
+ng test --browsers ChromeHeadlessCI --code-coverage=true --watch=true &
+npm rebuild
 nodemon scripts/TestServer.js & 
-sleep 10
+npm run compodoc &
 ng serve --host 0.0.0.0 --port 4200

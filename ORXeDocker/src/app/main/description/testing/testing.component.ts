@@ -32,8 +32,10 @@ export class TestingComponent implements OnInit {
     };
     this.http.post(this.testUrl, this.testName)
     .subscribe(err => console.log(err));
-   
-    this.showTestResult = true;
+    // setTimeout(()=>{
+    //   this.showTestResult = true;
+    //  }, 5000);
+     this.showTestResult = true;
   }
   ngOnChanges() {
     //console.log(this.Component);

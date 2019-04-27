@@ -1,7 +1,7 @@
 const comp = require('../src/app/componentList');
 
 function execute() {
-    console.log("working");
+    console.log("Start Executing");
     var component;
     var customComponentsPath = "src/app/customiseComponents ";
     var finalTerminalCommand, githublink, firsthalf, secondehalf, componentName;
@@ -21,13 +21,13 @@ function execute() {
         if (githublink != null) {
             componentName = githublink.substring(githublink.lastIndexOf('/') + 1, githublink.length);
             githublink = githublink.replace("tree","branches");
-            githublink = githublink.replace("master","Kapoor");
+            githublink = githublink.replace("master","Dev");
             // startIndex = githublink.indexOf('tree');
             // firsthalf = githublink.substring(0, startIndex);
             // lastIndex = githublink.substring(startIndex + 5).indexOf('/');
             // secondehalf = githublink.substring(startIndex + 4 + lastIndex + 1, githublink.length);
             // githublink = firsthalf + 'trunk' + secondehalf;
-             finalTerminalCommand = "cd " + customComponentsPath + " && " + 'if exist ' + componentName + ' ( rmdir /Q /S '+componentName+' && svn export ' + githublink + ') else ( svn export ' + githublink+')';
+            finalTerminalCommand = "cd " + customComponentsPath + " && " + 'if exist ' + componentName + ' ( rmdir /Q /S '+componentName+' && svn export ' + githublink + ') else ( svn export ' + githublink+')';
             //finalTerminalCommand = "cd " + customComponentsPath + " && " + 'if [ -d ' + componentName + ' ]; then rm -r '+componentName+' && svn export ' + githublink + '; else  svn export ' + githublink + '; fi';
             terminalCommandRunner(finalTerminalCommand);
             
@@ -40,9 +40,10 @@ execute();
 
 function terminalCommandRunner(commandtoRun) {
     const exec = require('child_process').execSync
-
+    console.log("Execute Command: ",commandtoRun);
                 exec(commandtoRun, (err, stdout, stderr) => {
-                    console.log("hiiiiii",stderr);
+                    console.log("Error: ",stderr);
+                    console.log("Success: ",stdout);
                     process.stdout.write(stderr)
                 })
     return 1;

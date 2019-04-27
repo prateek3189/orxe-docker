@@ -6,7 +6,7 @@
     "add-dependency": "node scripts/dependency.js",
     "compodoc": "compodoc -p src/tsconfig.app.json -s",
     "start": "ng serve",
-    "build": "npm run add-dependency && ng build && npm run compodoc",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

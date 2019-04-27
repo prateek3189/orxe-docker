@@ -14,7 +14,8 @@ app.post('/posts/check', (req,res) => {
     const exec = require('child_process').execSync
 
                 exec(commandtoRun, (err, stdout, stderr) => {
-                    console.log("hiiiiii",stderr);
+                    console.log("Error: ",stderr);
+                    console.log("Success: ",stdout);
                     process.stdout.write(stderr)
                 })
     res.send("Success");

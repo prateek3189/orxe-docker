@@ -29,3 +29,8 @@ $ compodoc -p src/tsconfig.app.json -s //For Creating New Document & Serve
 ```
 $ ng serve
 ```
+## Steps For Docker
+* Open "scripts\dependency.js" Comment Line 30 & Uncomment Line 31 
+* Open "src\karma.conf.js" Comment Line 41 & Uncomment Line 22-27,42
+* Run "docker build -t orxe3doc-image . --no-cache"
+* Run "docker run -it -p 4200:4200 -p 9876:9876 -p 8080:8080 -p 3000:3000 orxe3doc-image"

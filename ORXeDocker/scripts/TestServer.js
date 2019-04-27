@@ -8,12 +8,12 @@ app.use(cors());
 app.options('*', cors());
 
 app.post('/posts/check', (req,res) => {
-    console.log("hi");
+    console.log("Updating File Name...");
     //var file_path = 'D:\\ORXe 3.0 Docker\\v10\\orxe-docker\\ORXeDocker\\src\\test.ts';
     var file_path = 'src/test.ts';
     fs.readFile(file_path, function(err, data) {
         if(err) {
-            console.log(err);
+            console.log("Error: " , err);
             throw error
         }
         var file_content = data.toString();
@@ -24,6 +24,8 @@ app.post('/posts/check', (req,res) => {
         var write_text = file_content.replace(replacestring, "require.context('./', true, /"+req.body.compName);
         fs.writeFileSync(file_path, '');
         fs.writeFileSync(file_path , write_text);
+        // console.log("Execute TestCase..");
+        // RunTest("ng test --browsers ChromeHeadlessCI --code-coverage=true");
     });
     res.send("Success");
 });
@@ -33,3 +35,17 @@ app.get('/', (req,res) => {
 });
 
 app.listen(3000, () => console.log('Listening on port 3000'))
+
+// function RunTest(commandtoRun) {
+//     console.log("Run Test: " + commandtoRun);
+//     const exec = require('child_process').exec
+//     const testscript = exec(commandtoRun);
+//     testscript.stdout.on('data', function (data) {
+//         console.log("Success Command: " + data);
+//         // sendBackInfo();
+//     });
+//     testscript.stderr.on('data', function (data) {
+//         console.log("Error Command: " + data);
+//         // triggerErrorStuff(); 
+//     });
+// }
